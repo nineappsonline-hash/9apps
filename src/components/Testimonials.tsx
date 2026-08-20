@@ -59,7 +59,7 @@ const testimonialsData = [
 
 function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimonialsData[0]; locale: string }) {
   return (
-    <div className="glass-card rounded-2xl p-5 w-[420px] flex-shrink-0 mx-2.5 hover-lift group overflow-hidden">
+    <div className="glass-card rounded-2xl p-5 w-[420px] flex-shrink-0 mx-2.5 hover-lift group overflow-hidden" style={{ whiteSpace: 'normal' }}>
       <Quote className="w-6 h-6 text-indigo-500/25 mb-3 group-hover:text-indigo-500/40 transition-colors" />
 
       <div className="flex gap-0.5 mb-3">
