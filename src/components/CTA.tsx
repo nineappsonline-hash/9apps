@@ -4,10 +4,12 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
 export default function CTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { t } = useI18n()
 
   return (
     <section className="relative py-32">
@@ -18,14 +20,10 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
           className="relative rounded-3xl overflow-hidden"
         >
-          {/* Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/15 via-purple-500/08 to-cyan-500/15" />
           <div className="absolute inset-0 bg-[#0a0e1a]/70 backdrop-blur-xl" />
-
-          {/* Animated border */}
           <div className="absolute inset-0 rounded-3xl border-gradient" />
 
-          {/* Content */}
           <div className="relative z-10 text-center py-16 px-6 sm:px-10">
             <motion.div
               initial={{ scale: 0 }}
@@ -37,11 +35,10 @@ export default function CTA() {
             </motion.div>
 
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-balance">
-              Ready to transform your business?
+              {t.ctaTitle}
             </h2>
             <p className="text-gray-400 text-[17px] mb-8 max-w-lg mx-auto text-balance leading-relaxed">
-              Start your 14-day free trial today. No credit card required.
-              Full access to all features.
+              {t.ctaSubtitle}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -49,14 +46,14 @@ export default function CTA() {
                 href="/signup"
                 className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-2xl hover:shadow-xl hover:shadow-indigo-500/20 transition-all duration-300 whitespace-nowrap"
               >
-                Get Started for Free
+                {t.ctaPrimary}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/signin"
                 className="inline-flex items-center justify-center px-8 py-4 text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/[0.15] rounded-2xl font-medium transition-all duration-300 whitespace-nowrap text-sm"
               >
-                Sign In to Dashboard
+                {t.ctaSecondary}
               </Link>
             </div>
           </div>

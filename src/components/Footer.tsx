@@ -4,33 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Mail } from 'lucide-react'
-
-const footerLinks = {
-  Product: [
-    { label: 'CRM Suite', href: '#products' },
-    { label: 'ERP Platform', href: '#products' },
-    { label: 'Analytics', href: '#features' },
-    { label: 'Integrations', href: '#features' },
-  ],
-  Company: [
-    { label: 'About Us', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Press Kit', href: '#' },
-  ],
-  Resources: [
-    { label: 'Documentation', href: '#' },
-    { label: 'Help Center', href: '#' },
-    { label: 'API Reference', href: '#' },
-    { label: 'Status', href: '#' },
-  ],
-  Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
-    { label: 'GDPR', href: '#' },
-  ],
-}
+import { useI18n } from '@/lib/i18n'
 
 function GithubIcon() {
   return (
@@ -64,14 +38,41 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const { t, locale } = useI18n()
+
+  const footerLinks = {
+    [t.product]: [
+      { label: 'CRM Suite', href: '#products' },
+      { label: 'ERP Platform', href: '#products' },
+      { label: 'Analytics', href: '#features' },
+      { label: 'Integrations', href: '#features' },
+    ],
+    [t.company]: [
+      { label: 'About Us', href: '#' },
+      { label: 'Careers', href: '#' },
+      { label: 'Blog', href: '#' },
+      { label: 'Press Kit', href: '#' },
+    ],
+    [t.resources]: [
+      { label: 'Documentation', href: '#' },
+      { label: 'Help Center', href: '#' },
+      { label: 'API Reference', href: '#' },
+      { label: 'Status', href: '#' },
+    ],
+    [t.legal]: [
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Terms of Service', href: '#' },
+      { label: 'Cookie Policy', href: '#' },
+      { label: 'GDPR', href: '#' },
+    ],
+  }
+
   return (
     <footer className="relative border-t border-white/[0.04] bg-[#04060c]/60">
-      {/* Gradient line at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image
@@ -84,8 +85,7 @@ export default function Footer() {
               <span className="text-lg font-bold gradient-text">NineApps</span>
             </Link>
             <p className="text-sm text-gray-500 max-w-xs mb-6 leading-relaxed">
-              Empowering businesses with intelligent CRM and ERP solutions.
-              Transform how you manage relationships and resources.
+              {t.footerDesc}
             </p>
             <div className="flex gap-2.5">
               {socialLinks.map((social) => (
@@ -102,7 +102,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="text-xs font-semibold text-gray-300 mb-4 tracking-wide">{category}</h3>
@@ -122,13 +121,12 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-xs text-gray-600">
-            &copy; {new Date().getFullYear()} NineApps. All rights reserved.
+            &copy; {new Date().getFullYear()} NineApps. {t.copyright}
           </p>
           <p className="text-xs text-gray-700">
-            Built with precision &amp; passion
+            {t.builtWith}
           </p>
         </div>
       </div>

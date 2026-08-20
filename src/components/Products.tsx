@@ -15,62 +15,7 @@ import {
   Calculator,
   ArrowUpRight,
 } from 'lucide-react'
-
-const crmProducts = [
-  {
-    icon: Users,
-    name: 'Contact Manager',
-    description: 'Centralized customer database with smart tagging and relationship mapping.',
-  },
-  {
-    icon: Mail,
-    name: 'Email Campaigns',
-    description: 'Design, send, and track email campaigns with AI-powered personalization.',
-  },
-  {
-    icon: Phone,
-    name: 'Call Tracker',
-    description: 'Log calls, set follow-ups, and analyze conversation patterns automatically.',
-  },
-  {
-    icon: BarChart3,
-    name: 'Sales Pipeline',
-    description: 'Visual pipeline management with drag-and-drop stages and forecasting.',
-  },
-  {
-    icon: ShoppingCart,
-    name: 'Deal Room',
-    description: 'Close deals faster with collaborative proposals and e-signature support.',
-  },
-]
-
-const erpProducts = [
-  {
-    icon: Warehouse,
-    name: 'Inventory Control',
-    description: 'Real-time stock tracking, reorder alerts, and multi-warehouse management.',
-  },
-  {
-    icon: Truck,
-    name: 'Supply Chain',
-    description: 'End-to-end supply chain visibility from procurement to delivery.',
-  },
-  {
-    icon: DollarSign,
-    name: 'Financial Suite',
-    description: 'Invoicing, expense tracking, budgeting, and financial reporting in one place.',
-  },
-  {
-    icon: FileText,
-    name: 'HR Management',
-    description: 'Employee records, payroll, leave management, and performance reviews.',
-  },
-  {
-    icon: Calculator,
-    name: 'Project Billing',
-    description: 'Time tracking, resource allocation, and automated client billing.',
-  },
-]
+import { useI18n } from '@/lib/i18n'
 
 function ProductCard({
   product,
@@ -108,14 +53,29 @@ function ProductCard({
 export default function Products() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { t } = useI18n()
+
+  const crmProducts = [
+    { icon: Users, name: t.contactManager, description: t.contactManagerDesc },
+    { icon: Mail, name: t.emailCampaigns, description: t.emailCampaignsDesc },
+    { icon: Phone, name: t.callTracker, description: t.callTrackerDesc },
+    { icon: BarChart3, name: t.salesPipeline, description: t.salesPipelineDesc },
+    { icon: ShoppingCart, name: t.dealRoom, description: t.dealRoomDesc },
+  ]
+
+  const erpProducts = [
+    { icon: Warehouse, name: t.inventoryControl, description: t.inventoryControlDesc },
+    { icon: Truck, name: t.supplyChain, description: t.supplyChainDesc },
+    { icon: DollarSign, name: t.financialSuite, description: t.financialSuiteDesc },
+    { icon: FileText, name: t.hrManagement, description: t.hrManagementDesc },
+    { icon: Calculator, name: t.projectBilling, description: t.projectBillingDesc },
+  ]
 
   return (
     <section id="products" className="relative py-32">
-      {/* Background accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/[0.03] rounded-full blur-[140px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -123,21 +83,18 @@ export default function Products() {
           className="text-center mb-20"
         >
           <span className="text-xs font-semibold text-cyan-400 tracking-[0.2em] uppercase mb-4 block">
-            Products
+            {t.productsLabel}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-white">Two powerful suites, </span>
-            <span className="gradient-text-alt">one platform</span>
+            <span className="text-white">{t.productsTitle1}</span>
+            <span className="gradient-text-alt">{t.productsTitle2}</span>
           </h2>
           <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
-            Whether you need to manage customer relationships or streamline operations,
-            our modular products work together seamlessly.
+            {t.productsSubtitle}
           </p>
         </motion.div>
 
-        {/* Product suites */}
         <div className="grid lg:grid-cols-2 gap-6">
-          {/* CRM Suite */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -149,27 +106,20 @@ export default function Products() {
                 <Users className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">CRM Suite</h3>
-                <p className="text-xs text-indigo-400">Customer Relationship Management</p>
+                <h3 className="text-lg font-bold text-white">{t.crmSuite}</h3>
+                <p className="text-xs text-indigo-400">{t.crmSubtitle}</p>
               </div>
             </div>
             <p className="text-sm text-gray-400 mb-6 mt-4 leading-relaxed">
-              Build stronger relationships with your customers. Track every interaction,
-              automate follow-ups, and close deals faster with intelligent sales tools.
+              {t.crmDesc}
             </p>
             <div className="space-y-0.5">
               {crmProducts.map((product, i) => (
-                <ProductCard
-                  key={product.name}
-                  product={product}
-                  index={i}
-                  isInView={isInView}
-                />
+                <ProductCard key={product.name} product={product} index={i} isInView={isInView} />
               ))}
             </div>
           </motion.div>
 
-          {/* ERP Suite */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -181,22 +131,16 @@ export default function Products() {
                 <Warehouse className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">ERP Platform</h3>
-                <p className="text-xs text-cyan-400">Enterprise Resource Planning</p>
+                <h3 className="text-lg font-bold text-white">{t.erpPlatform}</h3>
+                <p className="text-xs text-cyan-400">{t.erpSubtitle}</p>
               </div>
             </div>
             <p className="text-sm text-gray-400 mb-6 mt-4 leading-relaxed">
-              Optimize every resource in your organization. From inventory to finance,
-              get complete visibility and control over your business operations.
+              {t.erpDesc}
             </p>
             <div className="space-y-0.5">
               {erpProducts.map((product, i) => (
-                <ProductCard
-                  key={product.name}
-                  product={product}
-                  index={i}
-                  isInView={isInView}
-                />
+                <ProductCard key={product.name} product={product} index={i} isInView={isInView} />
               ))}
             </div>
           </motion.div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles, Play } from 'lucide-react'
+import { useI18n, currencyConfig } from '@/lib/i18n'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,6 +23,8 @@ const itemVariants = {
 }
 
 export default function Hero() {
+  const { t, locale } = useI18n()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden particle-dots">
       {/* Background orbs */}
@@ -49,7 +52,7 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="flex justify-center mb-8 w-full">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/[0.08] border border-indigo-500/15 text-indigo-300 text-xs font-medium tracking-wide whitespace-nowrap">
               <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
-              <span>Next-Generation Business Software</span>
+              <span>{t.badge}</span>
               <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
             </div>
           </motion.div>
@@ -59,9 +62,9 @@ export default function Hero() {
             variants={itemVariants}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight leading-[1.08] mb-7 text-balance"
           >
-            <span className="text-white">Manage Your Business</span>
+            <span className="text-white">{t.headline1}</span>
             <br />
-            <span className="gradient-text">With Intelligence</span>
+            <span className="gradient-text">{t.headline2}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -69,8 +72,7 @@ export default function Hero() {
             variants={itemVariants}
             className="max-w-[580px] mx-auto text-[17px] sm:text-lg text-gray-400 mb-10 leading-relaxed text-balance"
           >
-            Powerful CRM and ERP solutions designed to streamline your workflows,
-            boost productivity, and drive growth. Built for modern teams.
+            {t.heroSubtitle}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -85,7 +87,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative flex items-center gap-2">
-                Start Free Trial
+                {t.startFreeTrial}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
@@ -94,7 +96,7 @@ export default function Hero() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] flex items-center justify-center group-hover:bg-white/[0.1] transition-colors flex-shrink-0">
                 <Play className="w-3.5 h-3.5 ml-0.5" />
               </div>
-              <span className="font-medium text-sm">Watch Demo</span>
+              <span className="font-medium text-sm">{t.watchDemo}</span>
             </button>
           </motion.div>
 
@@ -104,10 +106,10 @@ export default function Hero() {
             className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-3xl mx-auto w-full"
           >
             {[
-              { value: '10K+', label: 'Active Users' },
-              { value: '99.9%', label: 'Uptime' },
-              { value: '50+', label: 'Integrations' },
-              { value: '4.9/5', label: 'User Rating' },
+              { value: '10K+', label: t.activeUsers },
+              { value: '99.9%', label: t.uptime },
+              { value: '50+', label: t.integrations },
+              { value: '4.9/5', label: t.userRating },
             ].map((stat) => (
               <motion.div
                 key={stat.label}

@@ -6,17 +6,20 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
-
-const navLinks = [
-  { href: '#features', label: 'Features' },
-  { href: '#products', label: 'Products' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#testimonials', label: 'Testimonials' },
-]
+import { useI18n } from '@/lib/i18n'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t, locale } = useI18n()
+
+  const navLinks = [
+    { href: '#features', label: t.features },
+    { href: '#products', label: t.products },
+    { href: '#pricing', label: t.pricing },
+    { href: '#testimonials', label: t.testimonials },
+  ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -73,11 +76,12 @@ export default function Navbar() {
 
           {/* Desktop auth buttons */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <LanguageSwitcher />
             <Link
               href="/signin"
               className="px-5 py-2 text-sm text-gray-400 hover:text-white transition-colors duration-300 whitespace-nowrap"
             >
-              Sign In
+              {t.signIn}
             </Link>
             <Link
               href="/signup"
@@ -86,8 +90,8 @@ export default function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300" />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative flex items-center gap-1.5">
-                Get Started
-                <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                {t.getStarted}
+                <ChevronRight className={cn("w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform", locale === 'ar' && 'rotate-180 group-hover:-translate-x-0.5')} />
               </span>
             </Link>
           </div>
@@ -116,7 +120,7 @@ export default function Navbar() {
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: locale === 'ar' ? 20 : -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                 >
@@ -130,19 +134,22 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <div className="pt-3 border-t border-white/[0.04] space-y-2 mt-2">
+                <div className="flex justify-center pb-1">
+                  <LanguageSwitcher />
+                </div>
                 <Link
                   href="/signin"
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3 text-center text-gray-300 hover:text-white hover:bg-white/[0.04] rounded-xl transition-all text-sm"
                 >
-                  Sign In
+                  {t.signIn}
                 </Link>
                 <Link
                   href="/signup"
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3 text-center text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl font-medium text-sm"
                 >
-                  Get Started
+                  {t.getStarted}
                 </Link>
               </div>
             </div>
