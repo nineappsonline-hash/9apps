@@ -5,6 +5,7 @@ import { useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
+import AnimatedBusinessScene from './AnimatedBusinessScene'
 
 function ParticleBurst({ isActive, x, y }: { isActive: boolean; x: number; y: number }) {
   if (!isActive) return null
@@ -72,6 +73,11 @@ export default function CTA() {
           <ParticleBurst isActive={burst.active} x={burst.x} y={burst.y} />
 
           <div className="relative z-10 text-center py-16 px-6 sm:px-10">
+            {/* Animated business scene illustration */}
+            <div className="mb-8">
+              <AnimatedBusinessScene className="w-full max-w-md mx-auto h-auto" />
+            </div>
+
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={isInView ? { scale: 1, rotate: 0 } : {}}

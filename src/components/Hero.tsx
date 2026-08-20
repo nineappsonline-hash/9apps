@@ -9,6 +9,7 @@ import TextScramble from './TextScramble'
 import MagneticButton from './MagneticButton'
 import GlitchText from './GlitchText'
 import InteractiveGrid from './InteractiveGrid'
+import AnimatedTeamIllustration from './AnimatedTeamIllustration'
 import { useRef } from 'react'
 
 const containerVariants = {
@@ -224,6 +225,11 @@ export default function Hero() {
                 <span className="font-medium text-sm">{t.watchDemo}</span>
               </button>
             </MagneticButton>
+          </motion.div>
+
+          {/* Animated team illustration */}
+          <motion.div variants={itemVariants} className="w-full mb-8">
+            <AnimatedTeamIllustration className="w-full max-w-xl mx-auto h-auto" />
           </motion.div>
 
           {/* Floating mockup */}

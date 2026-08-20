@@ -17,6 +17,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
+import AnimatedDataFlow from './AnimatedDataFlow'
 
 function ProductCard({
   product,
@@ -160,6 +161,16 @@ export default function Products() {
             </div>
           </motion.div>
         </div>
+
+        {/* Animated data flow illustration */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-10"
+        >
+          <AnimatedDataFlow className="w-full max-w-lg mx-auto h-auto" />
+        </motion.div>
       </div>
     </section>
   )
