@@ -23,7 +23,7 @@ export async function signUp(formData: FormData) {
     return redirect('/signup?error=' + encodeURIComponent(error.message))
   }
 
-  redirect('/signin?message=Check your email to confirm your account.')
+  redirect('/signin?message=Check+your+email+to+confirm+your+account.')
 }
 
 export async function signIn(formData: FormData) {
@@ -45,11 +45,12 @@ export async function signIn(formData: FormData) {
 
 export async function signInWithGitHub() {
   const supabase = await createClient()
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/auth/callback`,
+      redirectTo: `${siteUrl}/auth/callback`,
     },
   })
 
@@ -60,11 +61,12 @@ export async function signInWithGitHub() {
 
 export async function signInWithGoogle() {
   const supabase = await createClient()
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/auth/callback`,
+      redirectTo: `${siteUrl}/auth/callback`,
     },
   })
 
