@@ -59,7 +59,7 @@ const testimonialsData = [
 
 function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimonialsData[0]; locale: string }) {
   return (
-    <div className="glass-card rounded-2xl p-5 w-[340px] flex-shrink-0 mx-2.5 hover-lift group">
+    <div className="glass-card rounded-2xl p-5 w-[340px] flex-shrink-0 mx-2.5 hover-lift group overflow-hidden">
       <Quote className="w-6 h-6 text-indigo-500/25 mb-3 group-hover:text-indigo-500/40 transition-colors" />
 
       <div className="flex gap-0.5 mb-3">
@@ -68,7 +68,7 @@ function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimon
         ))}
       </div>
 
-      <p className="text-[13px] text-gray-300 leading-relaxed mb-5">
+      <p className="text-[13px] text-gray-300 leading-relaxed mb-5 break-words">
         &ldquo;{locale === 'ar' ? testimonial.quoteAr : testimonial.quoteEn}&rdquo;
       </p>
 
