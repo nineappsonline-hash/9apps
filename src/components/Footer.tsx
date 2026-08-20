@@ -42,28 +42,28 @@ export default function Footer() {
 
   const footerLinks = {
     [t.product]: [
-      { label: 'CRM Suite', href: '#products' },
-      { label: 'ERP Platform', href: '#products' },
-      { label: 'Analytics', href: '#features' },
-      { label: 'Integrations', href: '#features' },
+      { label: t.footerCrmSuite, href: '#products' },
+      { label: t.footerErpPlatform, href: '#products' },
+      { label: t.footerAnalytics, href: '#features' },
+      { label: t.footerIntegrations, href: '#features' },
     ],
     [t.company]: [
-      { label: 'About Us', href: '#' },
-      { label: 'Careers', href: '#' },
-      { label: 'Blog', href: '#' },
-      { label: 'Press Kit', href: '#' },
+      { label: t.aboutUs, href: '#' },
+      { label: t.careers, href: '#' },
+      { label: t.blog, href: '#' },
+      { label: t.pressKit, href: '#' },
     ],
     [t.resources]: [
-      { label: 'Documentation', href: '#' },
-      { label: 'Help Center', href: '#' },
-      { label: 'API Reference', href: '#' },
-      { label: 'Status', href: '#' },
+      { label: t.documentation, href: '#' },
+      { label: t.helpCenter, href: '#' },
+      { label: t.apiReference, href: '#' },
+      { label: t.status, href: '#' },
     ],
     [t.legal]: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'GDPR', href: '#' },
+      { label: t.privacyPolicy, href: '#' },
+      { label: t.termsOfService, href: '#' },
+      { label: t.cookiePolicy, href: '#' },
+      { label: t.gdpr, href: '#' },
     ],
   }
 

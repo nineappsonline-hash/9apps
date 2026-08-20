@@ -17,17 +17,17 @@ const cairo = Cairo({
 })
 
 export const metadata: Metadata = {
-  title: 'NineApps — CRM & ERP Software for Modern Teams',
+  title: 'NineApps — برنامج إدارة علاقات العملاء ومورد المؤسسات للفرق الحديثة',
   description:
-    'Powerful CRM and ERP solutions designed to streamline workflows, boost productivity, and drive business growth. Start your free trial today.',
-  keywords: ['CRM', 'ERP', 'business software', 'customer relationship management', 'enterprise resource planning'],
+    'حلول CRM و ERP قوية مصممة لتبسيط سير العمل، وزيادة الإنتاجية، ودفع نمو الأعمال. ابدأ تجربتك المجانية اليوم.',
+  keywords: ['CRM', 'ERP', 'برمجيات أعمال', 'إدارة علاقات العملاء', 'تخطيط موارد المؤسسات'],
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'NineApps — CRM & ERP Software for Modern Teams',
-    description: 'Powerful CRM and ERP solutions designed to streamline workflows, boost productivity, and drive business growth.',
+    title: 'NineApps — برنامج إدارة علاقات العملاء ومورد المؤسسات للفرق الحديثة',
+    description: 'حلول CRM و ERP قوية مصممة لتبسيط سير العمل، وزيادة الإنتاجية، ودفع نمو الأعمال.',
     type: 'website',
     images: ['/Logo.jpeg'],
   },
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${inter.variable} ${cairo.variable}`} suppressHydrationWarning>
+    <html lang="ar" dir="rtl" className={`${inter.variable} ${cairo.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans">
         <ClientEffects />
         <I18nProvider>{children}</I18nProvider>
