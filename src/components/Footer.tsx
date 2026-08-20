@@ -65,35 +65,35 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/5 bg-gray-950/50">
+    <footer className="relative border-t border-white/[0.04] bg-[#04060c]/60">
       {/* Gradient line at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image
                 src="/Logo.jpeg"
                 alt="NineApps Logo"
-                width={36}
-                height={36}
-                className="rounded-lg"
+                width={32}
+                height={32}
+                className="rounded-lg ring-1 ring-white/10"
               />
               <span className="text-lg font-bold gradient-text">NineApps</span>
             </Link>
-            <p className="text-sm text-gray-400 max-w-xs mb-6 leading-relaxed">
+            <p className="text-sm text-gray-500 max-w-xs mb-6 leading-relaxed">
               Empowering businesses with intelligent CRM and ERP solutions.
               Transform how you manage relationships and resources.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                  className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/[0.08] transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon />
@@ -105,13 +105,13 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-sm font-semibold text-white mb-4">{category}</h3>
+              <h3 className="text-xs font-semibold text-gray-300 mb-4 tracking-wide">{category}</h3>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                      className="text-sm text-gray-500 hover:text-gray-200 transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -123,11 +123,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-sm text-gray-500">
+        <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p className="text-xs text-gray-600">
             &copy; {new Date().getFullYear()} NineApps. All rights reserved.
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-xs text-gray-700">
             Built with precision &amp; passion
           </p>
         </div>

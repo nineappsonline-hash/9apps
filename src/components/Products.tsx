@@ -83,20 +83,20 @@ function ProductCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
     >
-      <div className="group flex items-start gap-4 p-4 rounded-xl hover:bg-white/[0.03] transition-all duration-300 cursor-pointer">
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 border border-indigo-500/10 flex items-center justify-center flex-shrink-0 group-hover:from-indigo-500/30 group-hover:to-cyan-500/30 transition-all">
-          <product.icon className="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
+      <div className="group flex items-start gap-4 p-3.5 rounded-xl hover:bg-white/[0.03] transition-all duration-300 cursor-pointer">
+        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500/15 to-cyan-500/15 border border-indigo-500/[0.08] flex items-center justify-center flex-shrink-0 group-hover:from-indigo-500/25 group-hover:to-cyan-500/25 transition-all">
+          <product.icon className="w-4 h-4 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <h4 className="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors">
+          <div className="flex items-center gap-1.5 mb-0.5">
+            <h4 className="text-sm font-medium text-gray-200 group-hover:text-indigo-300 transition-colors">
               {product.name}
             </h4>
-            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </div>
           <p className="text-xs text-gray-500 leading-relaxed">{product.description}</p>
         </div>
@@ -112,7 +112,7 @@ export default function Products() {
   return (
     <section id="products" className="relative py-32">
       {/* Background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/[0.03] rounded-full blur-[140px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
         {/* Section header */}
@@ -122,21 +122,21 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-sm font-medium text-cyan-400 tracking-wider uppercase mb-4 block">
+          <span className="text-xs font-semibold text-cyan-400 tracking-[0.2em] uppercase mb-4 block">
             Products
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-white">Two powerful suites, </span>
             <span className="gradient-text-alt">one platform</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-400 text-lg">
+          <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             Whether you need to manage customer relationships or streamline operations,
             our modular products work together seamlessly.
           </p>
         </motion.div>
 
         {/* Product suites */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-6">
           {/* CRM Suite */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -145,19 +145,19 @@ export default function Products() {
             className="glass-card rounded-3xl p-8 lg:p-10"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                 <Users className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">CRM Suite</h3>
+                <h3 className="text-lg font-bold text-white">CRM Suite</h3>
                 <p className="text-xs text-indigo-400">Customer Relationship Management</p>
               </div>
             </div>
-            <p className="text-sm text-gray-400 mb-6 mt-3 leading-relaxed">
+            <p className="text-sm text-gray-400 mb-6 mt-4 leading-relaxed">
               Build stronger relationships with your customers. Track every interaction,
               automate follow-ups, and close deals faster with intelligent sales tools.
             </p>
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               {crmProducts.map((product, i) => (
                 <ProductCard
                   key={product.name}
@@ -177,19 +177,19 @@ export default function Products() {
             className="glass-card rounded-3xl p-8 lg:p-10"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
                 <Warehouse className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">ERP Platform</h3>
+                <h3 className="text-lg font-bold text-white">ERP Platform</h3>
                 <p className="text-xs text-cyan-400">Enterprise Resource Planning</p>
               </div>
             </div>
-            <p className="text-sm text-gray-400 mb-6 mt-3 leading-relaxed">
+            <p className="text-sm text-gray-400 mb-6 mt-4 leading-relaxed">
               Optimize every resource in your organization. From inventory to finance,
               get complete visibility and control over your business operations.
             </p>
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               {erpProducts.map((product, i) => (
                 <ProductCard
                   key={product.name}

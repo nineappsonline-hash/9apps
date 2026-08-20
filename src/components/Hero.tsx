@@ -8,16 +8,16 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 }
 
@@ -27,18 +27,18 @@ export default function Hero() {
       {/* Background orbs */}
       <div className="orb orb-1" />
       <div className="orb orb-2" />
-      <div className="orb w-[300px] h-[300px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <div className="orb w-[400px] h-[400px] bg-gradient-to-r from-purple-500/15 to-pink-500/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       {/* Grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+          backgroundSize: '64px 64px',
         }}
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -47,17 +47,17 @@ export default function Hero() {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="flex justify-center mb-8 w-full">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm whitespace-nowrap">
-              <Sparkles className="w-4 h-4 flex-shrink-0" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/[0.08] border border-indigo-500/15 text-indigo-300 text-xs font-medium tracking-wide whitespace-nowrap">
+              <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
               <span>Next-Generation Business Software</span>
-              <ArrowRight className="w-4 h-4 flex-shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
             </div>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-balance"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight leading-[1.08] mb-7 text-balance"
           >
             <span className="text-white">Manage Your Business</span>
             <br />
@@ -67,7 +67,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed text-balance"
+            className="max-w-[580px] mx-auto text-[17px] sm:text-lg text-gray-400 mb-10 leading-relaxed text-balance"
           >
             Powerful CRM and ERP solutions designed to streamline your workflows,
             boost productivity, and drive growth. Built for modern teams.
@@ -80,28 +80,28 @@ export default function Hero() {
           >
             <Link
               href="/signup"
-              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden animate-glow whitespace-nowrap"
+              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden animate-glow whitespace-nowrap"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative flex items-center gap-2">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
-            <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300 whitespace-nowrap">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
-                <Play className="w-4 h-4 ml-0.5" />
+            <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-300 whitespace-nowrap">
+              <div className="w-10 h-10 rounded-full bg-white/[0.06] flex items-center justify-center group-hover:bg-white/[0.1] transition-colors flex-shrink-0">
+                <Play className="w-3.5 h-3.5 ml-0.5" />
               </div>
-              <span className="font-medium">Watch Demo</span>
+              <span className="font-medium text-sm">Watch Demo</span>
             </button>
           </motion.div>
 
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto w-full"
+            className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-3xl mx-auto w-full"
           >
             {[
               { value: '10K+', label: 'Active Users' },
@@ -114,10 +114,10 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1.5">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
+                <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -125,7 +125,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-950 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#06080f] to-transparent" />
     </section>
   )
 }

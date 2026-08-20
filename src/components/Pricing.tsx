@@ -18,7 +18,6 @@ const plans = [
       'Basic analytics',
       'Standard support',
     ],
-    gradient: 'from-gray-700 to-gray-600',
     popular: false,
   },
   {
@@ -35,7 +34,6 @@ const plans = [
       'Priority support',
       'Custom branding',
     ],
-    gradient: 'from-indigo-500 to-purple-500',
     popular: true,
   },
   {
@@ -53,7 +51,6 @@ const plans = [
       'Custom deployments',
       'SLA guarantee',
     ],
-    gradient: 'from-cyan-500 to-teal-500',
     popular: false,
   },
 ]
@@ -72,21 +69,21 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-sm font-medium text-purple-400 tracking-wider uppercase mb-4 block">
+          <span className="text-xs font-semibold text-purple-400 tracking-[0.2em] uppercase mb-4 block">
             Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-white">Simple, transparent </span>
             <span className="gradient-text">pricing</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-400 text-lg">
+          <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             Start free, upgrade when you&apos;re ready. No hidden fees, no surprises.
             All plans include a 14-day free trial.
           </p>
         </motion.div>
 
         {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -96,8 +93,8 @@ export default function Pricing() {
               className="relative"
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-semibold">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
+                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[11px] font-semibold tracking-wide shadow-lg shadow-indigo-500/25">
                     <Zap className="w-3 h-3" />
                     Most Popular
                   </div>
@@ -107,13 +104,13 @@ export default function Pricing() {
               <div
                 className={`glass-card rounded-3xl p-8 h-full flex flex-col ${
                   plan.popular
-                    ? 'border-indigo-500/30 bg-indigo-500/[0.03]'
+                    ? 'border-indigo-500/20 bg-indigo-500/[0.03] shadow-xl shadow-indigo-500/5'
                     : ''
                 }`}
               >
                 {/* Plan header */}
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-1.5">{plan.name}</h3>
                   <p className="text-sm text-gray-500">{plan.description}</p>
                 </div>
 
@@ -131,7 +128,7 @@ export default function Pricing() {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                        plan.popular ? 'text-indigo-400' : 'text-gray-500'
+                        plan.popular ? 'text-indigo-400' : 'text-gray-600'
                       }`} />
                       <span className="text-sm text-gray-300">{feature}</span>
                     </li>
@@ -144,7 +141,7 @@ export default function Pricing() {
                   className={`group flex items-center justify-center gap-2 py-3.5 rounded-xl font-medium text-sm transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:shadow-lg hover:shadow-indigo-500/25'
-                      : 'bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20'
+                      : 'bg-white/[0.04] text-white border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.12]'
                   }`}
                 >
                   Start Free Trial
