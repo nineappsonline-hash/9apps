@@ -559,3 +559,10 @@ body {
   background-clip: text;
   animation: textShimmer 4s linear infinite;
 }
+
+/* ======== OVERFLOW WRAP ======== */
+
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
