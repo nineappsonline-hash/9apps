@@ -26,7 +26,7 @@ export default function CTA() {
           <div className="absolute inset-0 rounded-3xl border-gradient" />
 
           {/* Content */}
-          <div className="relative z-10 text-center py-16 px-8">
+          <div className="relative z-10 text-center py-16 px-6 sm:px-8">
             <motion.div
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : {}}
@@ -36,10 +36,10 @@ export default function CTA() {
               <Sparkles className="w-8 h-8 text-white" />
             </motion.div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-balance">
               Ready to transform your business?
             </h2>
-            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto text-balance">
               Start your 14-day free trial today. No credit card required.
               Full access to all features.
             </p>
@@ -47,16 +47,14 @@ export default function CTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/signup"
-                className="group px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 whitespace-nowrap"
               >
-                <span className="flex items-center gap-2">
-                  Get Started for Free
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
+                Get Started for Free
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/signin"
-                className="px-8 py-4 text-gray-300 hover:text-white border border-white/10 hover:border-white/20 rounded-2xl font-medium transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 text-gray-300 hover:text-white border border-white/10 hover:border-white/20 rounded-2xl font-medium transition-all duration-300 whitespace-nowrap"
               >
                 Sign In to Dashboard
               </Link>

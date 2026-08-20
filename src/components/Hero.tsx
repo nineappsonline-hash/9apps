@@ -30,34 +30,34 @@ export default function Hero() {
       <div className="orb w-[300px] h-[300px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-[0.03]"
+      <div
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center"
+          className="text-center flex flex-col items-center"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm">
-              <Sparkles className="w-4 h-4" />
+          <motion.div variants={itemVariants} className="flex justify-center mb-8 w-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm whitespace-nowrap">
+              <Sparkles className="w-4 h-4 flex-shrink-0" />
               <span>Next-Generation Business Software</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 flex-shrink-0" />
             </div>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-balance"
           >
             <span className="text-white">Manage Your Business</span>
             <br />
@@ -67,7 +67,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed"
+            className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed text-balance"
           >
             Powerful CRM and ERP solutions designed to streamline your workflows,
             boost productivity, and drive growth. Built for modern teams.
@@ -76,11 +76,11 @@ export default function Hero() {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
           >
             <Link
               href="/signup"
-              className="group relative px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden animate-glow"
+              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden animate-glow whitespace-nowrap"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -90,8 +90,8 @@ export default function Hero() {
               </span>
             </Link>
 
-            <button className="group flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+            <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300 whitespace-nowrap">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
                 <Play className="w-4 h-4 ml-0.5" />
               </div>
               <span className="font-medium">Watch Demo</span>
@@ -101,14 +101,14 @@ export default function Hero() {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto w-full"
           >
             {[
               { value: '10K+', label: 'Active Users' },
               { value: '99.9%', label: 'Uptime' },
               { value: '50+', label: 'Integrations' },
               { value: '4.9/5', label: 'User Rating' },
-            ].map((stat, i) => (
+            ].map((stat) => (
               <motion.div
                 key={stat.label}
                 whileHover={{ scale: 1.05 }}

@@ -3,8 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
-  variable: '--font-inter',
   subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
@@ -25,10 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen bg-gray-950 text-white font-sans">
-        {children}
-      </body>
+    <html lang="en" className={inter.variable}>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }

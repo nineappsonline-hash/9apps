@@ -88,11 +88,11 @@ export default function Features() {
           <span className="text-sm font-medium text-indigo-400 tracking-wider uppercase mb-4 block">
             Features
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
             <span className="text-white">Everything you need to </span>
             <span className="gradient-text">scale your business</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-400 text-lg">
+          <p className="max-w-2xl mx-auto text-gray-400 text-lg text-balance">
             A comprehensive suite of tools designed to cover every aspect of
             your business operations, from sales to supply chain.
           </p>
