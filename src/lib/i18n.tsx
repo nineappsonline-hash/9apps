@@ -82,37 +82,8 @@ type TranslationKeys = {
   pricingTitle1: string
   pricingTitle2: string
   pricingSubtitle: string
-  starter: string
-  starterDesc: string
-  professional: string
-  professionalDesc: string
-  enterprise: string
-  enterpriseDesc: string
   perMonth: string
-  mostPopular: string
-  starterF1: string
-  starterF2: string
-  starterF3: string
-  starterF4: string
-  starterF5: string
-  starterF6: string
-  proF1: string
-  proF2: string
-  proF3: string
-  proF4: string
-  proF5: string
-  proF6: string
-  proF7: string
-  proF8: string
-  entF1: string
-  entF2: string
-  entF3: string
-  entF4: string
-  entF5: string
-  entF6: string
-  entF7: string
-  entF8: string
-  entF9: string
+  subscribe: string
   // Testimonials
   testimonialsLabel: string
   testimonialsTitle1: string
@@ -228,40 +199,11 @@ const translations: Record<Locale, TranslationKeys> = {
     projectBillingDesc: 'Time tracking, resource allocation, and automated client billing.',
     // Pricing
     pricingLabel: 'Pricing',
-    pricingTitle1: 'Simple, transparent ',
-    pricingTitle2: 'pricing',
-    pricingSubtitle: "Start free, upgrade when you're ready. No hidden fees, no surprises. All plans include a 14-day free trial.",
-    starter: 'Starter',
-    starterDesc: 'Perfect for small teams getting started',
-    professional: 'Professional',
-    professionalDesc: 'For growing businesses that need more',
-    enterprise: 'Enterprise',
-    enterpriseDesc: 'For large organizations with custom needs',
+    pricingTitle1: 'Choose the products ',
+    pricingTitle2: 'you need',
+    pricingSubtitle: 'Subscribe to individual products that fit your business. Start free, cancel anytime. All products include a 14-day free trial.',
     perMonth: '/month',
-    mostPopular: 'Most Popular',
-    starterF1: 'Up to 5 team members',
-    starterF2: 'CRM Suite (basic)',
-    starterF3: '1,000 contacts',
-    starterF4: 'Email integration',
-    starterF5: 'Basic analytics',
-    starterF6: 'Standard support',
-    proF1: 'Up to 25 team members',
-    proF2: 'CRM + ERP Suites',
-    proF3: 'Unlimited contacts',
-    proF4: 'All integrations',
-    proF5: 'Advanced analytics & AI',
-    proF6: 'Workflow automation',
-    proF7: 'Priority support',
-    proF8: 'Custom branding',
-    entF1: 'Unlimited team members',
-    entF2: 'Full Platform Access',
-    entF3: 'Unlimited everything',
-    entF4: 'All integrations + API',
-    entF5: 'AI-powered insights',
-    entF6: 'Advanced automation',
-    entF7: 'Dedicated account manager',
-    entF8: 'Custom deployments',
-    entF9: 'SLA guarantee',
+    subscribe: 'Subscribe',
     // Testimonials
     testimonialsLabel: 'Testimonials',
     testimonialsTitle1: 'Loved by teams ',
@@ -375,40 +317,11 @@ const translations: Record<Locale, TranslationKeys> = {
     projectBillingDesc: 'تتبع الوقت وتخصيص الموارد وفوترة العملاء الآلية.',
     // Pricing
     pricingLabel: 'الأسعار',
-    pricingTitle1: 'أسعار ',
-    pricingTitle2: 'بسيطة وشفافة',
-    pricingSubtitle: 'ابدأ مجاناً وقم بالترقية عندما تكون مستعداً. لا رسوم خفية، لا مفاجآت. جميع الخطط تشمل تجربة مجانية لمدة 14 يوماً.',
-    starter: 'المبتدئ',
-    starterDesc: 'مثالي للفرق الصغيرة التي تبدأ',
-    professional: 'الاحترافي',
-    professionalDesc: 'للأعمال النامية التي تحتاج المزيد',
-    enterprise: 'المؤسسات',
-    enterpriseDesc: 'للمنظمات الكبيرة ذات الاحتياجات المخصصة',
+    pricingTitle1: 'اختر المنتجات ',
+    pricingTitle2: 'التي تحتاجها',
+    pricingSubtitle: 'اشترك في المنتجات الفردية التي تناسب عملك. ابدأ مجاناً، ألغِ في أي وقت. جميع المنتجات تشمل تجربة مجانية لمدة 14 يوماً.',
     perMonth: '/شهرياً',
-    mostPopular: 'الأكثر شعبية',
-    starterF1: 'حتى 5 أعضاء فريق',
-    starterF2: 'حزمة CRM (أساسي)',
-    starterF3: '1,000 جهة اتصال',
-    starterF4: 'تكامل البريد الإلكتروني',
-    starterF5: 'تحليلات أساسية',
-    starterF6: 'دعم قياسي',
-    proF1: 'حتى 25 عضو فريق',
-    proF2: 'حزم CRM + ERP',
-    proF3: 'جهات اتصال غير محدودة',
-    proF4: 'جميع التكاملات',
-    proF5: 'تحليلات متقدمة والذكاء الاصطناعي',
-    proF6: 'أتمتة سير العمل',
-    proF7: 'دعم ذو أولوية',
-    proF8: 'علامة تجارية مخصصة',
-    entF1: 'أعضاء فريق غير محدودين',
-    entF2: 'وصول كامل للمنصة',
-    entF3: 'كل شيء غير محدود',
-    entF4: 'جميع التكاملات + API',
-    entF5: 'رؤى مدعومة بالذكاء الاصطناعي',
-    entF6: 'أتمتة متقدمة',
-    entF7: 'مدير حساب مخصص',
-    entF8: 'نشر مخصص',
-    entF9: 'ضمان اتفاقية مستوى الخدمة',
+    subscribe: 'اشترك',
     // Testimonials
     testimonialsLabel: 'آراء العملاء',
     testimonialsTitle1: 'محبوبة من ',
@@ -451,8 +364,36 @@ const translations: Record<Locale, TranslationKeys> = {
 
 // Currency
 export const currencyConfig = {
-  en: { symbol: '$', prices: { starter: '29', pro: '79', enterprise: '199' } },
-  ar: { symbol: 'ج.م', prices: { starter: '899', pro: '2,499', enterprise: '5,999' } },
+  en: {
+    symbol: '$',
+    products: {
+      contactManager: '19',
+      emailCampaigns: '29',
+      callTracker: '15',
+      salesPipeline: '39',
+      dealRoom: '35',
+      inventoryControl: '25',
+      supplyChain: '45',
+      financialSuite: '49',
+      hrManagement: '29',
+      projectBilling: '35',
+    },
+  },
+  ar: {
+    symbol: 'ج.م',
+    products: {
+      contactManager: '599',
+      emailCampaigns: '899',
+      callTracker: '449',
+      salesPipeline: '1,249',
+      dealRoom: '1,099',
+      inventoryControl: '799',
+      supplyChain: '1,399',
+      financialSuite: '1,499',
+      hrManagement: '899',
+      projectBilling: '1,099',
+    },
+  },
 }
 
 type I18nContextType = {

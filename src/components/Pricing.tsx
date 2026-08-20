@@ -2,42 +2,107 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Check, ArrowRight, Zap } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
+import {
+  Users,
+  BarChart3,
+  Mail,
+  Phone,
+  ShoppingCart,
+  Warehouse,
+  Truck,
+  DollarSign,
+  FileText,
+  Calculator,
+} from 'lucide-react'
 
 export default function Pricing() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const { t, currency } = useI18n()
 
-  const plans = [
+  const products = [
     {
-      name: t.starter,
-      price: currency.prices.starter,
-      description: t.starterDesc,
-      features: [t.starterF1, t.starterF2, t.starterF3, t.starterF4, t.starterF5, t.starterF6],
-      popular: false,
+      icon: Users,
+      name: t.contactManager,
+      description: t.contactManagerDesc,
+      price: currency.products.contactManager,
+      gradient: 'from-indigo-500 to-purple-500',
     },
     {
-      name: t.professional,
-      price: currency.prices.pro,
-      description: t.professionalDesc,
-      features: [t.proF1, t.proF2, t.proF3, t.proF4, t.proF5, t.proF6, t.proF7, t.proF8],
-      popular: true,
+      icon: Mail,
+      name: t.emailCampaigns,
+      description: t.emailCampaignsDesc,
+      price: currency.products.emailCampaigns,
+      gradient: 'from-cyan-500 to-blue-500',
     },
     {
-      name: t.enterprise,
-      price: currency.prices.enterprise,
-      description: t.enterpriseDesc,
-      features: [t.entF1, t.entF2, t.entF3, t.entF4, t.entF5, t.entF6, t.entF7, t.entF8, t.entF9],
-      popular: false,
+      icon: Phone,
+      name: t.callTracker,
+      description: t.callTrackerDesc,
+      price: currency.products.callTracker,
+      gradient: 'from-violet-500 to-pink-500',
+    },
+    {
+      icon: BarChart3,
+      name: t.salesPipeline,
+      description: t.salesPipelineDesc,
+      price: currency.products.salesPipeline,
+      gradient: 'from-emerald-500 to-teal-500',
+    },
+    {
+      icon: ShoppingCart,
+      name: t.dealRoom,
+      description: t.dealRoomDesc,
+      price: currency.products.dealRoom,
+      gradient: 'from-orange-500 to-red-500',
+    },
+    {
+      icon: Warehouse,
+      name: t.inventoryControl,
+      description: t.inventoryControlDesc,
+      price: currency.products.inventoryControl,
+      gradient: 'from-yellow-500 to-orange-500',
+    },
+    {
+      icon: Truck,
+      name: t.supplyChain,
+      description: t.supplyChainDesc,
+      price: currency.products.supplyChain,
+      gradient: 'from-blue-500 to-indigo-500',
+    },
+    {
+      icon: DollarSign,
+      name: t.financialSuite,
+      description: t.financialSuiteDesc,
+      price: currency.products.financialSuite,
+      gradient: 'from-pink-500 to-rose-500',
+    },
+    {
+      icon: FileText,
+      name: t.hrManagement,
+      description: t.hrManagementDesc,
+      price: currency.products.hrManagement,
+      gradient: 'from-teal-500 to-cyan-500',
+    },
+    {
+      icon: Calculator,
+      name: t.projectBilling,
+      description: t.projectBillingDesc,
+      price: currency.products.projectBilling,
+      gradient: 'from-indigo-500 to-blue-500',
     },
   ]
 
   return (
     <section id="pricing" className="relative py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+      {/* Background accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-purple-500/[0.03] rounded-full blur-[140px]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -56,65 +121,43 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan, i) => (
+        {/* Product cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+          {products.map((product, i) => (
             <motion.div
-              key={plan.name}
+              key={product.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative"
+              transition={{ duration: 0.5, delay: i * 0.06 }}
             >
-              {plan.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[11px] font-semibold tracking-wide shadow-lg shadow-indigo-500/25">
-                    <Zap className="w-3 h-3" />
-                    {t.mostPopular}
-                  </div>
-                </div>
-              )}
-
-              <div
-                className={`glass-card rounded-3xl p-8 h-full flex flex-col ${
-                  plan.popular
-                    ? 'border-indigo-500/20 bg-indigo-500/[0.03] shadow-xl shadow-indigo-500/5'
-                    : ''
-                }`}
-              >
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-1.5">{plan.name}</h3>
-                  <p className="text-sm text-gray-500">{plan.description}</p>
+              <div className="glass-card rounded-2xl p-6 h-full flex flex-col group">
+                {/* Icon */}
+                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <product.icon className="w-5 h-5 text-white" />
                 </div>
 
-                <div className="mb-8">
-                  <div className="flex items-end gap-1">
-                    <span className="text-sm text-gray-400">{currency.symbol}</span>
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-sm text-gray-500 mb-2">{t.perMonth}</span>
-                  </div>
+                {/* Name & Description */}
+                <h3 className="text-[15px] font-semibold text-white mb-1.5">
+                  {product.name}
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed flex-1 mb-5">
+                  {product.description}
+                </p>
+
+                {/* Price */}
+                <div className="flex items-end gap-1 mb-4">
+                  <span className="text-xs text-gray-400">{currency.symbol}</span>
+                  <span className="text-3xl font-bold text-white">{product.price}</span>
+                  <span className="text-xs text-gray-500 mb-1">{t.perMonth}</span>
                 </div>
 
-                <ul className="space-y-3 mb-8 flex-1">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                        plan.popular ? 'text-indigo-400' : 'text-gray-600'
-                      }`} />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
+                {/* Subscribe button */}
                 <Link
                   href="/signup"
-                  className={`group flex items-center justify-center gap-2 py-3.5 rounded-xl font-medium text-sm transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:shadow-lg hover:shadow-indigo-500/25'
-                      : 'bg-white/[0.04] text-white border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.12]'
-                  }`}
+                  className="group/btn flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm bg-white/[0.04] text-white border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
                 >
-                  {t.startFreeTrial}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  {t.subscribe}
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </motion.div>
