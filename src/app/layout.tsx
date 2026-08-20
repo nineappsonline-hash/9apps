@@ -21,10 +21,15 @@ export const metadata: Metadata = {
   description:
     'Powerful CRM and ERP solutions designed to streamline workflows, boost productivity, and drive business growth. Start your free trial today.',
   keywords: ['CRM', 'ERP', 'business software', 'customer relationship management', 'enterprise resource planning'],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'NineApps — CRM & ERP Software for Modern Teams',
     description: 'Powerful CRM and ERP solutions designed to streamline workflows, boost productivity, and drive business growth.',
     type: 'website',
+    images: ['/Logo.jpeg'],
   },
 }
 
