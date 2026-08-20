@@ -8,86 +8,79 @@ import Marquee from './Marquee'
 
 const testimonialsData = [
   {
-    nameEn: 'Sarah Chen', nameAr: 'سارة تشين',
-    roleEn: 'CTO at TechFlow', roleAr: 'مديرة التقنية في TechFlow',
-    avatar: 'SC', rating: 5,
-    quoteEn: 'NineApps completely transformed how we manage our sales pipeline. The AI insights alone saved us 20+ hours per week on manual analysis.',
-    quoteAr: ' NineApps غيّرت تماماً طريقة إدارة خط أنابيب المبيعات لدينا. رؤى الذكاء الاصطناعي وحدها وفرت لنا أكثر من 20 ساعة أسبوعياً من التحليل اليدوي.',
+    nameEn: 'Ahmed Hassan', nameAr: 'أحمد حسن',
+    roleEn: 'CEO at Cairo Digital', roleAr: 'الرئيس التنفيذي في كايرو ديجيتال',
+    avatar: 'AH', rating: 5,
+    quoteEn: 'NineApps transformed our sales process completely. We closed 35% more deals in just 3 months.',
+    quoteAr: 'NineApps غيّرت عملية المبيعات لدينا بالكامل. أغلقنا صفقات بنسبة 35% أكثر في 3 أشهر فقط.',
     gradient: 'from-indigo-500 to-purple-500',
   },
   {
-    nameEn: 'Marcus Rivera', nameAr: 'ماركوس ريفيرا',
-    roleEn: 'Operations Director at ScaleUp', roleAr: 'مدير العمليات في ScaleUp',
-    avatar: 'MR', rating: 5,
-    quoteEn: 'The ERP suite is phenomenal. We went from juggling 5 different tools to one unified platform. Our efficiency has increased by 40%.',
-    quoteAr: 'حزمة ERP مذهلة. انتقلنا من استخدام 5 أدوات مختلفة إلى منصة موحدة واحدة. زادت كفاءتنا بنسبة 40%.',
+    nameEn: 'Fatma El-Sayed', nameAr: 'فاطمة السيد',
+    roleEn: 'Ops Manager at Nile Tech', roleAr: 'مديرة العمليات في نايل تك',
+    avatar: 'FS', rating: 5,
+    quoteEn: 'The ERP suite saved us from using 4 different tools. Everything we need is in one place now.',
+    quoteAr: 'حزمة ERP أنقذتنا من استخدام 4 أدوات مختلفة. كل ما نحتاجه في مكان واحد الآن.',
     gradient: 'from-cyan-500 to-blue-500',
   },
   {
-    nameEn: 'Emily Nakamura', nameAr: 'إيميلي ناكامورا',
-    roleEn: 'VP Sales at GrowthCo', roleAr: 'نائبة رئيس المبيعات في GrowthCo',
-    avatar: 'EN', rating: 5,
-    quoteEn: 'Best CRM I have ever used. The 360° customer view feature gives our team everything they need to close deals with confidence.',
-    quoteAr: 'أفضل نظام CRM استخدمته. ميزة النظرة الشاملة 360° على العملاء تعطي فريقنا كل ما يحتاجونه لإتمام الصفقات بثقة.',
+    nameEn: 'Omar Khalil', nameAr: 'عمر خليل',
+    roleEn: 'Founder at Delta Apps', roleAr: 'مؤسس دلتا أبس',
+    avatar: 'OK', rating: 5,
+    quoteEn: 'Best CRM I have used. The customer view feature helps our team close deals with confidence.',
+    quoteAr: 'أفضل نظام CRM استخدمته. ميزة النظرة الشاملة على العملاء تساعد فريقنا على إتمام الصفقات بثقة.',
     gradient: 'from-violet-500 to-pink-500',
   },
   {
-    nameEn: 'David Okafor', nameAr: 'ديفيد أوكافور',
-    roleEn: 'Founder at NovaTech', roleAr: 'مؤسس NovaTech',
-    avatar: 'DO', rating: 5,
-    quoteEn: 'From startup to 200+ employees, NineApps scaled with us perfectly. The modular approach meant we only paid for what we needed.',
-    quoteAr: 'من شركة ناشئة إلى أكثر من 200 موظف، توسع NineApps معنا بشكل مثالي. النهج المعياري يعني أننا دفعنا فقط لما نحتاجه.',
+    nameEn: 'Nour Ibrahim', nameAr: 'نور إبراهيم',
+    roleEn: 'Head of IT at Alex Corp', roleAr: 'رئيسة قسم تكنولوجيا المعلومات في الإسكندرية كورب',
+    avatar: 'NI', rating: 5,
+    quoteEn: 'We automated 60% of our repetitive tasks in the first month. The workflow automation is incredible.',
+    quoteAr: 'أتمتنا 60% من المهام المتكررة في الشهر الأول. أتمتة سير العمل مذهلة.',
     gradient: 'from-emerald-500 to-teal-500',
   },
   {
-    nameEn: 'Lisa Andersson', nameAr: 'ليزا أندرسون',
-    roleEn: 'Head of IT at Nordic Retail', roleAr: 'رئيسة قسم تكنولوجيا المعلومات في Nordic Retail',
-    avatar: 'LA', rating: 5,
-    quoteEn: 'The workflow automation is a game changer. We automated 60% of our repetitive processes within the first month of implementation.',
-    quoteAr: 'أتمتة سير العمل هي نقطة تحول. أتمتنا 60% من عملياتنا المتكررة خلال الشهر الأول من التطبيق.',
+    nameEn: 'Youssef Ali', nameAr: 'يوسف علي',
+    roleEn: 'COO at Smart Solutions', roleAr: 'المدير التنفيذي في سمارت سولوشنز',
+    avatar: 'YA', rating: 5,
+    quoteEn: 'Outstanding support and a product that just works. The analytics dashboard gives me everything at a glance.',
+    quoteAr: 'فريق دعم متميز ومنتج يعمل بشكل ممتاز. لوحة التحليلات تعطيني كل ما أحتاجه من لمحة.',
     gradient: 'from-orange-500 to-red-500',
   },
   {
-    nameEn: 'James Mitchell', nameAr: 'جيمس ميتشل',
-    roleEn: 'COO at GlobalEdge', roleAr: 'العميل التنفيذي في GlobalEdge',
-    avatar: 'JM', rating: 5,
-    quoteEn: 'Outstanding support team and a product that just works. The real-time analytics dashboard gives me exactly what I need at a glance.',
-    quoteAr: 'فريق دعم متميز ومنتج يعمل بشكل ممتاز. لوحة التحليلات في الوقت الحقيقي تعطيني بالضبط ما أحتاجه من لمحة.',
+    nameEn: 'Mona Farouk', nameAr: 'منى فاروق',
+    roleEn: 'VP Sales at Delta ERP', roleAr: 'نائبة رئيس المبيعات في دلتا إرب',
+    avatar: 'MF', rating: 5,
+    quoteEn: 'From 10 employees to 200+, NineApps scaled with us perfectly. Only paid for what we needed.',
+    quoteAr: 'من 10 موظفين إلى أكثر من 200، توسع NineApps معنا بشكل مثالي. دفعنا فقط لما نحتاجه.',
     gradient: 'from-yellow-500 to-orange-500',
   },
 ]
 
 function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimonialsData[0]; locale: string }) {
   return (
-    <div className="glass-card rounded-2xl p-6 w-[380px] flex-shrink-0 mx-3 hover-lift group">
-      <Quote className="w-7 h-7 text-indigo-500/25 mb-4 group-hover:text-indigo-500/40 transition-colors" />
+    <div className="glass-card rounded-2xl p-5 w-[340px] flex-shrink-0 mx-2.5 hover-lift group">
+      <Quote className="w-6 h-6 text-indigo-500/25 mb-3 group-hover:text-indigo-500/40 transition-colors" />
 
-      <div className="flex gap-0.5 mb-4">
+      <div className="flex gap-0.5 mb-3">
         {Array.from({ length: testimonial.rating }).map((_, j) => (
-          <motion.div
-            key={j}
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: j * 0.05, type: 'spring' }}
-          >
-            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-          </motion.div>
+          <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
         ))}
       </div>
 
-      <p className="text-sm text-gray-300 leading-relaxed mb-6">
+      <p className="text-[13px] text-gray-300 leading-relaxed mb-5 line-clamp-4">
         &ldquo;{locale === 'ar' ? testimonial.quoteAr : testimonial.quoteEn}&rdquo;
       </p>
 
-      <div className="flex items-center gap-3 pt-4 border-t border-white/[0.04]">
-        <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-white text-[11px] font-bold group-hover:scale-110 transition-transform duration-300`}>
+      <div className="flex items-center gap-3 pt-3 border-t border-white/[0.04]">
+        <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-white text-[10px] font-bold group-hover:scale-110 transition-transform duration-300`}>
           {testimonial.avatar}
         </div>
-        <div>
-          <div className="text-sm font-medium text-white">
+        <div className="min-w-0">
+          <div className="text-sm font-medium text-white truncate">
             {locale === 'ar' ? testimonial.nameAr : testimonial.nameEn}
           </div>
-          <div className="text-xs text-gray-500">
+          <div className="text-[11px] text-gray-500 truncate">
             {locale === 'ar' ? testimonial.roleAr : testimonial.roleEn}
           </div>
         </div>
@@ -110,7 +103,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
@@ -130,23 +123,12 @@ export default function Testimonials() {
         </motion.div>
       </div>
 
-      {/* Auto-scrolling marquee row 1 */}
-      <div className="mb-5">
-        <Marquee speed={35} rtl={locale === 'ar'}>
-          {testimonialsData.map((testimonial) => (
-            <TestimonialCard key={testimonial.nameEn} testimonial={testimonial} locale={locale} />
-          ))}
-        </Marquee>
-      </div>
-
-      {/* Auto-scrolling marquee row 2 (reverse) */}
-      <div className="mb-10">
-        <Marquee speed={40} rtl={locale !== 'ar'}>
-          {[...testimonialsData].reverse().map((testimonial) => (
-            <TestimonialCard key={`rev-${testimonial.nameEn}`} testimonial={testimonial} locale={locale} />
-          ))}
-        </Marquee>
-      </div>
+      {/* Single marquee row */}
+      <Marquee speed={30} rtl={locale === 'ar'}>
+        {testimonialsData.map((testimonial) => (
+          <TestimonialCard key={testimonial.nameEn} testimonial={testimonial} locale={locale} />
+        ))}
+      </Marquee>
     </section>
   )
 }
