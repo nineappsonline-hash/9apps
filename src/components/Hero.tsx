@@ -8,8 +8,6 @@ import ParticleField from './ParticleField'
 import TextScramble from './TextScramble'
 import MagneticButton from './MagneticButton'
 import GlitchText from './GlitchText'
-import InteractiveGrid from './InteractiveGrid'
-import AnimatedTeamIllustration from './AnimatedTeamIllustration'
 import { useRef } from 'react'
 
 const containerVariants = {
@@ -78,7 +76,7 @@ function FloatingMockup() {
               <span className="text-[10px] text-gray-400 font-medium">Sales Pipeline</span>
             </div>
             <div className="flex items-end gap-1.5 h-20">
-              {[40, 65, 45, 80, 55, 90, 70, 95, 60, 85, 75, 100].map((h, i) => (
+              {[40, 65, 45, 80, 55, 90, 70, 95].map((h, i) => (
                 <motion.div
                   key={i}
                   initial={{ height: 0 }}
@@ -123,9 +121,6 @@ export default function Hero() {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Interactive grid */}
-      <InteractiveGrid />
-
       {/* Animated mesh background */}
       <div className="animated-mesh" />
 
@@ -139,7 +134,7 @@ export default function Hero() {
       />
 
       {/* Particles */}
-      <ParticleField count={50} color="rgba(129, 140, 248, 0.3)" />
+      <ParticleField count={20} color="rgba(129, 140, 248, 0.3)" />
 
       {/* Grid overlay */}
       <div
@@ -225,11 +220,6 @@ export default function Hero() {
                 <span className="font-medium text-sm">{t.watchDemo}</span>
               </button>
             </MagneticButton>
-          </motion.div>
-
-          {/* Animated team illustration */}
-          <motion.div variants={itemVariants} className="w-full mb-8">
-            <AnimatedTeamIllustration className="w-full max-w-xl mx-auto h-auto" />
           </motion.div>
 
           {/* Floating mockup */}

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function AnimatedDataFlow({ className = '' }: { className?: string }) {
   return (
     <motion.svg
-      viewBox="0 0 400 200"
+      viewBox="0 0 400 180"
       fill="none"
       className={className}
       initial={{ opacity: 0 }}
@@ -13,35 +13,37 @@ export default function AnimatedDataFlow({ className = '' }: { className?: strin
       transition={{ duration: 1 }}
     >
       <defs>
-        <linearGradient id="flowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="dfGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#818cf8" />
           <stop offset="100%" stopColor="#22d3ee" />
         </linearGradient>
-        <linearGradient id="flowGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#a78bfa" />
-          <stop offset="100%" stopColor="#ec4899" />
-        </linearGradient>
+        <filter id="nodeGlow">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
       </defs>
 
       {/* Central hub */}
       <motion.circle
-        cx="200" cy="100" r="25"
-        fill="#0f172a" stroke="url(#flowGrad1)" strokeWidth="2"
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        cx="200" cy="90" r="22"
+        fill="#0f172a" stroke="url(#dfGrad1)" strokeWidth="2"
+        animate={{ scale: [1, 1.04, 1] }}
+        transition={{ duration: 2.5, repeat: Infinity }}
       />
       <motion.circle
-        cx="200" cy="100" r="8"
-        fill="url(#flowGrad1)"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        cx="200" cy="90" r="7"
+        fill="url(#dfGrad1)"
+        animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 1.8, repeat: Infinity }}
       />
+      {/* Hub label */}
+      <text x="200" y="93" textAnchor="middle" fill="#818cf8" fontSize="6" fontWeight="bold" opacity="0.6">9APPS</text>
 
       {/* Left nodes */}
       {[
-        { x: 50, y: 40, label: 'CRM', color: '#818cf8' },
-        { x: 50, y: 100, label: 'ERP', color: '#22d3ee' },
-        { x: 50, y: 160, label: 'HR', color: '#a78bfa' },
+        { x: 55, y: 35, label: 'CRM', color: '#818cf8', icon: 'M0-4 L4 0 L0 4 L-4 0Z' },
+        { x: 55, y: 90, label: 'ERP', color: '#22d3ee', icon: 'M-3-3 L3-3 L3 3 L-3 3Z' },
+        { x: 55, y: 145, label: 'HR', color: '#a78bfa', icon: 'M0-4 L4 0 L0 4 L-4 0Z' },
       ].map((node, i) => (
         <motion.g
           key={node.label}
@@ -49,35 +51,43 @@ export default function AnimatedDataFlow({ className = '' }: { className?: strin
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 + i * 0.15 }}
         >
-          <circle cx={node.x} cy={node.y} r="18" fill="#0f172a" stroke={node.color} strokeWidth="1.5" opacity="0.8" />
-          <text x={node.x} y={node.y + 4} textAnchor="middle" fill={node.color} fontSize="8" fontWeight="bold">
+          {/* Glow */}
+          <circle cx={node.x} cy={node.y} r="20" fill={node.color} opacity="0.05" />
+          {/* Node circle */}
+          <circle cx={node.x} cy={node.y} r="16" fill="#0f172a" stroke={node.color} strokeWidth="1.5" />
+          {/* Icon inside */}
+          <g transform={`translate(${node.x}, ${node.y - 2})`} opacity="0.6">
+            <path d={node.icon} fill={node.color} />
+          </g>
+          {/* Label */}
+          <text x={node.x} y={node.y + 10} textAnchor="middle" fill={node.color} fontSize="6" fontWeight="bold" opacity="0.8">
             {node.label}
           </text>
-          {/* Connection line to center */}
+          {/* Connection line */}
           <motion.line
-            x1={node.x + 18} y1={node.y} x2="175" y2="100"
-            stroke={node.color} strokeWidth="0.8" opacity="0.3"
+            x1={node.x + 16} y1={node.y} x2="178" y2="90"
+            stroke={node.color} strokeWidth="0.8" strokeDasharray="3 3"
             animate={{ opacity: [0.15, 0.5, 0.15] }}
             transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
           />
-          {/* Data packet traveling */}
+          {/* Data packet */}
           <motion.circle
-            r="3" fill={node.color}
+            r="2.5" fill={node.color} filter="url(#nodeGlow)"
             animate={{
-              cx: [node.x + 18, 175],
-              cy: [node.y, 100],
-              opacity: [0, 0.8, 0],
+              cx: [node.x + 16, 178],
+              cy: [node.y, 90],
+              opacity: [0, 0.9, 0],
             }}
-            transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
+            transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.4, ease: "easeInOut" }}
           />
         </motion.g>
       ))}
 
       {/* Right nodes */}
       {[
-        { x: 350, y: 40, label: 'Sales', color: '#818cf8' },
-        { x: 350, y: 100, label: 'Data', color: '#22d3ee' },
-        { x: 350, y: 160, label: 'Finance', color: '#a78bfa' },
+        { x: 345, y: 35, label: 'Sales', color: '#818cf8', icon: 'M-2 3 L0-4 L2 3Z' },
+        { x: 345, y: 90, label: 'Data', color: '#22d3ee', icon: 'M-3 0 A3 3 0 1 1 3 0 A3 3 0 1 1 -3 0' },
+        { x: 345, y: 145, label: 'Finance', color: '#a78bfa', icon: 'M-3-2 L3-2 L3 2 L-3 2Z' },
       ].map((node, i) => (
         <motion.g
           key={node.label}
@@ -85,42 +95,39 @@ export default function AnimatedDataFlow({ className = '' }: { className?: strin
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 + i * 0.15 }}
         >
-          <circle cx={node.x} cy={node.y} r="18" fill="#0f172a" stroke={node.color} strokeWidth="1.5" opacity="0.8" />
-          <text x={node.x} y={node.y + 4} textAnchor="middle" fill={node.color} fontSize="7" fontWeight="bold">
+          <circle cx={node.x} cy={node.y} r="20" fill={node.color} opacity="0.05" />
+          <circle cx={node.x} cy={node.y} r="16" fill="#0f172a" stroke={node.color} strokeWidth="1.5" />
+          <g transform={`translate(${node.x}, ${node.y - 2})`} opacity="0.6">
+            <path d={node.icon} fill={node.color} />
+          </g>
+          <text x={node.x} y={node.y + 10} textAnchor="middle" fill={node.color} fontSize="5.5" fontWeight="bold" opacity="0.8">
             {node.label}
           </text>
           <motion.line
-            x1="225" y1="100" x2={node.x - 18} y2={node.y}
-            stroke={node.color} strokeWidth="0.8" opacity="0.3"
+            x1="222" y1="90" x2={node.x - 16} y2={node.y}
+            stroke={node.color} strokeWidth="0.8" strokeDasharray="3 3"
             animate={{ opacity: [0.15, 0.5, 0.15] }}
             transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 + 1 }}
           />
           <motion.circle
-            r="3" fill={node.color}
+            r="2.5" fill={node.color} filter="url(#nodeGlow)"
             animate={{
-              cx: [225, node.x - 18],
-              cy: [100, node.y],
-              opacity: [0, 0.8, 0],
+              cx: [222, node.x - 16],
+              cy: [90, node.y],
+              opacity: [0, 0.9, 0],
             }}
-            transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.5 + 0.7, ease: "easeInOut" }}
+            transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.4 + 0.6, ease: "easeInOut" }}
           />
         </motion.g>
       ))}
 
-      {/* Orbiting ring */}
+      {/* Orbiting rings */}
       <motion.circle
-        cx="200" cy="100" r="55"
-        stroke="url(#flowGrad1)" strokeWidth="0.5" fill="none" opacity="0.3"
+        cx="200" cy="90" r="50"
+        stroke="url(#dfGrad1)" strokeWidth="0.4" fill="none" opacity="0.2"
         animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: '200px 100px' }}
-      />
-      <motion.circle
-        cx="200" cy="100" r="70"
-        stroke="url(#flowGrad2)" strokeWidth="0.3" fill="none" opacity="0.2"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: '200px 100px' }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        style={{ transformOrigin: '200px 90px' }}
       />
     </motion.svg>
   )

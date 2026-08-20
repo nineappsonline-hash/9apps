@@ -567,15 +567,7 @@ body {
   word-break: break-word;
 }
 
-/* ======== CUSTOM CURSOR ======== */
-
-@media (min-width: 1024px) {
-  * {
-    cursor: none !important;
-  }
-}
-
-/* ======== GLITCH TEXT ======== */
+/* ======== OVERFLOW WRAP ======== */
 
 @keyframes glitchSkew {
   0% { transform: skew(0deg); }
