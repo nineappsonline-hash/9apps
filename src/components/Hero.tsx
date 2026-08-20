@@ -5,57 +5,36 @@ import Link from 'next/link'
 import { ArrowRight, Sparkles, Play, BarChart3, Users, TrendingUp, CheckCircle2 } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
 import ParticleField from './ParticleField'
-import { useEffect, useState, useRef } from 'react'
+import TextScramble from './TextScramble'
+import MagneticButton from './MagneticButton'
+import GlitchText from './GlitchText'
+import InteractiveGrid from './InteractiveGrid'
+import { useRef } from 'react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.4 },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 40, filter: 'blur(12px)', scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
     filter: 'blur(0px)',
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+    scale: 1,
+    transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 }
 
 const floatingVariants = {
   animate: {
-    y: [0, -12, 0],
-    transition: { duration: 5, repeat: Infinity, ease: 'easeInOut' as const },
+    y: [0, -15, 0],
+    transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' as const },
   },
-}
-
-function TypingBadge({ text }: { text: string }) {
-  const [displayed, setDisplayed] = useState('')
-  const [showCursor, setShowCursor] = useState(true)
-
-  useEffect(() => {
-    let i = 0
-    const timer = setInterval(() => {
-      if (i <= text.length) {
-        setDisplayed(text.slice(0, i))
-        i++
-      } else {
-        clearInterval(timer)
-        setTimeout(() => setShowCursor(false), 1500)
-      }
-    }, 60)
-    return () => clearInterval(timer)
-  }, [text])
-
-  return (
-    <span>
-      {displayed}
-      {showCursor && <span className="inline-block w-[2px] h-[14px] bg-indigo-400 ml-0.5 animate-pulse" />}
-    </span>
-  )
 }
 
 function FloatingMockup() {
@@ -103,7 +82,7 @@ function FloatingMockup() {
                   key={i}
                   initial={{ height: 0 }}
                   animate={{ height: `${h}%` }}
-                  transition={{ duration: 0.5, delay: 1.5 + i * 0.05 }}
+                  transition={{ duration: 0.5, delay: 2 + i * 0.05 }}
                   className="flex-1 rounded-sm bg-gradient-to-t from-indigo-500/30 to-indigo-400/60"
                 />
               ))}
@@ -119,7 +98,7 @@ function FloatingMockup() {
                 key={item.label}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 2 + i * 0.1 }}
+                transition={{ duration: 0.4, delay: 2.5 + i * 0.1 }}
                 className="flex-1 rounded-lg bg-white/[0.02] border border-white/[0.04] px-3 py-2"
               >
                 <div className="flex items-center gap-1.5 mb-1">
@@ -142,7 +121,10 @@ export default function Hero() {
   const isInView = useInView(heroRef, { once: true })
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Interactive grid */}
+      <InteractiveGrid />
+
       {/* Animated mesh background */}
       <div className="animated-mesh" />
 
@@ -156,7 +138,7 @@ export default function Hero() {
       />
 
       {/* Particles */}
-      <ParticleField count={40} color="rgba(129, 140, 248, 0.3)" />
+      <ParticleField count={50} color="rgba(129, 140, 248, 0.3)" />
 
       {/* Grid overlay */}
       <div
@@ -174,31 +156,31 @@ export default function Hero() {
           animate="visible"
           className="text-center flex flex-col items-center"
         >
-          {/* Badge with typing */}
+          {/* Badge with text scramble */}
           <motion.div variants={itemVariants} className="flex justify-center mb-8 w-full">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/[0.08] border border-indigo-500/15 text-indigo-300 text-xs font-medium tracking-wide whitespace-nowrap">
               <motion.div
-                animate={{ rotate: [0, 15, -15, 0] }}
+                animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
               </motion.div>
-              <span><TypingBadge text={t.badge} /></span>
+              <TextScramble text={t.badge} delay={500} speed={20} />
               <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
             </div>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline with glitch */}
           <motion.h1
             variants={itemVariants}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight leading-[1.08] mb-7 text-balance"
           >
-            <span className="text-white">{t.headline1}</span>
+            <GlitchText text={t.headline1} className="text-white" interval={5000} />
             <br />
             <span className="text-shimmer">{t.headline2}</span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle with character reveal */}
           <motion.p
             variants={itemVariants}
             className="max-w-[580px] mx-auto text-[17px] sm:text-lg text-gray-400 mb-10 leading-relaxed text-balance"
@@ -206,38 +188,42 @@ export default function Hero() {
             {t.heroSubtitle}
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with magnetic effect */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
           >
-            <Link
-              href="/signup"
-              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden glow-btn whitespace-nowrap"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <span className="relative flex items-center gap-2">
-                {t.startFreeTrial}
-                <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </motion.span>
-              </span>
-            </Link>
-
-            <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-300 whitespace-nowrap">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 rounded-full bg-white/[0.06] flex items-center justify-center group-hover:bg-white/[0.1] transition-colors flex-shrink-0"
+            <MagneticButton strength={0.2}>
+              <Link
+                href="/signup"
+                className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden glow-btn whitespace-nowrap"
               >
-                <Play className="w-3.5 h-3.5 ml-0.5" />
-              </motion.div>
-              <span className="font-medium text-sm">{t.watchDemo}</span>
-            </button>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative flex items-center gap-2">
+                  {t.startFreeTrial}
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.span>
+                </span>
+              </Link>
+            </MagneticButton>
+
+            <MagneticButton strength={0.15}>
+              <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-300 whitespace-nowrap">
+                <motion.div
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-10 h-10 rounded-full bg-white/[0.06] flex items-center justify-center group-hover:bg-white/[0.1] transition-colors flex-shrink-0"
+                >
+                  <Play className="w-3.5 h-3.5 ml-0.5" />
+                </motion.div>
+                <span className="font-medium text-sm">{t.watchDemo}</span>
+              </button>
+            </MagneticButton>
           </motion.div>
 
           {/* Floating mockup */}
@@ -256,16 +242,17 @@ export default function Hero() {
               { value: '50+', label: t.integrations },
               { value: '4.9/5', label: t.userRating },
             ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                whileHover={{ scale: 1.08, y: -4 }}
-                className="text-center"
-              >
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1.5">
-                  {stat.value}
-                </div>
-                <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
-              </motion.div>
+              <MagneticButton key={stat.label} strength={0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.08, y: -4 }}
+                  className="text-center"
+                >
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1.5">
+                    <TextScramble text={stat.value} delay={2500 + i * 200} />
+                  </div>
+                  <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
+                </motion.div>
+              </MagneticButton>
             ))}
           </motion.div>
         </motion.div>
