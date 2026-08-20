@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Cairo } from 'next/font/google'
 import './globals.css'
 import { I18nProvider } from '@/lib/i18n'
+import ClientEffects from '@/components/ClientEffects'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" className={`${inter.variable} ${cairo.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans">
+        <ClientEffects />
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>

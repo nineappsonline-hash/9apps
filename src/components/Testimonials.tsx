@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Star, Quote } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
+import Marquee from './Marquee'
 
 const testimonialsData = [
   {
@@ -56,6 +57,45 @@ const testimonialsData = [
   },
 ]
 
+function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimonialsData[0]; locale: string }) {
+  return (
+    <div className="glass-card rounded-2xl p-6 w-[380px] flex-shrink-0 mx-3 hover-lift group">
+      <Quote className="w-7 h-7 text-indigo-500/25 mb-4 group-hover:text-indigo-500/40 transition-colors" />
+
+      <div className="flex gap-0.5 mb-4">
+        {Array.from({ length: testimonial.rating }).map((_, j) => (
+          <motion.div
+            key={j}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: j * 0.05, type: 'spring' }}
+          >
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+          </motion.div>
+        ))}
+      </div>
+
+      <p className="text-sm text-gray-300 leading-relaxed mb-6">
+        &ldquo;{locale === 'ar' ? testimonial.quoteAr : testimonial.quoteEn}&rdquo;
+      </p>
+
+      <div className="flex items-center gap-3 pt-4 border-t border-white/[0.04]">
+        <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-white text-[11px] font-bold group-hover:scale-110 transition-transform duration-300`}>
+          {testimonial.avatar}
+        </div>
+        <div>
+          <div className="text-sm font-medium text-white">
+            {locale === 'ar' ? testimonial.nameAr : testimonial.nameEn}
+          </div>
+          <div className="text-xs text-gray-500">
+            {locale === 'ar' ? testimonial.roleAr : testimonial.roleEn}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Testimonials() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
@@ -72,56 +112,40 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-xs font-semibold text-emerald-400 tracking-[0.2em] uppercase mb-4 block">
+          <motion.span
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-xs font-semibold text-emerald-400 tracking-[0.2em] uppercase mb-4 block"
+          >
             {t.testimonialsLabel}
-          </span>
+          </motion.span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-white">{t.testimonialsTitle1}</span>
-            <span className="gradient-text">{t.testimonialsTitle2}</span>
+            <span className="text-shimmer">{t.testimonialsTitle2}</span>
           </h2>
           <p className="max-w-[500px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             {t.testimonialsSubtitle}
           </p>
         </motion.div>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {testimonialsData.map((testimonial, i) => (
-            <motion.div
-              key={testimonial.nameEn}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-            >
-              <div className="glass-card rounded-2xl p-6 h-full flex flex-col group">
-                <Quote className="w-7 h-7 text-indigo-500/25 mb-4" />
-
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, j) => (
-                    <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-
-                <p className="text-sm text-gray-300 leading-relaxed flex-1 mb-6">
-                  &ldquo;{locale === 'ar' ? testimonial.quoteAr : testimonial.quoteEn}&rdquo;
-                </p>
-
-                <div className="flex items-center gap-3 pt-4 border-t border-white/[0.04]">
-                  <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-white text-[11px] font-bold`}>
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-white">
-                      {locale === 'ar' ? testimonial.nameAr : testimonial.nameEn}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {locale === 'ar' ? testimonial.roleAr : testimonial.roleEn}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+      {/* Auto-scrolling marquee row 1 */}
+      <div className="mb-5">
+        <Marquee speed={35} rtl={locale === 'ar'}>
+          {testimonialsData.map((testimonial) => (
+            <TestimonialCard key={testimonial.nameEn} testimonial={testimonial} locale={locale} />
           ))}
-        </div>
+        </Marquee>
+      </div>
+
+      {/* Auto-scrolling marquee row 2 (reverse) */}
+      <div className="mb-10">
+        <Marquee speed={40} rtl={locale !== 'ar'}>
+          {[...testimonialsData].reverse().map((testimonial) => (
+            <TestimonialCard key={`rev-${testimonial.nameEn}`} testimonial={testimonial} locale={locale} />
+          ))}
+        </Marquee>
       </div>
     </section>
   )
