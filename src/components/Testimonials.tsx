@@ -68,7 +68,7 @@ function TestimonialCard({ testimonial, locale }: { testimonial: typeof testimon
         ))}
       </div>
 
-      <p className="text-[13px] text-gray-300 leading-relaxed mb-5 break-words overflow-wrap-anywhere">
+      <p className="text-sm text-gray-300 leading-relaxed mb-5 break-words">
         &ldquo;{locale === 'ar' ? testimonial.quoteAr : testimonial.quoteEn}&rdquo;
       </p>
 
