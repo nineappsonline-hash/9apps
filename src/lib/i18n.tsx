@@ -56,6 +56,8 @@ type TranslationKeys = {
   volleyraDesc: string
   volleyraStartTrial: string
   volleyraMoreInfo: string
+  volleyraHeroSub: string
+  volleyraFeaturesSubtitle: string
   volleyraFeaturesTitle: string
   volleyraFeature1Title: string
   volleyraFeature1Desc: string
@@ -269,6 +271,8 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraDesc: 'A complete management platform for sports academies. From player registration and training schedules to match tracking and performance analytics — Volleyra gives coaches and administrators everything they need to run a world-class academy.',
     volleyraStartTrial: 'Start Free Trial',
     volleyraMoreInfo: 'More Info',
+    volleyraHeroSub: 'Replaces spreadsheets, WhatsApp groups and notebooks with a single platform that handles enrollment, scheduling, billing, attendance and profitability — so you can focus on coaching, not paperwork.',
+    volleyraFeaturesSubtitle: 'Volleyra handles the full lifecycle of running an academy — from the moment a member joins to knowing exactly which sessions make money.',
     volleyraFeaturesTitle: 'Volleyra Features',
     volleyraFeature1Title: 'Player Management',
     volleyraFeature1Desc: 'Register players, manage profiles, track skill levels, and monitor individual progress over time with detailed player cards.',
@@ -479,6 +483,8 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraDesc: 'منصة إدارة متكاملة لأكاديميات الرياضة. من تسجيل اللاعبين وجداول التدريب إلى تتبع المباريات والتحليلات الأدائية — فوليرا توفر لكل المدربين والمديرين ما يحتاجونه لإدارة أكاديمية عالمية المستوى.',
     volleyraStartTrial: 'ابدأ التجربة المجانية',
     volleyraMoreInfo: 'المزيد من المعلومات',
+    volleyraHeroSub: 'يستبدل الجداول الإلكترونية ومجموعات واتساب والدفاتر بمنصة واحدة تتعامل مع التسجيل والجدولة والفواتير والحضور والربحية — حتى تتمكن من التركيز على التدريب بدلاً من الأعمال الإدارية.',
+    volleyraFeaturesSubtitle: 'فوليرا يتعامل مع دورةifecycle الكاملة لإدارة الأكاديمية — من لحظة انضمام العضو إلى معرفة أي الجلسات تحقق أرباحاً.',
     volleyraFeaturesTitle: 'مميزات فوليرا',
     volleyraFeature1Title: 'إدارة اللاعبين',
     volleyraFeature1Desc: 'سجّل اللاعبين وأدر ملفاتهم وتتبّع مستوياتهم المهارية وراقب تطورهم الفردي عبر الوقت بم脆弱 بطاقةلاعبين تفصيلية.',
