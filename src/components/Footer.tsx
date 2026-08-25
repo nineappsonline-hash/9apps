@@ -60,7 +60,7 @@ export default function Footer() {
       { label: t.status, href: '#' },
     ],
     [t.legal]: [
-      { label: t.privacyPolicy, href: '#' },
+      { label: t.privacyPolicy, href: '/privacy' },
       { label: t.termsOfService, href: '#' },
       { label: t.returnPolicy, href: '/return-policy' },
       { label: t.cookiePolicy, href: '#' },

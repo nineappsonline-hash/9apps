@@ -155,6 +155,50 @@ type TranslationKeys = {
   rpContactTitle: string
   rpContactP1: string
   rpContactEmail: string
+  // Privacy Policy
+  privacyTitle: string
+  privacyIntro: string
+  privacyLastUpdated: string
+  ppInfoWeCollectTitle: string
+  ppInfoWeCollectP1: string
+  ppInfoWeCollectP2: string
+  ppInfoWeCollectList1: string
+  ppInfoWeCollectList2: string
+  ppInfoWeCollectList3: string
+  ppInfoWeCollectList4: string
+  ppHowWeUseTitle: string
+  ppHowWeUseP1: string
+  ppHowWeUseList1: string
+  ppHowWeUseList2: string
+  ppHowWeUseList3: string
+  ppHowWeUseList4: string
+  ppHowWeUseList5: string
+  ppSharingTitle: string
+  ppSharingP1: string
+  ppSharingList1: string
+  ppSharingList2: string
+  ppSharingList3: string
+  ppSecurityTitle: string
+  ppSecurityP1: string
+  ppSecurityP2: string
+  ppRetentionTitle: string
+  ppRetentionP1: string
+  ppRetentionP2: string
+  ppYourRightsTitle: string
+  ppYourRightsP1: string
+  ppYourRightsList1: string
+  ppYourRightsList2: string
+  ppYourRightsList3: string
+  ppYourRightsList4: string
+  ppCookiesTitle: string
+  ppCookiesP1: string
+  ppCookiesP2: string
+  ppChildrenTitle: string
+  ppChildrenP1: string
+  ppChangesTitle: string
+  ppChangesP1: string
+  ppContactTitle: string
+  ppContactP1: string
   // Sign In
   welcomeBack: string
   signInSubtitle: string
@@ -327,6 +371,50 @@ const translations: Record<Locale, TranslationKeys> = {
     rpContactTitle: 'Contact Us',
     rpContactP1: 'If you have any questions about this Return & Refund Policy or need assistance with a refund request, please contact our support team:',
     rpContactEmail: 'support@nineapps.com',
+    // Privacy Policy
+    privacyTitle: 'Privacy Policy',
+    privacyIntro: 'At NineApps, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you use our platform.',
+    privacyLastUpdated: 'Last updated: August 2026',
+    ppInfoWeCollectTitle: 'Information We Collect',
+    ppInfoWeCollectP1: 'We collect information that you provide directly to us when you create an account, subscribe to our services, or interact with our platform.',
+    ppInfoWeCollectP2: 'The types of information we may collect include:',
+    ppInfoWeCollectList1: 'Account Information: your name, email address, company name, and password when you register.',
+    ppInfoWeCollectList2: 'Payment Information: billing details and payment method data processed securely through our third-party payment processors.',
+    ppInfoWeCollectList3: 'Usage Data: information about how you interact with our platform, including features used, pages visited, actions taken, and device/browser information.',
+    ppInfoWeCollectList4: 'Communications: any messages you send to our support team or through in-app feedback forms.',
+    ppHowWeUseTitle: 'How We Use Your Information',
+    ppHowWeUseP1: 'We use the information we collect for the following purposes:',
+    ppHowWeUseList1: 'To provide, operate, and maintain our services and deliver the features you have subscribed to.',
+    ppHowWeUseList2: 'To process transactions, manage your subscription, and send related information such as invoices and renewal reminders.',
+    ppHowWeUseList3: 'To personalize your experience and provide AI-powered insights tailored to your business data.',
+    ppHowWeUseList4: 'To communicate with you about product updates, security alerts, and support messages.',
+    ppHowWeUseList5: 'To detect, prevent, and address technical issues and protect against fraudulent or unauthorized activity.',
+    ppSharingTitle: 'Data Sharing & Disclosure',
+    ppSharingP1: 'We do not sell your personal information. We may share your data only in the following circumstances:',
+    ppSharingList1: 'Service Providers: we share data with trusted third-party vendors who assist in operating our platform (hosting, payment processing, analytics), bound by strict confidentiality obligations.',
+    ppSharingList2: 'Legal Requirements: we may disclose your information if required by law, regulation, or valid legal process, or to protect the rights, property, or safety of NineApps, our users, or the public.',
+    ppSharingList3: 'Business Transfers: in the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction, with notice provided to you.',
+    ppSecurityTitle: 'Data Security',
+    ppSecurityP1: 'We implement industry-standard security measures to protect your data, including AES-256 encryption at rest, TLS 1.3 encryption in transit, role-based access controls, and regular security audits.',
+    ppSecurityP2: 'While no method of transmission or storage is 100% secure, we continuously monitor and update our security practices to maintain the highest level of protection for your data.',
+    ppRetentionTitle: 'Data Retention',
+    ppRetentionP1: 'We retain your personal information for as long as your account is active or as needed to provide you with our services. If you cancel your subscription, we retain your data for 30 days to allow for reactivation or data export.',
+    ppRetentionP2: 'After 30 days of account inactivity, all personal data is permanently deleted from our systems. Certain anonymized or aggregated data may be retained indefinitely for analytical purposes.',
+    ppYourRightsTitle: 'Your Rights',
+    ppYourRightsP1: 'Depending on your location, you may have the following rights regarding your personal data:',
+    ppYourRightsList1: 'Access: request a copy of the personal data we hold about you.',
+    ppYourRightsList2: 'Rectification: request correction of inaccurate or incomplete data.',
+    ppYourRightsList3: 'Deletion: request deletion of your personal data, subject to legal obligations.',
+    ppYourRightsList4: 'Portability: request transfer of your data to another service in a structured, machine-readable format.',
+    ppCookiesTitle: 'Cookies & Tracking',
+    ppCookiesP1: 'We use cookies and similar technologies to maintain your session, remember your preferences, and analyze platform usage to improve our services.',
+    ppCookiesP2: 'You can control cookie settings through your browser. Disabling certain cookies may affect the functionality of our platform.',
+    ppChildrenTitle: "Children's Privacy",
+    ppChildrenP1: 'Our services are intended for business use and are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected data from a child, we will take steps to delete it promptly.',
+    ppChangesTitle: 'Changes to This Policy',
+    ppChangesP1: 'We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy on this page and, where appropriate, by email. We encourage you to review this page periodically.',
+    ppContactTitle: 'Contact Us',
+    ppContactP1: 'If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:',
     // Sign In
     welcomeBack: 'Welcome back',
     signInSubtitle: 'Sign in to access your dashboard and apps',
@@ -497,6 +585,50 @@ const translations: Record<Locale, TranslationKeys> = {
     rpContactTitle: 'تواصل معنا',
     rpContactP1: 'إذا كانت لديك أي أسئلة حول سياسة الإرجاع والاسترداد هذه أو تحتاج المساعدة في طلب استرداد، يرجى الاتصال بفريق الدعم:',
     rpContactEmail: 'support@nineapps.com',
+    // Privacy Policy
+    privacyTitle: 'سياسة الخصوصية',
+    privacyIntro: 'في NineApps، نلتزم بحماية خصوصيتك وضمان أمان معلوماتك الشخصية. توضح سياسة الخصوصية هذه كيف نجمع بياناتك ونستخدمها ونفصح عنها ونحميها عند استخدامك لمنصتنا.',
+    privacyLastUpdated: 'آخر تحديث: أغسطس 2026',
+    ppInfoWeCollectTitle: 'المعلومات التي نجمعها',
+    ppInfoWeCollectP1: 'نجمع المعلومات التي تقدمها لنا مباشرة عند إنشاء حساب أو الاشتراك في خدماتنا أو التفاعل مع منصتنا.',
+    ppInfoWeCollectP2: 'تشمل الأنواع التي قد نجمعها:',
+    ppInfoWeCollectList1: 'معلومات الحساب: اسمك وعنوان بريدك الإلكتروني واسم شركتك وكلمة المرور عند التسجيل.',
+    ppInfoWeCollectList2: 'معلومات الدفع: تفاصيل الفوترة وبيانات طريقة الدفع التي تُعالج بشكل آمن من خلال معالجي الدفع من أطراف ثالثة.',
+    ppInfoWeCollectList3: 'بيانات الاستخدام: معلومات حول كيفية تفاعلك مع منصتنا، بما في ذلك الميزات المستخدمة والصفحات التي تزورها والإجراءات المتخذة ومعلومات الجهاز والمتصفح.',
+    ppInfoWeCollectList4: 'الرسائل: أي رسائل ترسلها إلى فريق الدعم أو من خلال نماذج الملاحظات داخل التطبيق.',
+    ppHowWeUseTitle: 'كيف نستخدم معلوماتك',
+    ppHowWeUseP1: 'نستخدم المعلومات التي نجمعها للأغراض التالية:',
+    ppHowWeUseList1: 'لتقديم تشغيل وصيانة خدماتنا وتسليم الميزات التي اشتركت فيها.',
+    ppHowWeUseList2: 'لمعالجة المعاملات وإدارة اشتراكك وإرسال معلومات ذات صلة مثل الفواتير وتذكيرات التجديد.',
+    ppHowWeUseList3: 'لتخصيص تجربتك وتقديم رؤى مدعومة بالذكاء الاصطناعي مصممة خصيصاً لبيانات عملك.',
+    ppHowWeUseList4: 'للتواصل معك بشأن تحديثات المنتج وأمان التنبيهات ورسائل الدعم.',
+    ppHowWeUseList5: 'لاكتشاف المشاكل التقنية ومنعها ومعالجتها والحماية ضد النشاط الاحتيالي أو غير المصرح به.',
+    ppSharingTitle: 'مشاركة البيانات والكشف عنها',
+    ppSharingP1: 'لا نبيع معلوماتك الشخصية. قد نشارك بياناتك فقط في الظروف التالية:',
+    ppSharingList1: 'مقدمو الخدمات: نشارك البيانات مع موردين موثوقين من أطراف ثالثة يساعدون في تشغيل منصتنا (الاستضافة ومعالجة الدفع والتحليلات) وملزمين بأحكام سرية صارمة.',
+    ppSharingList2: 'المتطلبات القانونية: قد نكشف عن معلوماتك إذا تطلب الأمر بموجب قانون أو تنظيم أو عملية قانونية صالحة، أو لحماية حقوق أو ممتلكات أو سلامة NineApps أو مستخدمينا أو الجمهور.',
+    ppSharingList3: 'التحويلات التجارية: في حالة اندماج أو استحواذ أو بيع أصول، قد تُنقل معلوماتك كجزء من تلك المعاملة مع إخطارك.',
+    ppSecurityTitle: 'أمان البيانات',
+    ppSecurityP1: 'ن implementing تدابير أمان متوافقة مع معايير الصناعة لحماية بياناتك، بما في ذلك التشفير AES-256 عند السكون وTLS 1.3 أثناء النقل والتحكم في الوصول المستند إلى الأدوار والتدقيق الأمني الدوري.',
+    ppSecurityP2: 'على الرغم من أن أي طريقة نقل أو تخزين ليست آمنة بنسبة 100٪، إلا أننا نراقب ونحدّث ممارسات الأمان لدينا باستمرار للحفاظ على أعلى مستوى من الحماية لبياناتك.',
+    ppRetentionTitle: 'احتفاظ البيانات',
+    ppRetentionP1: 'نحتفظ بمعلوماتك الشخصية طالما حسابك نشط أو كما هو ضروري لتقديم خدماتنا. إذا ألغيت اشتراكك، نحتفظ ببياناتك لمدة 30 يوماً للسماح بإعادة التفعيل أو تصدير البيانات.',
+    ppRetentionP2: 'بعد 30 يوماً من عدم نشاط الحساب، يتم حذف جميع البيانات الشخصية نهائياً من أنظمتنا. قد تُحتفظ ببعض البيانات المجهولة الهوية أو المجمّعة بشكل غير محدود لأغراض تحليلية.',
+    ppYourRightsTitle: 'حقوقك',
+    ppYourRightsP1: 'depending على موقعك، قد تكون لديك الحقوق التالية فيما يتعلق ببياناتك الشخصية:',
+    ppYourRightsList1: 'الوصول: طلب نسخة من البيانات الشخصية التي نحتفظ بها عنك.',
+    ppYourRightsList2: 'التصحيح: طلب تصحيح بيانات غير دقيقة أو غير مكتملة.',
+    ppYourRightsList3: 'الحذف: طلب حذف بياناتك الشخصية، مع مراعاة الالتزامات القانونية.',
+    ppYourRightsList4: 'النقل: طلب نقل بياناتك إلى خدمة أخرى بتنسيق منظم وقابل للقراءة آلياً.',
+    ppCookiesTitle: 'ملفات تعريف الارتباط والتتبع',
+    ppCookiesP1: 'نستخدم ملفات تعريف الارتباط والتقنيات المماثلة للحفاظ على جلستك وتذكر تفضيلاتك وتحليل استخدام المنصة لتحسين خدماتنا.',
+    ppCookiesP2: 'يمكنك التحكم في إعدادات ملفات تعريف الارتباط من خلال متصفحك. تعطيل ملفات تعريف الارتباط قد يؤثر على وظائف منصتنا.',
+    ppChildrenTitle: 'خصوصية الأطفال',
+    ppChildrenP1: 'خدماتنا مخصصة للاستخدام التجاري غير موجهة للأفراد الذين تقل أعمارهم عن 18 عاماً. لا نجمع عمداً معلومات شخصية من الأطفال. إذا علمنا بأننا جمعنا بيانات من طفل، سنتخذ خطوات لحذفها فوراً.',
+    ppChangesTitle: 'تغييرات على هذه السياسة',
+    ppChangesP1: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات جوهرية من خلال نشر السياسة المحدّثة على هذه الصفحة وحيثما كان ذلك مناسبًا عبر البريد الإلكتروني. نشجعك على مراجعة هذه الصفحة بشكل دوري.',
+    ppContactTitle: 'تواصل معنا',
+    ppContactP1: 'إذا كانت لديك أي أسئلة أو مخاوف حول سياسة الخصوصية هذه أو ممارسات البيانات لدينا، يرجى التواصل معنا:',
     // Sign In
     welcomeBack: 'مرحباً بعودتك',
     signInSubtitle: 'سجّل الدخول للوصول إلى لوحة التحكم والتطبيقات',
