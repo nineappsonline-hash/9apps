@@ -59,22 +59,148 @@ type TranslationKeys = {
   volleyraHeroSub: string
   volleyraFeaturesSubtitle: string
   volleyraFeaturesTitle: string
-  volleyraFeature1Title: string
-  volleyraFeature1Desc: string
-  volleyraFeature2Title: string
-  volleyraFeature2Desc: string
-  volleyraFeature3Title: string
-  volleyraFeature3Desc: string
-  volleyraFeature4Title: string
-  volleyraFeature4Desc: string
-  volleyraFeature5Title: string
-  volleyraFeature5Desc: string
-  volleyraFeature6Title: string
-  volleyraFeature6Desc: string
-  volleyraFeature7Title: string
-  volleyraFeature7Desc: string
-  volleyraFeature8Title: string
-  volleyraFeature8Desc: string
+  // Workflow
+  workflowEnroll: string
+  workflowSchedule: string
+  workflowAttend: string
+  workflowBill: string
+  workflowProfit: string
+  workflowSubtitle: string
+  // Stats
+  statModules: string
+  statSync: string
+  statLanguages: string
+  statSetup: string
+  // Features heading
+  featuresHeading1: string
+  featuresHeading2: string
+  // Feature 1 - Dashboard
+  f1Subtitle: string
+  f1Title: string
+  f1Desc: string
+  f1p1: string
+  f1p2: string
+  f1p3: string
+  f1p4: string
+  // Feature 2 - Members
+  f2Subtitle: string
+  f2Title: string
+  f2Desc: string
+  f2p1: string
+  f2p2: string
+  f2p3: string
+  f2p4: string
+  f2p5: string
+  f2p6: string
+  // Feature 3 - Payments
+  f3Subtitle: string
+  f3Title: string
+  f3Desc: string
+  f3p1: string
+  f3p2: string
+  f3p3: string
+  f3p4: string
+  // Feature 4 - Scheduling
+  f4Subtitle: string
+  f4Title: string
+  f4Desc: string
+  f4p1: string
+  f4p2: string
+  f4p3: string
+  f4p4: string
+  f4p5: string
+  // Feature 5 - Attendance
+  f5Subtitle: string
+  f5Title: string
+  f5Desc: string
+  f5p1: string
+  f5p2: string
+  f5p3: string
+  f5p4: string
+  f5p5: string
+  // Feature 6 - Financial Engine
+  f6Subtitle: string
+  f6Title: string
+  f6Desc: string
+  f6p1: string
+  f6p2: string
+  f6p3: string
+  f6p4: string
+  f6p5: string
+  // Feature 7 - Reports
+  f7Subtitle: string
+  f7Title: string
+  f7Desc: string
+  f7p1: string
+  f7p2: string
+  f7p3: string
+  f7p4: string
+  f7p5: string
+  f7p6: string
+  // Feature 8 - Teams
+  f8Subtitle: string
+  f8Title: string
+  f8Desc: string
+  f8p1: string
+  f8p2: string
+  f8p3: string
+  f8p4: string
+  // Feature 9 - Tournaments
+  f9Subtitle: string
+  f9Title: string
+  f9Desc: string
+  f9p1: string
+  f9p2: string
+  f9p3: string
+  // Feature 10 - Engagement
+  f10Subtitle: string
+  f10Title: string
+  f10Desc: string
+  f10p1: string
+  f10p2: string
+  f10p3: string
+  f10p4: string
+  f10p5: string
+  f10p6: string
+  // Feature 11 - Public Page
+  f11Subtitle: string
+  f11Title: string
+  f11Desc: string
+  f11p1: string
+  f11p2: string
+  f11p3: string
+  // Feature 12 - Notifications
+  f12Subtitle: string
+  f12Title: string
+  f12Desc: string
+  f12p1: string
+  f12p2: string
+  f12p3: string
+  f12p4: string
+  // Built for Your Region
+  regionTitle: string
+  regionSubtitle: string
+  region1Label: string
+  region1Desc: string
+  region2Label: string
+  region2Desc: string
+  region3Label: string
+  region3Desc: string
+  region4Label: string
+  region4Desc: string
+  // Security
+  securityTitle: string
+  securitySubtitle: string
+  security1: string
+  security2: string
+  security3: string
+  security4: string
+  security5: string
+  security6: string
+  // CTA
+  ctaHeading: string
+  ctaText: string
+  ctaBack: string
   // Pricing
   pricingLabel: string
   pricingTitle1: string
@@ -274,22 +400,148 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraHeroSub: 'Replaces spreadsheets, WhatsApp groups and notebooks with a single platform that handles enrollment, scheduling, billing, attendance and profitability — so you can focus on coaching, not paperwork.',
     volleyraFeaturesSubtitle: 'Volleyra handles the full lifecycle of running an academy — from the moment a member joins to knowing exactly which sessions make money.',
     volleyraFeaturesTitle: 'Volleyra Features',
-    volleyraFeature1Title: 'Player Management',
-    volleyraFeature1Desc: 'Register players, manage profiles, track skill levels, and monitor individual progress over time with detailed player cards.',
-    volleyraFeature2Title: 'Training Scheduling',
-    volleyraFeature2Desc: 'Create and manage training sessions with smart scheduling, conflict detection, and automatic notifications to players and staff.',
-    volleyraFeature3Title: 'Match & Tournament Tracking',
-    volleyraFeature3Desc: 'Record match results, track tournament brackets, and maintain a complete history of your academy\'s competitive performance.',
-    volleyraFeature4Title: 'Performance Analytics',
-    volleyraFeature4Desc: 'Visual dashboards with key metrics on player development, team performance, and attendance trends to drive data-informed decisions.',
-    volleyraFeature5Title: 'Staff & Coach Management',
-    volleyraFeature5Desc: 'Manage coaching staff assignments, qualifications, availability, and communication all in one centralized platform.',
-    volleyraFeature6Title: 'Attendance Tracking',
-    volleyraFeature6Desc: 'Real-time attendance monitoring for training sessions and matches with automated alerts for absences and patterns.',
-    volleyraFeature7Title: 'Communication Hub',
-    volleyraFeature7Desc: 'Send announcements, share schedules, and communicate with players, parents, and staff through integrated messaging tools.',
-    volleyraFeature8Title: 'Financial Management',
-    volleyraFeature8Desc: 'Handle subscription billing, track payments, manage invoices, and generate financial reports for your academy operations.',
+    // Workflow
+    workflowEnroll: 'Enroll',
+    workflowSchedule: 'Schedule',
+    workflowAttend: 'Attend',
+    workflowBill: 'Bill',
+    workflowProfit: 'Profit',
+    workflowSubtitle: 'The complete lifecycle — from enrollment to profitability',
+    // Stats
+    statModules: 'Feature Modules',
+    statSync: 'Real-Time Sync',
+    statLanguages: 'Languages (EN + AR)',
+    statSetup: 'Setup Fee',
+    // Features heading
+    featuresHeading1: 'Everything You Need to ',
+    featuresHeading2: 'Run Your Academy',
+    // Feature 1 - Dashboard
+    f1Subtitle: 'Instant Overview',
+    f1Title: 'Command Center Dashboard',
+    f1Desc: 'A role-aware home screen that answers "how is my academy doing?" at a glance. Owners see total members, monthly revenue, monthly costs and net profit — all updated in real time. Smart alerts flag members running out of sessions, unpaid members, and new sign-ups awaiting approval.',
+    f1p1: 'Total members, revenue, costs, and net profit cards — always current',
+    f1p2: 'Smart alerts for expiring sessions, unpaid members, and pending approvals',
+    f1p3: 'Upcoming sessions with per-session profit/loss indicators',
+    f1p4: 'Members see their own view: remaining sessions, attendance rate, and payment status',
+    // Feature 2 - Members
+    f2Subtitle: 'Complete Roster Management',
+    f2Title: 'Members & Subscriptions',
+    f2Desc: 'Your full member roster with search, filtering, sorting and pagination. Define flexible membership plans — Full (8 sessions), Half (4), or any custom plan you offer. The platform automatically tracks remaining sessions as attendance is taken, so you always know who is active, who needs renewal, and who has lapsed.',
+    f2p1: 'Flexible membership plans — define any plan structure your academy offers',
+    f2p2: 'Automatic remaining-session tracking as attendance is recorded',
+    f2p3: 'One-click visual statuses: Paid, Needs Renewal, Unpaid',
+    f2p4: 'Pending-signup approval queue — members join via invite code, you approve them',
+    f2p5: 'Rich member profiles with payment history, attendance, badges, and evaluations',
+    f2p6: 'Statement PDF export for any member — perfect for printing or emailing',
+    // Feature 3 - Payments
+    f3Subtitle: 'Effortless Financial Recording',
+    f3Title: 'Payments & Receipts',
+    f3Desc: 'Record payments with amount, date, plan, method and notes. Support for cash, card, mobile wallet, bank transfer, and more. Every payment generates a printable/downloadable receipt, and membership status updates automatically. Export the full payment log to CSV for your accountant.',
+    f3p1: 'Multiple payment methods: cash, card, mobile wallet, bank transfer, other',
+    f3p2: 'Printable and downloadable receipt page for every payment',
+    f3p3: 'Membership status updates automatically when a payment is recorded',
+    f3p4: 'Export the full payment log to CSV for accounting',
+    // Feature 4 - Scheduling
+    f4Subtitle: 'Calendar & Recurring Sessions',
+    f4Title: 'Smart Scheduling',
+    f4Desc: 'Monthly calendar and list views of all training sessions. Create sessions with sport, venue, coach, age group and skill level. The recurring schedule builder generates a whole month of sessions in one click — "Every Mon & Wed at 6pm" creates them all automatically. Coach availability windows prevent double-booking.',
+    f4p1: 'Monthly calendar and list views of all training sessions',
+    f4p2: 'Recurring schedule builder — generate a full month in one click',
+    f4p3: 'Coach availability windows prevent double-booking',
+    f4p4: 'Cancelled sessions are automatically excluded from financial calculations',
+    f4p5: 'Read-only .ics calendar feed — members subscribe once and stay in sync',
+    // Feature 5 - Attendance
+    f5Subtitle: 'Lightning-Fast Tracking',
+    f5Title: 'Attendance & Check-in',
+    f5Desc: 'Pick a session, toggle each member present/absent — changes save in real time. QR code check-in lets members scan at the door with no queues. Walk-in guests can pay per session, and their payments count toward session revenue automatically. Batch actions let you select many members and mark them present at once.',
+    f5p1: 'QR code check-in — every member gets a personal code, scan or type at the door',
+    f5p2: 'Batch actions: select many members and mark present/absent/export at once',
+    f5p3: 'Walk-in guests who pay per session — payments count toward revenue automatically',
+    f5p4: 'Waitlists when a session is full, with promotion tracking',
+    f5p5: 'Live revenue / cost / profit readout while taking attendance',
+    // Feature 6 - Financial Engine
+    f6Subtitle: 'Automatic Profit Intelligence',
+    f6Title: 'Financial Engine',
+    f6Desc: "This is the killer feature. Enter two numbers — coach salary and court rental — and everything else computes itself. The moment you mark a session's attendance, the platform calculates that session's revenue, cost and net profit — instantly and automatically. No end-of-month surprises. No mental math. Just clear numbers.",
+    f6p1: 'Cost per session auto-calculated from coach salary and court rental',
+    f6p2: "Session revenue = sum of attending members' per-session values + guest payments",
+    f6p3: 'Profit/loss shows green/red everywhere — the second attendance is marked',
+    f6p4: 'Additional expense tracking by category for true bottom-line numbers',
+    f6p5: 'Calculations run via database triggers — always current, always accurate',
+    // Feature 7 - Reports
+    f7Subtitle: 'Data-Driven Decisions',
+    f7Title: 'Reports & Analytics',
+    f7Desc: 'Two dedicated insight surfaces for making smart decisions. Revenue vs costs charts, retention analysis, coach performance comparison, revenue forecasts projecting the next 3 months, member health radar showing who is about to quit before they do. Export everything to PDF or CSV.',
+    f7p1: 'Revenue vs costs chart with monthly summary and average profit per session',
+    f7p2: 'Retention & churn analysis — active, inactive 30–60 days, inactive 60+ days',
+    f7p3: 'Member health radar: healthy / at-risk / churned segmentation',
+    f7p4: 'Revenue forecast projecting the next 3 months from historical trends',
+    f7p5: 'Coach performance comparison and session-time heatmap',
+    f7p6: 'One-click PDF report and CSV payment export',
+    // Feature 8 - Teams
+    f8Subtitle: 'Organize Your Operations',
+    f8Title: 'Teams, Coaches & Venues',
+    f8Desc: 'Organize members into teams by sport, age group and skill level. Coach directory with specialties and salaries feeding directly into cost calculations. Venue catalog with capacity info for every court/hall. Custom sport catalog — volleyball today, basketball tomorrow.',
+    f8p1: 'Teams organized by sport, age group and skill level',
+    f8p2: 'Coach directory with specialties and salaries for cost calculations',
+    f8p3: 'Venue catalog with capacity info for every court and hall',
+    f8p4: 'Custom sport catalog per academy — expand as you grow',
+    // Feature 9 - Tournaments
+    f9Subtitle: 'Competitive Management',
+    f9Title: 'Tournaments',
+    f9Desc: 'Create tournaments per sport with dates and status tracking. Manage the full match bracket: rounds, teams, scores, dates, venues. Match history stays linked to teams and seasons for long-term performance tracking.',
+    f9p1: 'Create tournaments per sport with dates and status tracking',
+    f9p2: 'Full match bracket management: rounds, teams, scores, dates, venues',
+    f9p3: 'Match history linked to teams and seasons',
+    // Feature 10 - Engagement
+    f10Subtitle: 'Keep Members Motivated',
+    f10Title: 'Member Engagement',
+    f10Desc: 'Keep members motivated and parents informed. Announcements board broadcast to all members. Photo galleries attached to sessions. Gamification badges awarded automatically at milestones — First Step, Regular, Dedicated, Champion, Legend. Player evaluations where coaches score technique, tactics, fitness and attitude.',
+    f10p1: 'Announcements board broadcast to all members',
+    f10p2: 'Photo galleries attached to sessions and announcements',
+    f10p3: 'Gamification badges: First Step, Regular (10), Dedicated (25), Champion (50), Legend (100)',
+    f10p4: 'Player evaluations — coaches score technique, tactics, fitness and attitude',
+    f10p5: 'Session ratings — members rate sessions 1–5 stars with comments',
+    f10p6: 'Live activity feed — a timeline of joins, payments, badges, and check-ins',
+    // Feature 11 - Public Page
+    f11Subtitle: 'Built-In Marketing Funnel',
+    f11Title: 'Public Academy Page',
+    f11Desc: "Every academy gets an optional public page at /a/your-name. Showcase your academy description and sports. Visitors submit trial request forms that flow straight into your dashboard's trials pipeline — new, contacted, converted, declined. A free marketing funnel built into your management tool.",
+    f11p1: 'Public page at /a/your-name showcasing your academy',
+    f11p2: 'Trial request forms flow into your dashboard pipeline',
+    f11p3: 'Free marketing funnel built into your management tool',
+    // Feature 12 - Notifications
+    f12Subtitle: 'Professional Communication',
+    f12Title: 'Notifications & Integrations',
+    f12Desc: "Professional email notifications powered by Resend. Payment confirmation emails, renewal reminders when a member runs low on sessions, welcome emails for new members, new-session notifications. Plus a personal calendar feed per academy so members' phone calendars stay in sync automatically.",
+    f12p1: 'Payment confirmation emails with amount and sessions',
+    f12p2: 'Renewal reminders — one click from the dashboard with send-history tracking',
+    f12p3: 'Welcome emails for new members and new-session notifications',
+    f12p4: 'Personal .ics calendar feed per academy for automatic sync',
+    // Built for Your Region
+    regionTitle: 'Built for Your Region',
+    regionSubtitle: 'Arabic-first, RTL-native',
+    region1Label: 'Fully bilingual English + Arabic',
+    region1Desc: 'Complete right-to-left (RTL) layout',
+    region2Label: 'Egyptian Pound (EGP) formatting',
+    region2Desc: 'Out of the box, no configuration needed',
+    region3Label: 'Fully responsive',
+    region3Desc: 'Works on phones at the court, not just office desktops',
+    region4Label: 'Dark mode across the entire app',
+    region4Desc: 'Modern, eye-friendly interface',
+    // Security
+    securityTitle: 'Security & Reliability',
+    securitySubtitle: 'Enterprise-grade protection',
+    security1: "Bank-grade data isolation — no academy can see another's data",
+    security2: 'Role-based access enforced at database and route level',
+    security3: 'Realtime sync powered by Supabase PostgreSQL',
+    security4: 'Hosted on Vercel + Supabase — zero-maintenance infrastructure',
+    security5: 'Automatic backups through managed Postgres',
+    security6: 'GDPR-ready architecture',
+    // CTA
+    ctaHeading: 'Ready to Run Your Academy Like a Business?',
+    ctaText: 'Start your free trial today. No credit card required. Full access to all features.',
+    ctaBack: 'Back',
     // Pricing
     pricingLabel: 'Pricing',
     pricingTitle1: 'Choose the products ',
@@ -484,24 +736,150 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraStartTrial: 'ابدأ التجربة المجانية',
     volleyraMoreInfo: 'المزيد من المعلومات',
     volleyraHeroSub: 'يستبدل الجداول الإلكترونية ومجموعات واتساب والدفاتر بمنصة واحدة تتعامل مع التسجيل والجدولة والفواتير والحضور والربحية — حتى تتمكن من التركيز على التدريب بدلاً من الأعمال الإدارية.',
-    volleyraFeaturesSubtitle: 'فوليرا يتعامل مع دورةifecycle الكاملة لإدارة الأكاديمية — من لحظة انضمام العضو إلى معرفة أي الجلسات تحقق أرباحاً.',
+    volleyraFeaturesSubtitle: 'فوليرا يتعامل مع دورةifecycle الكاملة لإدارة الأكاديمية — من لحظة انضمام العضو إلى معرفة أي الج Sessions تحقق أرباحاً.',
     volleyraFeaturesTitle: 'مميزات فوليرا',
-    volleyraFeature1Title: 'إدارة اللاعبين',
-    volleyraFeature1Desc: 'سجّل اللاعبين وأدر ملفاتهم وتتبّع مستوياتهم المهارية وراقب تطورهم الفردي عبر الوقت بم脆弱 بطاقةلاعبين تفصيلية.',
-    volleyraFeature2Title: 'جدولة التدريب',
-    volleyraFeature2Desc: 'أنشئ وأدر جلسات التدريب بجدولة ذكية واكتشاف التعارضات وإرسال إشعارات تلقائية للاعبين والطاقم.',
-    volleyraFeature3Title: 'تتبع المباريات والبطولات',
-    volleyraFeature3Desc: 'سجّل نتائج المباريات وتتبّع جداول البطولات واحتفظ بسجل كامل لأداء أكاديمتك التنافسي.',
-    volleyraFeature4Title: 'تحليلات الأداء',
-    volleyraFeature4Desc: 'لوحات تحكم بصرية بالمقاييس الأساسية لتطور اللاعبين وأداء الفريق واتجاهات الحضور لاتخاذ قرارات مبنية على البيانات.',
-    volleyraFeature5Title: 'إدارة الكادر والمدربين',
-    volleyraFeature5Desc: 'أدر تعيينات المدربين المؤهلات والتوفر والتواصل في منصة مركزية واحدة.',
-    volleyraFeature6Title: 'تتبع الحضور',
-    volleyraFeature6Desc: 'مراقبة الحضور لحظياً في جلسات التدريب والمباريات مع تنبيهات تلقائية للغيابات والأنماط.',
-    volleyraFeature7Title: 'مركز التواصل',
-    volleyraFeature7Desc: 'أرسل الإعلانات وشارك الجداول وتواصل مع اللاعبين وأولياء الأمور والطاقم من خلال أدوات مراسلة متكاملة.',
-    volleyraFeature8Title: 'الإدارة المالية',
-    volleyraFeature8Desc: 'أدر فواتير الاشتراك وتتبّع المدفوعات وأنشئ الفواتير وتقارير مالية لعمليات أكاديمتك.',
+    // Workflow
+    workflowEnroll: 'التسجيل',
+    workflowSchedule: 'الجدولة',
+    workflowAttend: 'الحضور',
+    workflowBill: 'الفوترة',
+    workflowProfit: 'الربح',
+    workflowSubtitle: 'الدورةifecycle الكاملة — من التسجيل إلى الربحية',
+    // Stats
+    statModules: 'وحدات المميزات',
+    statSync: 'مزامنة فورية',
+    statLanguages: 'اللغات (EN + AR)',
+    statSetup: 'رسوم الإعداد',
+    // Features heading
+    featuresHeading1: 'كل ما تحتاجه ل',
+    featuresHeading2: 'تشغيل أكاديمتك',
+    // Feature 1 - Dashboard
+    f1Subtitle: 'نظرة عامة فورية',
+    f1Title: 'لوحة التحكم المركزية',
+    f1Desc: 'شاشة رئيسية تجيب على سؤال "كيف حال أكاديميتي؟" بنظرة واحدة. يرى المالكون إجمالي الأعضاء والدخل الشهري والتكاليف الشهرية وصافي الربح — جميعها محدثة في الوقت الفعلي. تنبيهات ذكية تشير إلى الأعضاء الذين ينفد منهم الجلسات والأعضاء غير المدفوعين والتسجيلات الجديدة بانتظار الموافقة.',
+    f1p1: 'بطاقات إجمالي الأعضاء والدخل والتكاليف وصافي الربح — محدثة دائماً',
+    f1p2: 'تنبيهات ذكية للجلسات المنتهية والأعضاء غير المدفوعين والموافقات المعلقة',
+    f1p3: 'الجلسات القادمة مع مؤشرات الربح/الخسارة لكل جلسة',
+    f1p4: 'الأعضاء يرون نظرتهم الخاصة: الجلسات المتبقية ومعدل الحضور وحالة الدفع',
+    // Feature 2 - Members
+    f2Subtitle: 'إدارة شاملة للقائمة',
+    f2Title: 'الأعضاء والاشتراكات',
+    f2Desc: 'قائمة أعضائك الكاملة مع البحث والتصفية والفرز والتصفح. حدد خطط عضوية مرنة — كاملة (8 جلسات) أو نصف (4) أو أي خطة مخصصة تقدمها. تتبع المنصة تلقائياً الجلسات المتبقية عند تسجيل الحضور، حتى تعرف دائماً من هو نشط ومن يحتاج تجديد ومن توقف.',
+    f2p1: 'خطط عضوية مرنة — حدد أي هيكل خطة تقدمها أكاديمتك',
+    f2p2: 'تتبع تلقائي للجلسات المتبقية عند تسجيل الحضور',
+    f2p3: 'حالات بصرية بنقرة واحدة: مدفوع · يحتاج تجديد · غير مدفوع',
+    f2p4: 'قائمة انتظار للتسجيلات الجديدة — الأعضاء ينضمون بكود دعوة وأنت توافق عليهم',
+    f2p5: 'ملفات أعضاء غنية مع سجل الدفع والحضور والشارات والتقييمات',
+    f2p6: 'تصدير PDF لأي عضو — مثالي للطباعة أو إرسال البريد الإلكتروني',
+    // Feature 3 - Payments
+    f3Subtitle: 'تسجيل مالي بلا جهد',
+    f3Title: 'المدفوعات والإيصالات',
+    f3Desc: 'سجّل المدفوعات بالمبلغ والخطة والطريقة والملاحظات. دعم للنقدي والبطاقة والمحفظة الإلكترونية والتحويل البنكي والمزيد. كل دفعة تولّد إيصالاً قابلاً للطباعة/التنزيل، وتحديث حالة العضوية تلقائياً. تصدير سجل المدفوعات الكامل بصيغة CSV لمحاسبك.',
+    f3p1: 'طرق دفع متعددة: نقدي، بطاقة، محفظة إلكترونية، تحويل بنكي، أخرى',
+    f3p2: 'صفحة إيصال قابلة للطباعة والتنزيل لكل دفعة',
+    f3p3: 'تحديث حالة العضوية تلقائياً عند تسجيل الدفعة',
+    f3p4: 'تصدير سجل المدفوعات الكامل بصيغة CSV للحسابات',
+    // Feature 4 - Scheduling
+    f4Subtitle: 'التقويم والجلسات المتكررة',
+    f4Title: 'الجدولة الذكية',
+    f4Desc: 'عرض التقويم الشهري وقائمة جميع جلسات التدريب. أنشئ جلسات بالرياضة والمكان والمدرب وгруппة العمر ومستوى المهارة. أداة الجدولة المتكررة تنشئ شهراماً كاملاً من الجلسات بنقرة واحدة — "كل اثنين وأربعاء الساعة 6 مساءً" تنشئها جميعاً تلقائياً. نوافذ توفر المدرب تمنع الحجز المزدوج.',
+    f4p1: 'عرض التقويم الشهري وقائمة جميع جلسات التدريب',
+    f4p2: 'أداة جدولة متكررة — نشئ شهراً كاملاً بنقرة واحدة',
+    f4p3: 'نوافذ توفر المدرب تمنع الحجز المزدوج',
+    f4p4: 'الجلسات الملغاة مستبعدة تلقائياً من الحسابات المالية',
+    f4p5: 'تغذية .ics للقراءة فقط — الأعضاء يشتركون مرة واحدة ويظلون متزامنين',
+    // Feature 5 - Attendance
+    f5Subtitle: 'تتبع فائق السرعة',
+    f5Title: 'الحضور وتسجيل الدخول',
+    f5Desc: 'اختر جلسة، بدّل كل عضو حاضر/غائب — التغييرات تحفظ في الوقت الفعلي. تسجيل الدخول بالرمز المربع (QR) يتيح للأعضاء المسح عند الباب بدون قوائم انتظار. الضيوف المتجولون يمكنهم الدفع لكل جلسة، مدفوعاتهم تُحسب تجاه إيرادات الجلسة تلقائياً.',
+    f5p1: 'تسجيل دخول بالرمز المربع — كل عضو получает كود شخصي، امسح أو اكتب عند الباب',
+    f5p2: 'إجراءات جماعية: حدد أعضاء كثيرين وعلّم حاضرين/غائبين/صدرهم دفعة واحدة',
+    f5p3: 'ضيوف متجولون يدفعون لكل جلسة — مدفوعاتهم تُحسب تجاه الإيرادات تلقائياً',
+    f5p4: 'قوائم انتظار عند امتلاء الجلسة مع تتبع الترويج',
+    f5p5: 'قراءة حية للإيرادات/التكاليف/الربح أثناء تسجيل الحضور',
+    // Feature 6 - Financial Engine
+    f6Subtitle: 'ذكاء الربح التلقائي',
+    f6Title: 'المحرك المالي',
+    f6Desc: 'هذه هي الميزة الأساسية. أدخل رقمين — راتب المدرب و🇾 rental الملعب — وحساب كل شيء يظهر تلقائياً. في اللحظة التي تسجل فيها حضور الجلسة، تحسب المنصة إيرادات الجلسة وتكلفتها وصافي الربح — فوراً وتلقائياً. لا مفاجآت نهاية الشهر. لا حسابات ذهنية. أرقام واضحة فقط.',
+    f6p1: 'تكلفة الجلسة محسوبة تلقائياً من راتب المدرب و🇾 rental الملعب',
+    f6p2: 'إيرادات الجلسة = مجموع قيم الأعضاء الحاضرين لكل جلسة + مدفوعات الضيوف',
+    f6p3: 'الربح/الخسارة يظهر أخضر/أحمر في كل مكان — في الثانية التي تُسجل فيها الحضور',
+    f6p4: 'تتبع مصروفات إضافية حسب الفئة لأرقام الربح الحقيقية',
+    f6p5: 'الحسابات تعمل عبر محفزات قاعدة البيانات — محدثة دائماً ودقيقة دائماً',
+    // Feature 7 - Reports
+    f7Subtitle: 'قرارات مبنية على البيانات',
+    f7Title: 'التقارير والتحليلات',
+    f7Desc: 'سطحان مخصصان للرؤى لاتخاذ قرارات ذكية. رسوم بيانية للإيرادات مقابل التكاليف وتحليل الاحتفاظ وأداء المدربين ومคาดات الإيرادات للأشهر الثلاثة القادمة ورادار صحة الأعضاء الذي يظهر من على وشك المغادرة قبل أن يفعل. صدّر كل شيء إلى PDF أو CSV.',
+    f7p1: 'رسم بياني للإيرادات مقابل التكاليف مع ملخص شهري ومتوسط الربح لكل جلسة',
+    f7p2: 'تحليل الاحتفاظ والانسحاب — نشط، غير نشط 30-60 يوماً، غير نشط أكثر من 60 يوماً',
+    f7p3: 'رادار صحة الأعضاء: تصنيف صحي / تحت التهديد / منسحب',
+    f7p4: 'คาด إيرادات يوقع الأشهر الثلاثة القادمة من الاتجاهات التاريخية',
+    f7p5: 'مقارنة أداء المدربين وخريطة حرارية لأوقات الجلسات',
+    f7p6: 'تقرير PDF بنقرة واحدة وتصدير CSV للمدفوعات',
+    // Feature 8 - Teams
+    f8Subtitle: 'نظّم عملياتك',
+    f8Title: 'الفرق والمدربون والأماكن',
+    f8Desc: 'نظّم الأعضاء في فرق حسب الرياضة و groups العمر ومستوى المهارة. دليل المدربين بتخصصاتهم ورواتبهم ي feed مباشرة في حسابات التكلفة. كatalog الأماكن بمعلومات السعة لكل ملعب/صالة. كatalog رياضات مخصص — كرة الطائرة اليوم وكرة السلة غداً.',
+    f8p1: 'فرق منظمة حسب الرياضة و groups العمر ومستوى المهارة',
+    f8p2: 'دليل المدربين بالتخصصات والرواتب لحسابات التكلفة',
+    f8p3: 'catalog الأماكن بمعلومات السعة لكل ملعب وصالة',
+    f8p4: 'catalog رياضات مخصص لكل أكاديمية — توسع مع نموك',
+    // Feature 9 - Tournaments
+    f9Subtitle: 'الإدارة التنافسية',
+    f9Title: 'البطولات',
+    f9Desc: 'أنشئ بطولات لكل رياضة مع التواريخ وتتبع الحالة. أدر bracket المباريات الكامل: الجولات والفرق والنتائج والتواريخ والأماكن. سجل المباريات يظل مرتبطاً بالفرق والمواسم لتتبع الأداء طويل المدى.',
+    f9p1: 'أنشئ بطولات لكل رياضة مع التواريخ وتتبع الحالة',
+    f9p2: 'إدارة bracket المباريات الكامل: الجولات والفرق والنتائج والتواريخ والأماكن',
+    f9p3: 'سجل المباريات مرتبط بالفرق والمواسم',
+    // Feature 10 - Engagement
+    f10Subtitle: 'حافظ على حماس الأعضاء',
+    f10Title: 'تفاعل الأعضاء',
+    f10Desc: 'حافظ على حماس الأعضاء وأبلغ الأهالي. لوحة إعلانات تبث لجميع الأعضاء. معرض صور مرفق بالجلسات. شارات gamification تُمنح تلقائياً عند معالم — الخطوة الأولى، منتظم (10)، مخصص (25)، بطل (50)، أسطورة (100). تقييمات اللاعبين حيث ي computes المدربون التقنية والمناورة واللياقة والسلوك.',
+    f10p1: 'لوحة إعلانات تبث لجميع الأعضاء',
+    f10p2: 'معرض صور مرفق بالجلسات والإعلانات',
+    f10p3: 'شارات gamification: الخطوة الأولى (1)، منتظم (10)، مخصص (25)، بطل (50)، أسطورة (100)',
+    f10p4: 'تقييمات اللاعبين — المدربون يحسبون التقنية والمناورة واللياقة والسلوك',
+    f10p5: 'تقييمات الجلسات — الأعضاء يقيّمون الجلسات بنجوم 1-5 مع تعليقات',
+    f10p6: 'تغذية نشاط حية — خط زمني للانضمامات والمدفوعات والشارات وتسجيلات الدخول',
+    // Feature 11 - Public Page
+    f11Subtitle: 'قناة تسويق مدمجة',
+    f11Title: 'صفحة الأكاديمية العامة',
+    f11Desc: 'كل أكاديمية تحصل على صفحة عامة اختيارية at /a/اسمك. عرض وصف أكاديمتك والرياضات. الزوار يرسلون نماذج طلب تجربة تتدفق مباشرة إلى pipeline في لوحة التحكم — جديد، تم الاتصال، تحول، رُفض. قناة تسويق مجانية مدمجة في أداة الإدارة.',
+    f11p1: 'صفحة عامة at /a/اسمك تعرض أكاديمتك',
+    f11p2: 'نماذج طلب التجربة تتدفق إلى pipeline في لوحة التحكم',
+    f11p3: 'قناة تسويق مجانية مدمجة في أداة الإدارة',
+    // Feature 12 - Notifications
+    f12Subtitle: 'تواصل احترافي',
+    f12Title: 'الإشعارات والتكاملات',
+    f12Desc: 'إشعارات بريد إلكتروني احترافية مدعومة by Resend. إشعارات تأكيد الدفع وتذكيرات التجديد عندما ينفد لدى العضو الجلسات ورسائل ترحيب للأعضاء الجدد وإشعارات الجلسات الجديدة. بالإضافة to تغذية تقويم شخصية لكل أكاديمية حتى تظل تقويمات هواتف الأعضاء متزامنة تلقائياً.',
+    f12p1: 'رسائل تأكيد الدفع بالمبلغ والجلسات',
+    f12p2: 'تذكيرات التجديد — بنقرة واحدة من لوحة التحكم مع تتبع سجل الإرسال',
+    f12p3: 'رسائل ترحيب للأعضاء الجدد وإشعارات الجلسات الجديدة',
+    f12p4: 'تغذية تقويم .cs شخصية لكل أكاديمية للمزامنة التلقائية',
+    // Built for Your Region
+    regionTitle: 'مصمم لمنطقتك',
+    regionSubtitle: 'العربية أولاً، RTL الأصلي',
+    region1Label: 'ثنائي اللغة بالكامل English + Arabic',
+    region1Desc: 'تخطيط كامل من اليمين إلى اليسار (RTL)',
+    region2Label: 'تنسيق الجنيه المصري (EGP)',
+    region2Desc: 'جاهز من الصندوق، لا يحتاج إعداد',
+    region3Label: 'متجاوب بالكامل',
+    region3Desc: 'يعمل على الهواتف في الملعب، ليس فقط أجهزة المكتب',
+    region4Label: 'الوضع الداكن في جميع أنحاء التطبيق',
+    region4Desc: 'واجهة حديثة مريحة للعين',
+    // Security
+    securityTitle: 'الأمان والموثوقية',
+    securitySubtitle: 'حماية على مستوى المؤسسات',
+    security1: 'عزل بيانات على مستوى البنوك — لا يمكن لأي أكاديمية رؤية بيانات أخرى',
+    security2: 'التحكم في الوصول المستند إلى الأدوار على مستوى قاعدة البيانات والمسار',
+    security3: 'مزامنة فورية مدعومة by Supabase PostgreSQL',
+    security4: 'مضمن on Vercel + Supabase — بنية تحتية بدون صيانة',
+    security5: 'نسخ احتياطي تلقائي عبر Postgres المُدارة',
+    security6: 'بنية تحتية جاهزة for GDPR',
+    // CTA
+    ctaHeading: 'هل أنت مستعد لتشغيل أكاديمتك كعمل تجاري؟',
+    ctaText: 'ابدأ تجربتك المجانية اليوم. لا حاجة لبطاقة ائتمان. وصول كامل لجميع المميزات.',
+    ctaBack: 'رجوع',
     // Pricing
     pricingLabel: 'الأسعار',
     pricingTitle1: 'اختر المنتجات ',
