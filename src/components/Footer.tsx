@@ -42,8 +42,7 @@ export default function Footer() {
 
   const footerLinks = {
     [t.product]: [
-      { label: t.footerCrmSuite, href: '#products' },
-      { label: t.footerErpPlatform, href: '#products' },
+      { label: t.footerVolleyra, href: '#products' },
       { label: t.footerAnalytics, href: '#features' },
       { label: t.footerIntegrations, href: '#features' },
     ],

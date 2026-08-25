@@ -51,32 +51,28 @@ type TranslationKeys = {
   productsTitle1: string
   productsTitle2: string
   productsSubtitle: string
-  crmSuite: string
-  crmSubtitle: string
-  crmDesc: string
-  erpPlatform: string
-  erpSubtitle: string
-  erpDesc: string
-  contactManager: string
-  contactManagerDesc: string
-  emailCampaigns: string
-  emailCampaignsDesc: string
-  callTracker: string
-  callTrackerDesc: string
-  salesPipeline: string
-  salesPipelineDesc: string
-  dealRoom: string
-  dealRoomDesc: string
-  inventoryControl: string
-  inventoryControlDesc: string
-  supplyChain: string
-  supplyChainDesc: string
-  financialSuite: string
-  financialSuiteDesc: string
-  hrManagement: string
-  hrManagementDesc: string
-  projectBilling: string
-  projectBillingDesc: string
+  volleyraName: string
+  volleyraTagline: string
+  volleyraDesc: string
+  volleyraStartTrial: string
+  volleyraMoreInfo: string
+  volleyraFeaturesTitle: string
+  volleyraFeature1Title: string
+  volleyraFeature1Desc: string
+  volleyraFeature2Title: string
+  volleyraFeature2Desc: string
+  volleyraFeature3Title: string
+  volleyraFeature3Desc: string
+  volleyraFeature4Title: string
+  volleyraFeature4Desc: string
+  volleyraFeature5Title: string
+  volleyraFeature5Desc: string
+  volleyraFeature6Title: string
+  volleyraFeature6Desc: string
+  volleyraFeature7Title: string
+  volleyraFeature7Desc: string
+  volleyraFeature8Title: string
+  volleyraFeature8Desc: string
   // Pricing
   pricingLabel: string
   pricingTitle1: string
@@ -103,8 +99,7 @@ type TranslationKeys = {
   copyright: string
   builtWith: string
   // Footer links
-  footerCrmSuite: string
-  footerErpPlatform: string
+  footerVolleyra: string
   footerAnalytics: string
   footerIntegrations: string
   aboutUs: string
@@ -266,35 +261,31 @@ const translations: Record<Locale, TranslationKeys> = {
     feature9Desc: 'Pick and choose the modules you need. Scale from startup to enterprise without changing platforms.',
     // Products
     productsLabel: 'Products',
-    productsTitle1: 'Two powerful suites, ',
-    productsTitle2: 'one platform',
-    productsSubtitle: 'Whether you need to manage customer relationships or streamline operations, our modular products work together seamlessly.',
-    crmSuite: 'CRM Suite',
-    crmSubtitle: 'Customer Relationship Management',
-    crmDesc: 'Build stronger relationships with your customers. Track every interaction, automate follow-ups, and close deals faster with intelligent sales tools.',
-    erpPlatform: 'ERP Platform',
-    erpSubtitle: 'Enterprise Resource Planning',
-    erpDesc: 'Optimize every resource in your organization. From inventory to finance, get complete visibility and control over your business operations.',
-    contactManager: 'Contact Manager',
-    contactManagerDesc: 'Centralized customer database with smart tagging and relationship mapping.',
-    emailCampaigns: 'Email Campaigns',
-    emailCampaignsDesc: 'Design, send, and track email campaigns with AI-powered personalization.',
-    callTracker: 'Call Tracker',
-    callTrackerDesc: 'Log calls, set follow-ups, and analyze conversation patterns automatically.',
-    salesPipeline: 'Sales Pipeline',
-    salesPipelineDesc: 'Visual pipeline management with drag-and-drop stages and forecasting.',
-    dealRoom: 'Deal Room',
-    dealRoomDesc: 'Close deals faster with collaborative proposals and e-signature support.',
-    inventoryControl: 'Inventory Control',
-    inventoryControlDesc: 'Real-time stock tracking, reorder alerts, and multi-warehouse management.',
-    supplyChain: 'Supply Chain',
-    supplyChainDesc: 'End-to-end supply chain visibility from procurement to delivery.',
-    financialSuite: 'Financial Suite',
-    financialSuiteDesc: 'Invoicing, expense tracking, budgeting, and financial reporting in one place.',
-    hrManagement: 'HR Management',
-    hrManagementDesc: 'Employee records, payroll, leave management, and performance reviews.',
-    projectBilling: 'Project Billing',
-    projectBillingDesc: 'Time tracking, resource allocation, and automated client billing.',
+    productsTitle1: 'Built for Sports ',
+    productsTitle2: 'Academies',
+    productsSubtitle: 'Powerful management tools designed to help sports academies run smoothly, track performance, and grow their programs.',
+    volleyraName: 'Volleyra',
+    volleyraTagline: 'Sports Academy Management',
+    volleyraDesc: 'A complete management platform for sports academies. From player registration and training schedules to match tracking and performance analytics — Volleyra gives coaches and administrators everything they need to run a world-class academy.',
+    volleyraStartTrial: 'Start Free Trial',
+    volleyraMoreInfo: 'More Info',
+    volleyraFeaturesTitle: 'Volleyra Features',
+    volleyraFeature1Title: 'Player Management',
+    volleyraFeature1Desc: 'Register players, manage profiles, track skill levels, and monitor individual progress over time with detailed player cards.',
+    volleyraFeature2Title: 'Training Scheduling',
+    volleyraFeature2Desc: 'Create and manage training sessions with smart scheduling, conflict detection, and automatic notifications to players and staff.',
+    volleyraFeature3Title: 'Match & Tournament Tracking',
+    volleyraFeature3Desc: 'Record match results, track tournament brackets, and maintain a complete history of your academy\'s competitive performance.',
+    volleyraFeature4Title: 'Performance Analytics',
+    volleyraFeature4Desc: 'Visual dashboards with key metrics on player development, team performance, and attendance trends to drive data-informed decisions.',
+    volleyraFeature5Title: 'Staff & Coach Management',
+    volleyraFeature5Desc: 'Manage coaching staff assignments, qualifications, availability, and communication all in one centralized platform.',
+    volleyraFeature6Title: 'Attendance Tracking',
+    volleyraFeature6Desc: 'Real-time attendance monitoring for training sessions and matches with automated alerts for absences and patterns.',
+    volleyraFeature7Title: 'Communication Hub',
+    volleyraFeature7Desc: 'Send announcements, share schedules, and communicate with players, parents, and staff through integrated messaging tools.',
+    volleyraFeature8Title: 'Financial Management',
+    volleyraFeature8Desc: 'Handle subscription billing, track payments, manage invoices, and generate financial reports for your academy operations.',
     // Pricing
     pricingLabel: 'Pricing',
     pricingTitle1: 'Choose the products ',
@@ -320,8 +311,7 @@ const translations: Record<Locale, TranslationKeys> = {
     legal: 'Legal',
     copyright: 'All rights reserved.',
     builtWith: 'Built with precision & passion',
-    footerCrmSuite: 'CRM Suite',
-    footerErpPlatform: 'ERP Platform',
+    footerVolleyra: 'Volleyra',
     footerAnalytics: 'Analytics',
     footerIntegrations: 'Integrations',
     aboutUs: 'About Us',
@@ -481,35 +471,31 @@ const translations: Record<Locale, TranslationKeys> = {
     feature9Desc: 'اختر فقط ما تحتاجه من الوحدات وتوسّع تدريجياً من شركة ناشئة إلى مؤسسة كبيرة دون تغيير المنصة.',
     // Products
     productsLabel: 'المنتجات',
-    productsTitle1: 'حزمتان قويتان، ',
-    productsTitle2: 'منصة واحدة متكاملة',
-    productsSubtitle: 'سواء كنت تبحث عن إدارة علاقات العملاء أو تبسيط العمليات التشغيلية، منتجاتنا المرنة تعمل بسلاسة تامة معاً.',
-    crmSuite: 'حزمة إدارة علاقات العملاء',
-    crmSubtitle: 'إدارة علاقات العملاء',
-    crmDesc: 'ابنِ علاقات أقوى وأعمق مع عملائك. تتبّع كل تفاعل، وأتمتة عمليات المتابعة، وأغلق الصفقات بسرعة مع أدوات مبيعات ذكية.',
-    erpPlatform: 'منصة إدارة موارد المؤسسات',
-    erpSubtitle: 'تخطيط موارد المؤسسات',
-    erpDesc: 'حسّن استخدام كل مورد في مؤسستك. من المخزون إلى الإدارة المالية، احصل على رؤية شاملة وتحكم كامل في جميع عملياتك.',
-    contactManager: 'إدارة جهات الاتصال',
-    contactManagerDesc: 'قاعدة بيانات مركزية للعملاء مع تصنيف ذكي وربط العلاقات تلقائياً.',
-    emailCampaigns: 'حملات البريد الإلكتروني',
-    emailCampaignsDesc: 'صمّم وأرسل وتتبّع حملات بريد إلكتروني مخصصة بقوة الذكاء الاصطناعي.',
-    callTracker: 'تتبع المكالمات الهاتفية',
-    callTrackerDesc: 'سجّل المكالمات وحدّد مواعيد المتابعة وحلّل أنماط المحادثات بشكل آلي.',
-    salesPipeline: 'خط أنابيب المبيعات',
-    salesPipelineDesc: 'إدارة بصرية سريعة مع مراحل قابلة للسحب والإفلات وتنبؤات دقيقة بالمبيعات.',
-    dealRoom: 'غرفة الصفقات',
-    dealRoomDesc: 'أتمتة إغلاق الصفقات مع عروض أسعار تعاونية ودعم للتوقيع الإلكتروني.',
-    inventoryControl: 'إدارة المخزون',
-    inventoryControlDesc: 'تتبع المخزون لحظياً وتنبيهات إعادة الطلب وإدارة مستودعات متعددة بسهولة.',
-    supplyChain: 'سلسلة التوريد',
-    supplyChainDesc: 'رؤية شاملة لسلسلة التوريد بالكامل من مرحلة الشراء وحتى التسليم النهائي.',
-    financialSuite: 'الحزمة المالية المتكاملة',
-    financialSuiteDesc: 'الفوترة وتسجيل المصروفات وإعداد الميزانية والتقارير المالية الدقيقة في مكان واحد.',
-    hrManagement: 'إدارة الموارد البشرية',
-    hrManagementDesc: 'إدارة شؤون الموظفين والرواتب والإجازات ومتابعة الأداء بشكل منظم.',
-    projectBilling: 'فوترة المشاريع',
-    projectBillingDesc: 'تتبع ساعات العمل وتخصيص الموارد وفوترة العملاء بشكل آلي ودقيق.',
+    productsTitle1: 'صُمّمت لأكاديميات ',
+    productsTitle2: 'الرياضة',
+    productsSubtitle: 'أدوات إدارة قوية مصممة لمساعدة أكاديميات الرياضة على العمل بسلاسة وتتبّع الأداء وتنمية برامجها.',
+    volleyraName: 'فوليرا',
+    volleyraTagline: 'إدارة أكاديميات الرياضة',
+    volleyraDesc: 'منصة إدارة متكاملة لأكاديميات الرياضة. من تسجيل اللاعبين وجداول التدريب إلى تتبع المباريات والتحليلات الأدائية — فوليرا توفر لكل المدربين والمديرين ما يحتاجونه لإدارة أكاديمية عالمية المستوى.',
+    volleyraStartTrial: 'ابدأ التجربة المجانية',
+    volleyraMoreInfo: 'المزيد من المعلومات',
+    volleyraFeaturesTitle: 'مميزات فوليرا',
+    volleyraFeature1Title: 'إدارة اللاعبين',
+    volleyraFeature1Desc: 'سجّل اللاعبين وأدر ملفاتهم وتتبّع مستوياتهم المهارية وراقب تطورهم الفردي عبر الوقت بم脆弱 بطاقةلاعبين تفصيلية.',
+    volleyraFeature2Title: 'جدولة التدريب',
+    volleyraFeature2Desc: 'أنشئ وأدر جلسات التدريب بجدولة ذكية واكتشاف التعارضات وإرسال إشعارات تلقائية للاعبين والطاقم.',
+    volleyraFeature3Title: 'تتبع المباريات والبطولات',
+    volleyraFeature3Desc: 'سجّل نتائج المباريات وتتبّع جداول البطولات واحتفظ بسجل كامل لأداء أكاديمتك التنافسي.',
+    volleyraFeature4Title: 'تحليلات الأداء',
+    volleyraFeature4Desc: 'لوحات تحكم بصرية بالمقاييس الأساسية لتطور اللاعبين وأداء الفريق واتجاهات الحضور لاتخاذ قرارات مبنية على البيانات.',
+    volleyraFeature5Title: 'إدارة الكادر والمدربين',
+    volleyraFeature5Desc: 'أدر تعيينات المدربين المؤهلات والتوفر والتواصل في منصة مركزية واحدة.',
+    volleyraFeature6Title: 'تتبع الحضور',
+    volleyraFeature6Desc: 'مراقبة الحضور لحظياً في جلسات التدريب والمباريات مع تنبيهات تلقائية للغيابات والأنماط.',
+    volleyraFeature7Title: 'مركز التواصل',
+    volleyraFeature7Desc: 'أرسل الإعلانات وشارك الجداول وتواصل مع اللاعبين وأولياء الأمور والطاقم من خلال أدوات مراسلة متكاملة.',
+    volleyraFeature8Title: 'الإدارة المالية',
+    volleyraFeature8Desc: 'أدر فواتير الاشتراك وتتبّع المدفوعات وأنشئ الفواتير وتقارير مالية لعمليات أكاديمتك.',
     // Pricing
     pricingLabel: 'الأسعار',
     pricingTitle1: 'اختر المنتجات ',
@@ -535,8 +521,7 @@ const translations: Record<Locale, TranslationKeys> = {
     legal: 'قانوني',
     copyright: 'جميع الحقوق محفوظة.',
     builtWith: 'صُنع بشغف ودقة عالية',
-    footerCrmSuite: 'حزمة إدارة علاقات العملاء',
-    footerErpPlatform: 'منصة إدارة موارد المؤسسات',
+    footerVolleyra: 'فوليرا',
     footerAnalytics: 'التحليلات',
     footerIntegrations: 'التكاملات',
     aboutUs: 'من نحن',
