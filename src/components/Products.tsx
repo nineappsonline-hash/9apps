@@ -79,7 +79,7 @@ export default function Products() {
                     <h3 className="text-2xl lg:text-3xl font-bold text-white">{t.volleyraName}</h3>
                     <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
-                  <p className="text-sm text-indigo-400 font-medium mb-4">{t.volleyraTagline}</p>
+                  <p className="text-xl lg:text-2xl font-bold text-indigo-400 mb-4">{t.volleyraTagline}</p>
                 </motion.div>
 
                 <motion.p

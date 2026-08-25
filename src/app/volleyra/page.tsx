@@ -129,7 +129,7 @@ export default function VolleyraPage() {
               <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                 <span className="gradient-text">{t.volleyraName}</span>
               </h1>
-              <p className="text-indigo-400 font-medium text-lg mb-6">{t.volleyraTagline}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-6">{t.volleyraTagline}</p>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                 {t.volleyraDesc}
               </p>
