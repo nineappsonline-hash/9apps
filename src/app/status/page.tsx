@@ -5,8 +5,9 @@ import { motion, useInView } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { CheckCircle, AlertCircle, Clock } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
-function ServiceRow({ name, status, uptime, index }: { name: string; status: string; uptime: string; index: number }) {
+function ServiceRow({ name, status, uptime, isAr, index }: { name: string; status: string; uptime: string; isAr: boolean; index: number }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-20px' })
   const isOperational = status === 'operational'
@@ -21,9 +22,9 @@ function ServiceRow({ name, status, uptime, index }: { name: string; status: str
         <span className="text-sm text-gray-300">{name}</span>
       </div>
       <div className="flex items-center gap-4">
-        <span className="text-xs text-gray-500">{uptime} uptime</span>
+        <span className="text-xs text-gray-500">{uptime} {isAr ? 'وقت التشغيل' : 'uptime'}</span>
         <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${isOperational ? 'bg-emerald-500/10 text-emerald-400' : 'bg-amber-500/10 text-amber-400'}`}>
-          {isOperational ? 'Operational' : 'Degraded'}
+          {isOperational ? (isAr ? 'يعمل' : 'Operational') : (isAr ? 'متضرر' : 'Degraded')}
         </span>
       </div>
     </motion.div>
@@ -31,6 +32,8 @@ function ServiceRow({ name, status, uptime, index }: { name: string; status: str
 }
 
 export default function StatusPage() {
+  const { locale } = useI18n()
+  const isAr = locale === 'ar'
   const [time, setTime] = useState('')
 
   useEffect(() => {
@@ -40,13 +43,13 @@ export default function StatusPage() {
   }, [])
 
   const services = [
-    { name: 'Web Application', status: 'operational', uptime: '99.99%' },
+    { name: isAr ? 'التطبيق الإلكتروني' : 'Web Application', status: 'operational', uptime: '99.99%' },
     { name: 'API', status: 'operational', uptime: '99.99%' },
-    { name: 'Authentication (OAuth)', status: 'operational', uptime: '99.98%' },
-    { name: 'Email Campaigns Service', status: 'operational', uptime: '99.97%' },
-    { name: 'File Storage', status: 'operational', uptime: '100%' },
-    { name: 'Database', status: 'operational', uptime: '99.99%' },
-    { name: 'CDN & Static Assets', status: 'operational', uptime: '100%' },
+    { name: isAr ? 'المصادقة (OAuth)' : 'Authentication (OAuth)', status: 'operational', uptime: '99.98%' },
+    { name: isAr ? 'خدمة حملات البريد الإلكتروني' : 'Email Campaigns Service', status: 'operational', uptime: '99.97%' },
+    { name: isAr ? 'تخزين الملفات' : 'File Storage', status: 'operational', uptime: '100%' },
+    { name: isAr ? 'قاعدة البيانات' : 'Database', status: 'operational', uptime: '99.99%' },
+    { name: isAr ? 'شبكة التسليم والمجلدات الثابتة' : 'CDN & Static Assets', status: 'operational', uptime: '100%' },
     { name: 'Webhooks', status: 'operational', uptime: '99.96%' },
   ]
 
@@ -64,13 +67,13 @@ export default function StatusPage() {
         <section className="relative pt-36 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">System Status</span></h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">{isAr ? 'حالة النظام' : 'System Status'}</span></h1>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-                Real-time status of all NineApps services and infrastructure.
+                {isAr ? 'حالة فورية لجميع خدمات NineApps والبنية التحتية.' : 'Real-time status of all NineApps services and infrastructure.'}
               </p>
               <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${allOperational ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'}`}>
                 {allOperational ? <CheckCircle className="w-4 h-4" /> : <AlertCircle className="w-4 h-4" />}
-                {allOperational ? 'All Systems Operational' : 'Some Systems Experiencing Issues'}
+                {allOperational ? (isAr ? 'جميع الأنظمة تعمل بشكل طبيعي' : 'All Systems Operational') : (isAr ? 'بعض الأنظمة بتعاني من مشاكل' : 'Some Systems Experiencing Issues')}
               </div>
             </motion.div>
           </div>
@@ -80,24 +83,24 @@ export default function StatusPage() {
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="glass-card rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold text-gray-200">Service Status</h2>
-                <span className="flex items-center gap-1 text-xs text-gray-500"><Clock className="w-3 h-3" />Last checked: {time}</span>
+                <h2 className="text-lg font-semibold text-gray-200">{isAr ? 'حالة الخدمات' : 'Service Status'}</h2>
+                <span className="flex items-center gap-1 text-xs text-gray-500"><Clock className="w-3 h-3" />{isAr ? 'آخر فحص: ' : 'Last checked: '}{time}</span>
               </div>
               <div className="space-y-2">
                 {services.map((service, i) => (
-                  <ServiceRow key={service.name} {...service} index={i} />
+                  <ServiceRow key={service.name} {...service} isAr={isAr} index={i} />
                 ))}
               </div>
             </div>
 
             <div className="glass-card rounded-2xl p-6">
-              <h2 className="text-lg font-semibold text-gray-200 mb-4">90-Day Uptime</h2>
+              <h2 className="text-lg font-semibold text-gray-200 mb-4">{isAr ? 'وقت التشغيل لمدة 90 يوم' : '90-Day Uptime'}</h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                 {[
-                  { label: 'Web App', value: '99.99%' },
+                  { label: isAr ? 'التطبيق الإلكتروني' : 'Web App', value: '99.99%' },
                   { label: 'API', value: '99.99%' },
-                  { label: 'Database', value: '99.99%' },
-                  { label: 'Overall', value: '99.99%' },
+                  { label: isAr ? 'قاعدة البيانات' : 'Database', value: '99.99%' },
+                  { label: isAr ? 'الإجمالي' : 'Overall', value: '99.99%' },
                 ].map((stat) => (
                   <div key={stat.label} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04]">
                     <p className="text-2xl font-bold gradient-text">{stat.value}</p>
@@ -108,23 +111,23 @@ export default function StatusPage() {
             </div>
 
             <div className="glass-card rounded-2xl p-6">
-              <h2 className="text-lg font-semibold text-gray-200 mb-4">Incident History</h2>
+              <h2 className="text-lg font-semibold text-gray-200 mb-4">{isAr ? 'الحوادث الأخيرة' : 'Incident History'}</h2>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 text-sm">
                   <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-gray-300">All systems restored</p>
+                    <p className="text-gray-300">{isAr ? 'تمت استعادة جميع الأنظمة' : 'All systems restored'}</p>
                     <p className="text-xs text-gray-500 mt-1">August 20, 2026 — 14:30 UTC</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-gray-300">Scheduled maintenance completed</p>
+                    <p className="text-gray-300">{isAr ? 'تمت الصيانة المجدولة' : 'Scheduled maintenance completed'}</p>
                     <p className="text-xs text-gray-500 mt-1">August 10, 2026 — 02:00 UTC</p>
                   </div>
                 </div>
-                <p className="text-gray-500 text-xs">No incidents reported in the last 90 days.</p>
+                <p className="text-gray-500 text-xs">{isAr ? 'مفيش حوادث مسجلة في آخر 90 يوم.' : 'No incidents reported in the last 90 days.'}</p>
               </div>
             </div>
           </div>

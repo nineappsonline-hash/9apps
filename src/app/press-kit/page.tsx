@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { useI18n } from '@/lib/i18n'
 import { Download, Image, FileText, Mail } from 'lucide-react'
 
 function AssetCard({ icon: Icon, title, description, index }: { icon: React.ElementType; title: string; description: string; index: number }) {
@@ -21,6 +22,9 @@ function AssetCard({ icon: Icon, title, description, index }: { icon: React.Elem
 }
 
 export default function PressKitPage() {
+  const { locale } = useI18n()
+  const isAr = locale === 'ar'
+
   return (
     <>
       <Navbar />
@@ -33,9 +37,9 @@ export default function PressKitPage() {
         <section className="relative pt-36 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">Press Kit</span></h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">{isAr ? 'للصحافة' : 'Press Kit'}</span></h1>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-                Everything you need to write about NineApps. Logos, brand guidelines, and key facts — all in one place.
+                {isAr ? 'كل اللي محتاجه عشان تكتب عن NineApps. شعارات وإرشادات العلامة التجارية وحقائق أساسية — كلها في مكان واحد.' : 'Everything you need to write about NineApps. Logos, brand guidelines, and key facts — all in one place.'}
               </p>
             </motion.div>
           </div>
@@ -44,13 +48,13 @@ export default function PressKitPage() {
         <section className="relative pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="glass-card rounded-2xl p-8 mb-6">
-              <h2 className="text-xl font-bold gradient-text mb-4">About NineApps</h2>
+              <h2 className="text-xl font-bold gradient-text mb-4">{isAr ? 'عن NineApps' : 'About NineApps'}</h2>
               <div className="space-y-3 text-sm text-gray-400 leading-relaxed">
-                <p><strong className="text-gray-300">Founded:</strong> 2025</p>
-                <p><strong className="text-gray-300">Headquarters:</strong> Cairo, Egypt</p>
-                <p><strong className="text-gray-300">Industry:</strong> Business Software (SaaS)</p>
-                <p><strong className="text-gray-300">Products:</strong> CRM Suite, ERP Platform — 10 modular products covering contact management, email campaigns, call tracking, sales pipeline, deal room, inventory control, supply chain, financial suite, HR management, and project billing.</p>
-                <p><strong className="text-gray-300">Website:</strong> nineapps.com</p>
+                <p><strong className="text-gray-300">{isAr ? 'تأسيس:' : 'Founded:'}</strong> 2025</p>
+                <p><strong className="text-gray-300">{isAr ? 'المقر الرئيسي:' : 'Headquarters:'}</strong> {isAr ? 'القاهرة، مصر' : 'Cairo, Egypt'}</p>
+                <p><strong className="text-gray-300">{isAr ? 'الصناعة:' : 'Industry:'}</strong> {isAr ? 'برمجيات الأعمال (SaaS)' : 'Business Software (SaaS)'}</p>
+                <p><strong className="text-gray-300">{isAr ? 'المنتجات:' : 'Products:'}</strong> {isAr ? 'CRM Suite و ERP Platform — 10 منتجات معيارية تغطي إدارة جهات الاتصال وحملات البريد الإلكتروني وتتبع المكالمات وخط المبيعات وغرفة الصفقات والتحكم بالmockzoon وسلسلة التوريد والSuite المالي وإدارة الموارد البشرية وفوترة المشاريع.' : 'CRM Suite, ERP Platform — 10 modular products covering contact management, email campaigns, call tracking, sales pipeline, deal room, inventory control, supply chain, financial suite, HR management, and project billing.'}</p>
+                <p><strong className="text-gray-300">{isAr ? 'الموقع:' : 'Website:'}</strong> nineapps.com</p>
               </div>
             </div>
           </div>
@@ -58,20 +62,20 @@ export default function PressKitPage() {
 
         <section className="relative pb-32 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold gradient-text mb-6">Brand Assets</h2>
+            <h2 className="text-2xl font-bold gradient-text mb-6">{isAr ? 'أصول العلامة التجارية' : 'Brand Assets'}</h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              <AssetCard icon={Image} title="Logo Files" description="NineApps logo in SVG, PNG, and PDF formats. Available in light and dark variants." index={0} />
-              <AssetCard icon={FileText} title="Brand Guidelines" description="Color palette, typography, spacing rules, and usage guidelines for consistent brand representation." index={1} />
-              <AssetCard icon={FileText} title="Fact Sheet" description="Key company facts, product overview, market positioning, and competitive differentiators." index={2} />
-              <AssetCard icon={Download} title="Screenshots" description="High-resolution product screenshots of all CRM and ERP modules for editorial use." index={3} />
+              <AssetCard icon={Image} title={isAr ? 'ملفات الشعار' : 'Logo Files'} description={isAr ? 'شعار NineApps بصيغ SVG و PNG و PDF. متاح بنسخ فاتحة وغامقة.' : 'NineApps logo in SVG, PNG, and PDF formats. Available in light and dark variants.'} index={0} />
+              <AssetCard icon={FileText} title={isAr ? 'إرشادات العلامة التجارية' : 'Brand Guidelines'} description={isAr ? 'لوحة الألوان والخطوط وقواعد المسافات وإرشادات الاستخدام لتمثيل العلامة التجارية بثبات.' : 'Color palette, typography, spacing rules, and usage guidelines for consistent brand representation.'} index={1} />
+              <AssetCard icon={FileText} title={isAr ? 'الورقة Informationية' : 'Fact Sheet'} description={isAr ? 'حقائق الشركة الأساسية ونظرة عامة على المنتجات والموقع في السوق والمميزات التنافسية.' : 'Key company facts, product overview, market positioning, and competitive differentiators.'} index={2} />
+              <AssetCard icon={Download} title={isAr ? 'لقطات الشاشة' : 'Screenshots'} description={isAr ? 'لقطات شاشة عالية الدقة لجميع وحدات CRM و ERP للاستخدام Editorial.' : 'High-resolution product screenshots of all CRM and ERP modules for editorial use.'} index={3} />
             </div>
             <div className="mt-8 text-center">
               <p className="text-gray-500 text-sm mb-4">
-                Need custom assets or have media inquiries?
+                {isAr ? 'محتاج أصول مخصصة أو عندك استفسارات إعلامية؟' : 'Need custom assets or have media inquiries?'}
               </p>
               <a href="mailto:nineappsonline@gmail.com?subject=Press Inquiry" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-medium hover:bg-indigo-500/20 transition-colors">
                 <Mail className="w-4 h-4" />
-                Contact Press Team
+                {isAr ? 'تواصل مع فريق الصحافة' : 'Contact Press Team'}
               </a>
             </div>
           </div>

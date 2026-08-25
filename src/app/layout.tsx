@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Cairo } from 'next/font/google'
+import { Inter, Tajawal } from 'next/font/google'
 import './globals.css'
 import { I18nProvider } from '@/lib/i18n'
 import ClientEffects from '@/components/ClientEffects'
@@ -10,10 +10,11 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const cairo = Cairo({
+const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
+  weight: ['300', '400', '500', '700', '800', '900'],
   display: 'swap',
-  variable: '--font-cairo',
+  variable: '--font-tajawal',
 })
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" className={`${inter.variable} ${cairo.variable}`} suppressHydrationWarning>
+    <html lang="ar" dir="rtl" className={`${inter.variable} ${tajawal.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans">
         <ClientEffects />
         <I18nProvider>{children}</I18nProvider>

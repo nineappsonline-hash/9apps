@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useI18n } from '@/lib/i18n'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import TiltCard from '@/components/TiltCard'
 import {
@@ -35,14 +34,13 @@ import {
 function AnimatedWorkflow() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
-  const { t } = useI18n()
 
   const steps = [
-    { key: t.workflowEnroll },
-    { key: t.workflowSchedule },
-    { key: t.workflowAttend },
-    { key: t.workflowBill },
-    { key: t.workflowProfit },
+    { key: 'التسجيل' },
+    { key: 'الجدولة' },
+    { key: 'الحضور' },
+    { key: 'الفوترة' },
+    { key: 'الربح' },
   ]
 
   return (
@@ -181,7 +179,6 @@ function StatCard({ value, suffix, label, icon: Icon }: { value: number; suffix?
 }
 
 export default function VolleyraPage() {
-  const { t } = useI18n()
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true })
   const { scrollYProgress } = useScroll()
@@ -192,109 +189,109 @@ export default function VolleyraPage() {
     {
       icon: LayoutDashboard,
       gradient: 'from-indigo-500 to-purple-500',
-      title: t.f1Title,
-      subtitle: t.f1Subtitle,
-      description: t.f1Desc,
-      points: [t.f1p1, t.f1p2, t.f1p3, t.f1p4],
+      title: 'لوحة التحكم',
+      subtitle: 'كل حاجة في مكان واحد',
+      description: 'شاشة بتعرفك حال أكاديمتك من أول نظرة — عدد الأعضاء، الدخل الشهري، التكاليف، وصافي الربح، كلها محدّثة لحظة بلحظة. تنبيهات ذكية بتقولك مين عضويته ما اتدفعت، ومين لسه مستني موافقة، ومين الجلسات بتاعته خلصت.',
+      points: ['عدد الأعضاء، الدخل، التكاليف، وصافي الربح — دايماً محدّث', 'تنبيهات ذكية للجلسات اللي خلصت والأعضاء المتأخرين والموافقات المعلقة', 'الجلسات الجاية مع مؤشر ربح/خسارة لكل جلسة', 'كل عضو يشوف جلساته المتبقية ومعدل حضوره وحالة دفعه'],
     },
     {
       icon: Users,
       gradient: 'from-cyan-500 to-blue-500',
-      title: t.f2Title,
-      subtitle: t.f2Subtitle,
-      description: t.f2Desc,
-      points: [t.f2p1, t.f2p2, t.f2p3, t.f2p4, t.f2p5, t.f2p6],
+      title: 'الأعضاء والاشتراكات',
+      subtitle: 'كل الأعضاء في مكان واحد',
+      description: 'قائمة أعضائك كاملة — بحث وتصفية وفرز وتصفح. حدد خطط العضوية زي ما تحب — كاملة (8 جلسات) أو نصف (4) أو أي عدد. المنصة بتعدّ الجلسات المتبقية لحد ما الحضور يتسجّل، فتعرف دايماً مين نشط ومين محتاج يجدّد ومين وقّف.',
+      points: ['خطط عضوية مرونة — حدد عدد الجلسات زي ما يناسب أكاديمتك', 'عدّ تلقائي للجلسات المتبقية مع كل تسجيل حضور', 'حالات واضحة: مدفوع · محتاج تجديد · متأخر', 'قائمة انتظار للتسجيلات الجديدة — الأعضاء بيسجلوا بكود وأنت بتوافق', 'ملف كل عضو فيه كل حاجة: سجل الدفع والحضور والشارات والتقييمات', 'تقرير PDF لأي عضو — للطباعة أو إرساله بالبريد'],
     },
     {
       icon: CreditCard,
       gradient: 'from-violet-500 to-pink-500',
-      title: t.f3Title,
-      subtitle: t.f3Subtitle,
-      description: t.f3Desc,
-      points: [t.f3p1, t.f3p2, t.f3p3, t.f3p4],
+      title: 'المدفوعات والإيصالات',
+      subtitle: 'دفع من غير وجع دماغ',
+      description: 'سجّل أي دفعة بالمبلغ والخطة والطريقة. بيدعم كاش وكريديت كارد ومحفظة إلكترونية وتحويل بنكي. كل دفعة بتبعتلك إيصال تقدر تطبعه أو تحمله. حالة العضوية بتتحدث تلقائي. وتصدّر كل سجل المدفوعات CSV لمحاسبك.',
+      points: ['طرق دفع كتير: كاش، كريديت، محفظة إلكترونية، تحويل بنكي، غير كده', 'إيصال تطبعه أو تحمله لكل دفعة', 'حالة العضوية بتتحدث لوحدها لما الدفعة تتسجّل', 'تصدير سجل المدفوعات CSV للحسابات'],
     },
     {
       icon: CalendarCheck,
       gradient: 'from-emerald-500 to-teal-500',
-      title: t.f4Title,
-      subtitle: t.f4Subtitle,
-      description: t.f4Desc,
-      points: [t.f4p1, t.f4p2, t.f4p3, t.f4p4, t.f4p5],
+      title: 'الجدولة الذكية',
+      subtitle: 'جدولة من غير تعقيد',
+      description: 'تقويم شهري وقائمة كل جلسات التدريب. أنشئ جلسة بالرياضة والمكان والمدرب ومجموعة العمر والمستوى. أداة الجدولة المتكررة بتنشئلك شهر كامل من الجلسات بنقرة واحدة — مثلاً "كل اتنين وأربعاء الساعة 6" وخلاص. توقيتات المدربين بتمنع أي حجز مزدوج.',
+      points: ['تقويم شهري وقائمة كل جلسات التدريب', 'جدولة متكررة — شهر كامل بنقرة واحدة', 'توقيتات المدربين بتمنع الحجز المزدوج', 'الجلسات الملغاة بتتخصم تلقائياً من الحسابات المالية', 'تغذية تقويم .ics — الأعضاء بيشتركوا مرة واحدة والتقويم بيفضل محدّث'],
     },
     {
       icon: QrCode,
       gradient: 'from-orange-500 to-red-500',
-      title: t.f5Title,
-      subtitle: t.f5Subtitle,
-      description: t.f5Desc,
-      points: [t.f5p1, t.f5p2, t.f5p3, t.f5p4, t.f5p5],
+      title: 'الحضور وتسجيل الدخول',
+      subtitle: 'تسجيل حضور في ثانية',
+      description: 'اختار جلسة، وبدّل كل عضو حاضر/غائب — كل حاجة بتتوفّر لحظياً. تسجيل دخول بالكود المربّع (QR) — كل عضو ليه كوده، امسحه عند الباب من غير ما حد يستني. فيه كمان ضيوف بيدفعوا لكل جلسة والمبلغ بيتحسب في إيرادات الجلسة تلقائي.',
+      points: ['كود QR شخصي لكل عضو — امسح أو اكتب عند الباب من غير زحمة', 'إجراءات جماعية — حدد أعضاء كتير وعلّمهم حاضرين أو غائبين في مرة واحدة', 'ضيوف بيدفعوا لكل جلسة — المبلغ بيتحسب في الإيرادات تلقائي', 'قائمة انتظار لما الجلسة تكتمل مع تتبع الترقية', 'إيرادات/تكاليف/ربح لحظي وأنت لسه بتاخد الحضور'],
     },
     {
       icon: TrendingUp,
       gradient: 'from-yellow-500 to-amber-500',
-      title: t.f6Title,
-      subtitle: t.f6Subtitle,
-      description: t.f6Desc,
-      points: [t.f6p1, t.f6p2, t.f6p3, t.f6p4, t.f6p5],
+      title: 'المحرك المالي',
+      subtitle: 'الربح بيتحسب لوحده',
+      description: 'دي أقوى ميزة. حط رقمين بس — راتب المدرب و سعر الملعب — وهتشوف كل حاجة بتتحسب تلقائي. أول ما تسلّم حضور الجلسة، المنصة بتحسبلك الإيرادات والتكلفة وصافي الربح في الثانية. لا مفاجآت آخر شهر، لا حسابات في دماغك. أرقام واضحة.',
+      points: ['تكلفة الجلسة بتتحسب تلقائي من راتب المدرب و سعر الملعب', 'إيرادات الجلسة = مجموع جلسات الأعضاء الحاضرين + مدفوعات الضيوف', 'الربح/الخسارة بيظهر أخضر/أحمر في كل مكان — أول ما الحضور يتسجّل', 'تتبع مصاريف إضافية بالفئة — عشان تشوف الربح الحقيقي', 'الحسابات شغّالة في قاعدة البيانات — دايماً محدّثة ودقيقة'],
     },
     {
       icon: BarChart3,
       gradient: 'from-pink-500 to-rose-500',
-      title: t.f7Title,
-      subtitle: t.f7Subtitle,
-      description: t.f7Desc,
-      points: [t.f7p1, t.f7p2, t.f7p3, t.f7p4, t.f7p5, t.f7p6],
+      title: 'التقارير والتحليلات',
+      subtitle: 'قرارات بالبيانات مش بالحدس',
+      description: 'تحللين مخصصة عشان تاخد قرارات صح. رسوم بيانية للدخل مقابل المصاريف، تحليل الاحتفاظ بالأعضاء، أداء المدربين، توقعات الدخل للشه الجايين، ورادار صحة الأعضاء اللي بيقولك مين هيسيبك قبل ما يمشي. صدّر كل حاجة PDF أو CSV.',
+      points: ['رسم بياني للدخل مقابل المصاريف مع ملخص شهري ومتوسط الربح للجلسة', 'تحليل الاحتفاظ — نشط، متوقف 30-60 يوم، متوقف أكتر من 60 يوم', 'رادار صحة الأعضاء: سليم / تحت الخطر / مشترك', 'توقع الدخل للشه الجايين بناءً على الاتجاهات القديمة', 'مقارنة أداء المدربين وخريطة حرارية لأوقات الجلسات', 'تقرير PDF بنقرة واحدة وتصدير CSV للمدفوعات'],
     },
     {
       icon: UserCog,
       gradient: 'from-teal-500 to-cyan-500',
-      title: t.f8Title,
-      subtitle: t.f8Subtitle,
-      description: t.f8Desc,
-      points: [t.f8p1, t.f8p2, t.f8p3, t.f8p4],
+      title: 'الفرق والمدربين والأماكن',
+      subtitle: 'نظّم فريقك',
+      description: 'رتّب أعضاءك في فرق حسب الرياضة ومجموعة العمر والمستوى. دليل المدربين فيه تخصصاتهم ورواتبهم وبتدخل تلقائي في حسابات التكلفة. كتالوج الأماكن فيه سعة كل ملعب/صالة. وكتالوج رياضات — كرة طائرة النهارده وكرة سلة بكرة.',
+      points: ['فرق منظمة حسب الرياضة ومجموعة العمر والمستوى', 'دليل المدربين بالتخصصات والرواتب لحساب التكلفة', 'كتالوج الأماكن بمعلومات سعة كل ملعب وصالة', 'كتالوج رياضات لكل أكاديمية — كمّل مع نموك'],
     },
     {
       icon: Trophy,
       gradient: 'from-indigo-500 to-blue-500',
-      title: t.f9Title,
-      subtitle: t.f9Subtitle,
-      description: t.f9Desc,
-      points: [t.f9p1, t.f9p2, t.f9p3],
+      title: 'البطولات',
+      subtitle: 'إدارة المسابقات',
+      description: 'أنشئ بطولة لكل رياضة بالتاريخ وتابع حالتها. أدر جدول المباريات كله — الجولات والفرق والنتايج والتواريخ والأماكن. سجل المباريات بيفضل مرتبط بالفرق والمواسم.',
+      points: ['أنشئ بطولة لكل رياضة بالتاريخ وتابع حالتها', 'إدارة جدول المباريات كامل: الجولات والفرق والنتايج والتواريخ والأماكن', 'سجل المباريات مرتبط بالفرق والمواسم'],
     },
     {
       icon: Star,
       gradient: 'from-purple-500 to-violet-500',
-      title: t.f10Title,
-      subtitle: t.f10Subtitle,
-      description: t.f10Desc,
-      points: [t.f10p1, t.f10p2, t.f10p3, t.f10p4, t.f10p5, t.f10p6],
+      title: 'تفاعل الأعضاء',
+      subtitle: 'خلي أعضاءك متحمسين',
+      description: 'خلي الأعضاء متحمسين والأهل عارفين اللي بيحصل. لوحة إعلانات بتتوصل لكل الأعضاء. معرض صور مرتبط بالجلسات. شارات بتتحصل تلقائي مع كل إنجاز — الخطوة الأولى، المنتظم، المخلص، البطل، الأسطورة. تقييمات اللاعبين — المدرب بيقّيمهم في التقنية والمناورة واللياقة والسلوك.',
+      points: ['لوحة إعلانات بتتوصل لكل الأعضاء', 'معرض صور مرتبط بالجلسات والإعلانات', 'شارات إنجاز: الخطوة الأولى (1)، المنتظم (10)، المخلص (25)، البطل (50)، الأسطورة (100)', 'تقييمات اللاعبين — المدرب بيقّيمهم في التقنية والمناورة واللياقة والسلوك', 'تقييمات الجلسات — الأعضاء بيقيّموا الجلسات بنجوم 1-5 مع تعليقات', 'تغذية نشاط حية — كل حاجة بتحصل: انضمامات، دفع، شارات، تسجيلات دخول'],
     },
     {
       icon: Globe,
       gradient: 'from-cyan-500 to-emerald-500',
-      title: t.f11Title,
-      subtitle: t.f11Subtitle,
-      description: t.f11Desc,
-      points: [t.f11p1, t.f11p2, t.f11p3],
+      title: 'صفحة الأكاديمية العامة',
+      subtitle: 'صفحة تسويق جاهزة',
+      description: 'كل أكاديمية ليها صفحة عامة اختيارية باسماها. تعرض وصف الأكاديمية والرياضات. الزوار بيبعتوا طلب تجربة وبيدخلوا مباشرة في pipeline في لوحة التحكم — جديد، تم التواصل، اتحول، اترفض. قناة تسويق مجانية جاهزة.',
+      points: ['صفحة عامة باسم أكاديمتك تعرض كل حاجة', 'نماذج طلب التجربة بتدخل مباشرة في pipeline', 'قناة تسويق مجانية مدمجة في المنصة'],
     },
     {
       icon: Megaphone,
       gradient: 'from-amber-500 to-orange-500',
-      title: t.f12Title,
-      subtitle: t.f12Subtitle,
-      description: t.f12Desc,
-      points: [t.f12p1, t.f12p2, t.f12p3, t.f12p4],
+      title: 'الإشعارات والتكاملات',
+      subtitle: 'تواصل احترافي',
+      description: 'إشعارات بريد إلكتروني احترافية. تأكيد الدفع، تذكيرات التجديد لما العضو يخلص جلسات، رسائل ترحيب للأعضاء الجدد، وإشعارات الجلسات الجديدة. وفيه تغذية تقويم شخصية لكل أكاديمية — تقويم الموبايل بيفضل محدّث تلقائي.',
+      points: ['رسائل تأكيد الدفع بالمبلغ والجلسات', 'تذكيرات التجديد — بنقرة واحدة من لوحة التحكم', 'رسائل ترحيب للأعضاء الجدد وإشعارات الجلسات الجديدة', 'تغذية تقويم .ics شخصية لكل أكاديمية — مزامنة تلقائية'],
     },
   ]
 
   const regionItems = [
-    { icon: Globe, label: t.region1Label, desc: t.region1Desc },
-    { icon: DollarSign, label: t.region2Label, desc: t.region2Desc },
-    { icon: Smartphone, label: t.region3Label, desc: t.region3Desc },
-    { icon: Shield, label: t.region4Label, desc: t.region4Desc },
+    { icon: Globe, label: 'عربي وإنجليزي — الاتنين', desc: 'واجهة كاملة من اليمين للشمال' },
+    { icon: DollarSign, label: 'جنيه مصري — جاهز', desc: 'من غير ما تظبط حاجة' },
+    { icon: Smartphone, label: 'يشتغل على كل حاجة', desc: 'موبايل في الملعب زي اللاب توب في المكتب' },
+    { icon: Shield, label: 'وضع داكن في كل مكان', desc: 'واجهة حديثة ومريحة للعين' },
   ]
 
-  const securityPoints = [t.security1, t.security2, t.security3, t.security4, t.security5, t.security6]
+  const securityPoints = ['بيانات كل أكاديمية معزولة — لا أكاديمية تقدر تشوف بيانات التانية', 'تحكم في الوصول حسب الدور — في قاعدة البيانات والـ routes', 'مزامنة فورية بتقنية Supabase و PostgreSQL', 'مضمون على Vercel + Supabase — من غير ما تتعب في الصيانة', 'نسخ احتياطي تلقائي', 'بنية تحتية جاهزة لمعايير GDPR']
 
   return (
     <>
@@ -329,29 +326,29 @@ export default function VolleyraPage() {
               </motion.div>
 
               <motion.h1 initial={{ opacity: 0, y: 15 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }} className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-                <span className="gradient-text">{t.volleyraName}</span>
+                <span className="gradient-text">فوليرا</span>
               </motion.h1>
 
               <motion.p initial={{ opacity: 0, y: 15 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-6">
-                {t.volleyraTagline}
+                إدارة أكاديميات الرياضة
               </motion.p>
 
               <motion.p initial={{ opacity: 0, y: 15 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.25 }} className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-4">
-                {t.volleyraDesc}
+                منصة شاملة لإدارة أكاديميات الرياضة — من تسجيل اللاعبين وجداول التدريب لحد تتبع المباريات والتحليلات. فوليرا بتوفر كل اللي المدربين والمديرين محتاجينه عشان يسيروا أكاديمية باحترافية.
               </motion.p>
 
               <motion.p initial={{ opacity: 0, y: 15 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.3 }} className="text-gray-500 text-base leading-relaxed max-w-xl mx-auto mb-10">
-                {t.volleyraHeroSub}
+                بتبدل الإكسل وواتساب والدفاتر بمنصة واحدة بتغطي التسجيل والفواتير والحضور والربح — عشان تركز في التدريب مش في الأوراق.
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 10 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.35 }} className="flex flex-wrap gap-3 justify-center">
                 <a href="https://volley-academy.vercel.app/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5">
-                  {t.volleyraStartTrial}
+                  جرّب مجاناً
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
                 <Link href="/#products" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/10 text-gray-300 font-semibold hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5">
                   <ArrowLeft className="w-4 h-4" />
-                  {t.ctaBack}
+                  رجوع
                 </Link>
               </motion.div>
             </motion.div>
@@ -362,9 +359,9 @@ export default function VolleyraPage() {
         <section className="relative px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <AnimatedWorkflow />
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.8 }} className="text-center text-gray-500 text-sm -mt-8 mb-4">
-              {t.workflowSubtitle}
-            </motion.p>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.8 }} className="text-center text-gray-500 text-sm -mt-8 mb-4">
+                من التسجيل للربح — الدورة الكاملة
+              </motion.p>
           </div>
         </section>
 
@@ -373,10 +370,10 @@ export default function VolleyraPage() {
           <div className="max-w-4xl mx-auto">
             <div className="glass-card rounded-2xl p-8 border-gradient">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <StatCard value={12} label={t.statModules} icon={Zap} />
-                <StatCard value={100} suffix="%" label={t.statSync} icon={Clock} />
-                <StatCard value={2} label={t.statLanguages} icon={Globe} />
-                <StatCard value={0} suffix="%" label={t.statSetup} icon={DollarSign} />
+                <StatCard value={12} label="وحدة مميزات" icon={Zap} />
+                <StatCard value={100} suffix="%" label="مزامنة فورية" icon={Clock} />
+                <StatCard value={2} label="لغتين (عربي + إنجليزي)" icon={Globe} />
+                <StatCard value={0} suffix="%" label="رسوم الإعداد" icon={DollarSign} />
               </div>
             </div>
           </div>
@@ -387,11 +384,11 @@ export default function VolleyraPage() {
           <div className="max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.5 }} className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                <span className="text-white">{t.featuresHeading1}</span>
-                <span className="text-shimmer">{t.featuresHeading2}</span>
+                <span className="text-white">كل اللي تحتاجه عشان</span>
+                <span className="text-shimmer">تسير أكاديمتك</span>
               </h2>
               <p className="text-gray-400 text-lg max-w-xl mx-auto">
-                {t.volleyraFeaturesSubtitle}
+                فوليرا بيشتغل على كل دورة حياة الأكاديمية — من لحظة ما العضو يسجل لحد ما تعرف بالظبط أنهي جلسات بتحقق أرباح.
               </p>
             </motion.div>
 
@@ -415,8 +412,8 @@ export default function VolleyraPage() {
                       <Globe className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">{t.regionTitle}</h3>
-                      <p className="text-xs text-cyan-400">{t.regionSubtitle}</p>
+                      <h3 className="text-xl font-bold text-white">مصمم ليك</h3>
+                      <p className="text-xs text-cyan-400">عربي من الأول مش مترجم</p>
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -449,8 +446,8 @@ export default function VolleyraPage() {
                         <Shield className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white">{t.securityTitle}</h3>
-                        <p className="text-xs text-indigo-400">{t.securitySubtitle}</p>
+                        <h3 className="text-xl font-bold text-white">الأمان والموثوقية</h3>
+                        <p className="text-xs text-indigo-400">حماية على مستوى الشركات الكبيرة</p>
                       </div>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -476,14 +473,14 @@ export default function VolleyraPage() {
                 <Image src="/Volleyra.jpeg" alt="Volleyra Logo" width={80} height={80} className="w-full h-full object-cover" />
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                {t.ctaHeading}
+                جاهز تسير أكاديمتك كبيزنس؟
               </h2>
               <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                {t.ctaText}
+                جرّب مجاناً النهارده. من غير كريديت كارد. وصول كامل لكل المميزات.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <a href="https://volley-academy.vercel.app/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5">
-                  {t.volleyraStartTrial}
+                  جرّب مجاناً
                   <ArrowUpRight className="w-5 h-5" />
                 </a>
               </div>

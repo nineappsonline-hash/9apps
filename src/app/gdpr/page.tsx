@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Shield, Database, Settings, Users, Globe, Lock, Mail } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
 function Section({ icon: Icon, title, children, index }: { icon: React.ElementType; title: string; children: React.ReactNode; index: number }) {
   const ref = useRef(null)
@@ -23,6 +24,9 @@ function Section({ icon: Icon, title, children, index }: { icon: React.ElementTy
 }
 
 export default function GdprPage() {
+  const { locale } = useI18n()
+  const isAr = locale === 'ar'
+
   return (
     <>
       <Navbar />
@@ -37,11 +41,11 @@ export default function GdprPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs text-gray-400 mb-6">
                 <Shield className="w-3.5 h-3.5 text-indigo-400" />
-                Last updated: August 2026
+                {isAr ? 'آخر تحديث: أغسطس 2026' : 'Last updated: August 2026'}
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">GDPR Compliance</span></h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">{isAr ? 'الامتثال لـ GDPR' : 'GDPR Compliance'}</span></h1>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-                NineApps is committed to compliance with the General Data Protection Regulation (GDPR). This page outlines how we protect the data rights of users in the European Union and European Economic Area.
+                {isAr ? 'ملتزم NineApps بالامتثال للائحة العامة لحماية البيانات (GDPR). بيّض وثيقة هذه كيف نعالج بياناتك ونحميها وفقاً لمتطلبات GDPR.' : 'NineApps is committed to compliance with the General Data Protection Regulation (GDPR). This page outlines how we protect the data rights of users in the European Union and European Economic Area.'}
               </p>
             </motion.div>
           </div>
@@ -49,75 +53,51 @@ export default function GdprPage() {
 
         <section className="relative pb-32 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-6">
-            <Section icon={Shield} title="Our Commitment" index={0}>
-              <p>NineApps takes data protection seriously. We have implemented comprehensive technical and organizational measures to ensure the protection of personal data processed through our platform. Our practices are designed to comply with the GDPR and other applicable data protection laws.</p>
-              <p>We act as a Data Processor on behalf of our customers (Data Controllers) when processing personal data through the Service. We also act as a Data Controller for data we collect directly from users (e.g., account registration, billing information).</p>
+            <Section icon={Shield} title={isAr ? 'التزامنا' : 'Our Commitment'} index={0}>
+              <p>{isAr ? 'ملتزم NineApps بحماية الخصوصية وحقوق البيانات لجميع المستخدمين داخل الاتحاد الأوروبي والمنطقة الاقتصادية الأوروبية. نُ implement تدابير تنظيمية وتقنية مناسبة لضمان مستوى عالٍ من حماية البيانات.' : 'NineApps is committed to protecting the privacy and data rights of all users within the European Union and European Economic Area. We implement appropriate technical and organizational measures to ensure a high level of data protection.'}</p>
             </Section>
 
-            <Section icon={Database} title="Data We Process" index={1}>
-              <p>As a Data Processor, we process personal data on behalf of our customers, which may include:</p>
+            <Section icon={Database} title={isAr ? 'البيانات اللي بنعالجها' : 'Data We Process'} index={1}>
+              <p>{isAr ? 'بنعالج فئات البيانات الشخصية التالية:' : 'We process the following categories of personal data:'}</p>
               <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li>Customer contact information (names, emails, phone numbers) entered by our users.</li>
-                <li>Deal and transaction data entered through the CRM and ERP modules.</li>
-                <li>Employee records processed through the HR Management module.</li>
-                <li>Financial data processed through the Financial Suite.</li>
+                <li>{isAr ? 'بيانات الحساب: اسمك وعنوان بريدك الإلكتروني واسم شركتك وكلمة المرور.' : 'Account Data: name, email address, company name, and password.'}</li>
+                <li>{isAr ? 'بيانات الدفع: معلومات الفوترة وتفاصيل طريقة الدفع المعالجة بشكل آمن من خلال معالجي الدفع من أطراف ثالثة.' : 'Payment Data: billing information and payment method details processed securely through third-party payment processors.'}</li>
+                <li>{isAr ? 'بيانات الاستخدام: معلومات حول كيفية تفاعلك مع منصتنا، بما في ذلك الميزات المستخدمة والصفحات التي تزورها والإجراءات المتخذة.' : 'Usage Data: information about how you interact with our platform, including features used, pages visited, and actions taken.'}</li>
+                <li>{isAr ? 'بيانات الاتصال: الرسائل المرسلة لفريق الدعم أو من خلال نماذج الملاحظات داخل التطبيق.' : 'Communication Data: messages sent to our support team or through in-app feedback forms.'}</li>
               </ul>
-              <p>As a Data Controller, we collect: account holder information (name, email), billing details, usage analytics, and support communications.</p>
             </Section>
 
-            <Section icon={Users} title="Your GDPR Rights" index={2}>
-              <p>If you are located in the EU/EEA, you have the following rights under the GDPR:</p>
+            <Section icon={Users} title={isAr ? 'حقوقك بموجب GDPR' : 'Your GDPR Rights'} index={2}>
+              <p>{isAr ? 'بموجب GDPR، لديك الحقوق التالية فيما يتعلق ببياناتك الشخصية:' : 'Under GDPR, you have the following rights regarding your personal data:'}</p>
               <ul className="space-y-2 list-disc list-inside text-sm">
-                <li><strong className="text-gray-300">Right of Access (Article 15)</strong> — You have the right to request a copy of the personal data we hold about you.</li>
-                <li><strong className="text-gray-300">Right to Rectification (Article 16)</strong> — You have the right to request correction of inaccurate or incomplete personal data.</li>
-                <li><strong className="text-gray-300">Right to Erasure (Article 17)</strong> — You have the right to request deletion of your personal data, subject to certain legal exceptions.</li>
-                <li><strong className="text-gray-300">Right to Restrict Processing (Article 18)</strong> — You have the right to request restriction of processing of your personal data in certain circumstances.</li>
-                <li><strong className="text-gray-300">Right to Data Portability (Article 20)</strong> — You have the right to receive your personal data in a structured, commonly used, machine-readable format.</li>
-                <li><strong className="text-gray-300">Right to Object (Article 21)</strong> — You have the right to object to processing of your personal data in certain circumstances.</li>
-                <li><strong className="text-gray-300">Right to Withdraw Consent</strong> — Where processing is based on consent, you have the right to withdraw consent at any time.</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في الوصول' : 'Right of Access'}</strong> — {isAr ? 'تطلب نسخة من البيانات الشخصية اللي بنحتفظ بيها عنك.' : 'You may request a copy of the personal data we hold about you.'}</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في التصحيح' : 'Right to Rectification'}</strong> — {isAr ? 'تطلب تصحيح بيانات غير دقيقة أو غير مكتملة.' : 'You may request correction of inaccurate or incomplete data.'}</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في المحو' : 'Right to Erasure'}</strong> — {isAr ? 'تطلب حذف بياناتك الشخصية، مع مراعاة الالتزامات القانونية.' : 'You may request deletion of your personal data, subject to legal obligations.'}</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في تقييد المعالجة' : 'Right to Restrict Processing'}</strong> — {isAr ? 'تطلب منا تقييد معالجة بياناتك.' : 'You may request that we limit the processing of your data.'}</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في نقل البيانات' : 'Right to Data Portability'}</strong> — {isAr ? 'تطلب نقل بياناتك إلى خدمة أخرى بتنسيق منظم وقابل للقراءة آلياً.' : 'You may request transfer of your data to another service in a structured, machine-readable format.'}</li>
+                <li><strong className="text-gray-300">{isAr ? 'الحق في الاعتراض' : 'Right to Object'}</strong> — {isAr ? 'تعارض معالجة بياناتك لأغراض معينة.' : 'You may object to the processing of your data for certain purposes.'}</li>
               </ul>
             </Section>
 
-            <Section icon={Lock} title="Data Security" index={3}>
-              <p>We implement the following technical and organizational measures to protect personal data:</p>
-              <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li>AES-256 encryption for data at rest.</li>
-                <li>TLS 1.3 encryption for data in transit.</li>
-                <li>Role-based access controls with principle of least privilege.</li>
-                <li>Regular security audits and penetration testing.</li>
-                <li>Employee training on data protection and security practices.</li>
-                <li>Incident response procedures and breach notification protocols.</li>
-              </ul>
+            <Section icon={Lock} title={isAr ? 'أمن البيانات' : 'Data Security'} index={3}>
+              <p>{isAr ? 'نطبّق تدابير أمان متوافقة مع معايير الصناعة لحماية بياناتك، بما في ذلك تشفير AES-256 عند السكون وتشفير TLS 1.3 أثناء النقل والتحكم في الوصول المستند إلى الأدوار والتدقيق الأمني الدوري.' : 'We implement industry-standard security measures to protect your data, including AES-256 encryption at rest, TLS 1.3 encryption in transit, role-based access controls, and regular security audits.'}</p>
             </Section>
 
-            <Section icon={Globe} title="International Data Transfers" index={4}>
-              <p>NineApps may process data in regions outside the EU/EEA. When we transfer personal data internationally, we ensure appropriate safeguards are in place, including:</p>
-              <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li>Standard Contractual Clauses (SCCs) approved by the European Commission.</li>
-                <li>Adequacy decisions where applicable.</li>
-                <li>Contractual requirements for data protection standards equivalent to GDPR.</li>
-              </ul>
+            <Section icon={Globe} title={isAr ? 'النقل الدولي للبيانات' : 'International Data Transfers'} index={4}>
+              <p>{isAr ? 'قد يعالج NineApps بيانات في دول خارج المنطقة الاقتصادية الأوروبية (EEA). عندما ننقل البيانات دولياً، نضمن وجود ضمانات مناسبة، بما في ذلك البنود التعاقدية المعيارية (SCCs) المعتمدة من الم Commission الأوروبية.' : 'NineApps may process data in countries outside the European Economic Area (EEA). When we transfer data internationally, we ensure appropriate safeguards are in place, including Standard Contractual Clauses (SCCs) approved by the European Commission.'}</p>
             </Section>
 
-            <Section icon={Settings} title="Data Retention" index={5}>
-              <p>We retain personal data only for as long as necessary to fulfill the purposes for which it was collected:</p>
-              <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li><strong className="text-gray-300">Account data:</strong> Retained while the account is active, plus 30 days after cancellation for data export.</li>
-                <li><strong className="text-gray-300">Customer data (processed on behalf of customers):</strong> Deleted upon customer request or within 30 days of account closure.</li>
-                <li><strong className="text-gray-300">Billing records:</strong> Retained for 7 years as required by financial regulations.</li>
-                <li><strong className="text-gray-300">Analytics data:</strong> Anonymized after 26 months.</li>
-              </ul>
+            <Section icon={Settings} title={isAr ? 'الاحتفاظ بالبيانات' : 'Data Retention'} index={5}>
+              <p>{isAr ? 'نحتفظ ببياناتك الشخصية فقط طالما ذلك ضروري لتحقيق الأغراض التي تم جمعها من أجلها. تُحتفظ ببيانات الحساب لمدة 30 يوماً بعد الإلغاء للسماح بإعادة التفعيل أو تصدير البيانات، وبعد ذلك تُحذف نهائياً.' : 'We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected. Account data is retained for 30 days after cancellation to allow for reactivation or data export, after which it is permanently deleted.'}</p>
             </Section>
 
-            <Section icon={Mail} title="Exercising Your Rights" index={6}>
-              <p>To exercise any of your GDPR rights, or if you have questions about our data processing practices, please contact our Data Protection team:</p>
+            <Section icon={Mail} title={isAr ? 'ممارسة حقوقك' : 'Exercising Your Rights'} index={6}>
+              <p>{isAr ? 'لممارسة أي من حقوقك بموجب GDPR، يرجى التواصل معنا عبر البريد الإلكتروني أدناه. سنرد على طلبك خلال 30 يوماً.' : 'To exercise any of your GDPR rights, please contact us at the email below. We will respond to your request within 30 days.'}</p>
               <div className="space-y-2 mt-3">
                 <a href="mailto:nineappsonline@gmail.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">nineappsonline@gmail.com</a>
-                <p className="text-gray-500">Subject line: GDPR Request</p>
-                <p className="text-gray-500">We will respond to all requests within 30 days.</p>
-                <p className="text-gray-500 mt-3">33, Al Andalus, 5th Settlement, Cairo, Egypt</p>
+                <p className="text-gray-500">33, Al Andalus, 5th Settlement, Cairo, Egypt</p>
               </div>
-              <p className="mt-4">You also have the right to lodge a complaint with a supervisory authority in your EU/EEA member state if you believe your data protection rights have been infringed.</p>
+              <p className="mt-4">{isAr ? 'إذا لم تكن راضياً عن ردنا، لديك الحق في تقديم شكوى لدى سلطة حماية البيانات المحلية (DPA).' : 'If you are not satisfied with our response, you have the right to lodge a complaint with your local Data Protection Authority (DPA).'}</p>
             </Section>
           </div>
         </section>

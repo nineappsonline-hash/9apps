@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { useI18n } from '@/lib/i18n'
 import { Search, ChevronDown, Mail } from 'lucide-react'
 
 function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
@@ -28,9 +29,22 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 }
 
 export default function HelpPage() {
+  const { locale } = useI18n()
+  const isAr = locale === 'ar'
   const [search, setSearch] = useState('')
 
-  const faqs = [
+  const faqs = isAr ? [
+    { q: 'إزاي أبدأ التجربة المجانية؟', a: 'ببساطة اضغط \'ابدأ الآن\' على الصفحة الرئيسية، أنشئ حساب بالبريد الإلكتروني وكلمة المرور، وه_tfotr وصول فوري لـ 14 يوم تجربة مجانية لجميع المميزات. من غير بطاقة ائتمان.' },
+    { q: 'أقدر ألغي اشتراكي في أي وقت؟', a: 'أيه. تقدر ألغي اشتراكك في أي وقت من خلال لوحة تحكم حسابك (لوحة التحكم ← إعدادات الحساب ← الاشتراكات). وصولك بيفضل شغال لحد نهاية فترة الفوترة الحالية.' },
+    { q: 'إزاي بتشتغل سياسة الاسترداد؟', a: 'بنقدم استرداد كامل خلال أول 7 أيام من أي اشتراك مدفوع. بعد كده، الاستردادات بتتقيّم حالة بحال. تواصل مع فريق الدعم للمساعدة.' },
+    { q: 'أقدر أبدّل بين المنتجات؟', a: 'طبعاً. NineApps معياري — تقدر تشترك في منتجات فردية وتضيف أو تشيلها في أي وقت من لوحة التحكم.' },
+    { q: 'بياناتي آمنة؟', a: 'أيه. بنستخدم تشفير AES-256 عند السكون و TLS 1.3 أثناء النقل والتحكم في الوصول المستند للأدوار والتدقيق الأمني الدوري. بنلتزم بمعايير SOC 2 Type II و GDPR.' },
+    { q: 'أقدر أصدّر بياناتي؟', a: 'أيه. تقدر تصدّر جميع بياناتك في أي وقت من إعدادات حسابك. بندعم صيغ CSV و JSON و Excel.' },
+    { q: 'بتقدموا فوترة سنوية؟', a: 'حالياً بنقدم اشتراكات شهرية. خيارات الفوترة السنوية ممكن متاحة في المستقبل. تواصل معنا لترتيبات خاصة.' },
+    { q: 'إزاي أدعو أعضاء الفريق؟', a: 'روح لوحة التحكم ← إعدادات الفريق ← دعوة الأعضاء. اكتب عناوين بريدهم وحدد الأدوار. هيستلموا دعوة للانضمام لمساحة العمل بتاعتك.' },
+    { q: 'إزاي أقدر أتواصل مع الدعم؟', a: 'تقدر توصل فريق الدعم على nineappsonline@gmail.com أو تتصل بينا على +20 120 677 7292. بنرد خلال 24 ساعة في أيام العمل.' },
+    { q: 'بتقبلوا إيه من طرق الدفع؟', a: 'بنقبل جميع بطاقات الائتمان والخصم الرئيسية (Visa و Mastercard و American Express) المعالجة بشكل آمن من خلال شريك الدفع بتاعنا.' },
+  ] : [
     { q: 'How do I start my free trial?', a: 'Simply click "Get Started" on our homepage, create an account with your email and password, and you\'ll immediately have access to a 14-day free trial of all features. No credit card required.' },
     { q: 'Can I cancel my subscription at any time?', a: 'Yes. You can cancel your subscription at any time through your account dashboard (Dashboard → Account Settings → Subscriptions). Your access continues until the end of your current billing period.' },
     { q: 'How do refunds work?', a: 'We offer a full refund within the first 7 days of any paid subscription. After that, refunds are evaluated on a case-by-case basis. Contact our support team for assistance.' },
@@ -57,15 +71,15 @@ export default function HelpPage() {
         <section className="relative pt-36 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">Help Center</span></h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">{isAr ? 'مركز المساعدة' : 'Help Center'}</span></h1>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                Find answers to common questions. Can&apos;t find what you&apos;re looking for? Contact our support team.
+                {isAr ? 'لاقي إجابات للأسئلة الشائعة. مش لاقي اللي بتدوره؟ تواصل مع فريق الدعم بتاعنا.' : 'Find answers to common questions. Can\'t find what you\'re looking for? Contact our support team.'}
               </p>
               <div className="relative max-w-lg mx-auto">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
                   type="text"
-                  placeholder="Search questions..."
+                  placeholder={isAr ? 'ابحث في الأسئلة...' : 'Search questions...'}
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500/40 transition-colors"
@@ -81,16 +95,16 @@ export default function HelpPage() {
               <FAQItem key={faq.q} question={faq.q} answer={faq.a} index={i} />
             ))}
             {filtered.length === 0 && (
-              <p className="text-center text-gray-500 text-sm py-12">No results found. Try a different search term.</p>
+              <p className="text-center text-gray-500 text-sm py-12">{isAr ? 'ملناش نتائج. جرّب كلمة بحث تانية.' : 'No results found. Try a different search term.'}</p>
             )}
           </div>
           <div className="max-w-3xl mx-auto mt-12 text-center">
             <div className="glass-card rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-gray-200 mb-2">Still need help?</h3>
-              <p className="text-sm text-gray-500 mb-4">Our support team is ready to assist you.</p>
+              <h3 className="text-lg font-semibold text-gray-200 mb-2">{isAr ? 'لسه محتاج مساعدة؟' : 'Still need help?'}</h3>
+              <p className="text-sm text-gray-500 mb-4">{isAr ? 'فريق الدعم بتاعنا جاهز يساعدك.' : 'Our support team is ready to assist you.'}</p>
               <a href="mailto:nineappsonline@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-medium hover:bg-indigo-500/20 transition-colors">
                 <Mail className="w-4 h-4" />
-                Contact Support
+                {isAr ? 'تواصل مع الدعم' : 'Contact Support'}
               </a>
             </div>
           </div>

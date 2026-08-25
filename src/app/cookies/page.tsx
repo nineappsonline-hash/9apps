@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Cookie, Settings, Shield, BarChart3, Mail } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
 function Section({ icon: Icon, title, children, index }: { icon: React.ElementType; title: string; children: React.ReactNode; index: number }) {
   const ref = useRef(null)
@@ -23,6 +24,9 @@ function Section({ icon: Icon, title, children, index }: { icon: React.ElementTy
 }
 
 export default function CookiesPage() {
+  const { locale } = useI18n()
+  const isAr = locale === 'ar'
+
   return (
     <>
       <Navbar />
@@ -37,11 +41,11 @@ export default function CookiesPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs text-gray-400 mb-6">
                 <Shield className="w-3.5 h-3.5 text-indigo-400" />
-                Last updated: August 2026
+                {isAr ? 'آخر تحديث: أغسطس 2026' : 'Last updated: August 2026'}
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">Cookie Policy</span></h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6"><span className="gradient-text">{isAr ? 'سياسة ملفات تعريف الارتباط' : 'Cookie Policy'}</span></h1>
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-                This Cookie Policy explains how NineApps uses cookies and similar technologies to recognize you when you visit our website.
+                {isAr ? "توضح سياسة ملفات تعريف الارتباط هذه كيف تستخدم NineApps ملفات تعريف الارتباط ('الكوكيز') والتقنيات المماثلة عندما تستخدم منصتنا." : 'This Cookie Policy explains how NineApps uses cookies and similar technologies to recognize you when you visit our website.'}
               </p>
             </motion.div>
           </div>
@@ -49,91 +53,84 @@ export default function CookiesPage() {
 
         <section className="relative pb-32 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-6">
-            <Section icon={Cookie} title="What Are Cookies?" index={0}>
-              <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work efficiently, provide a better user experience, and supply information to the site owners.</p>
-              <p>Cookies can be &quot;persistent&quot; (remaining on your device until deleted) or &quot;session-based&quot; (deleted when you close your browser).</p>
+            <Section icon={Cookie} title={isAr ? 'إيه هي ملفات تعريف الارتباط؟' : 'What Are Cookies?'} index={0}>
+              <p>{isAr ? "ملفات تعريف الارتباط هي ملفات نصية صغيرة بتتوضع على جهازك لما تزور موقع إلكتروني. بتتستخدم بشكل واسع عشان تخلّي المواقع تشتغل بكفاءة وتوفر معلومات لأصحاب المواقع. ممكن تكون 'دائمة' (تفضل على جهازك لحد ما تتفضل) أو 'مبنية على الجلسة' (بتتفضل لما تقفل المتصفح)." : "Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work efficiently and to provide information to website owners. Cookies can be 'persistent' (remaining on your device until deleted) or 'session-based' (deleted when you close your browser)."}</p>
             </Section>
 
-            <Section icon={Settings} title="How We Use Cookies" index={1}>
-              <p>NineApps uses cookies for the following purposes:</p>
+            <Section icon={Settings} title={isAr ? 'إزاي بنستخدم ملفات تعريف الارتباط' : 'How We Use Cookies'} index={1}>
+              <p>{isAr ? 'بنستخدم الكوكيز للأغراض التالية:' : 'We use cookies for the following purposes:'}</p>
               <ul className="space-y-2 list-disc list-inside text-sm">
                 <li>
-                  <strong className="text-gray-300">Essential Cookies</strong> — Required for the Service to function properly. These include authentication cookies that keep you logged in, security cookies that protect against fraud, and session cookies that maintain your state across pages.
+                  <strong className="text-gray-300">{isAr ? 'كوكيز أساسية' : 'Essential Cookies'}</strong> — {isAr ? 'مطلوبة عشان الخدمة تشتغل بشكل صحيح (المصادقة والأمان وإدارة الجلسات).' : 'Required for the Service to function properly. These include authentication cookies that keep you logged in, security cookies that protect against fraud, and session cookies that maintain your state across pages.'}
                 </li>
                 <li>
-                  <strong className="text-gray-300">Functionality Cookies</strong> — Remember your preferences and settings, such as language selection, dashboard layout, and display preferences. These improve your experience by avoiding repeated configuration.
+                  <strong className="text-gray-300">{isAr ? 'كوكيز وظيفية' : 'Functionality Cookies'}</strong> — {isAr ? 'بتتذكر تفضيلاتك وإعداداتك عشان تحسّن تجربتك.' : 'Remember your preferences and settings, such as language selection, dashboard layout, and display preferences. These improve your experience by avoiding repeated configuration.'}
                 </li>
                 <li>
-                  <strong className="text-gray-300">Analytics Cookies</strong> — Help us understand how visitors interact with our website by collecting anonymous usage data. This information helps us improve our platform and user experience.
+                  <strong className="text-gray-300">{isAr ? 'كوكيز تحليلية' : 'Analytics Cookies'}</strong> — {isAr ? 'بتساعدنا نفهم إزاي المستخدمين بيتفاعلوا مع منصتنا عشان نحسّنها.' : 'Help us understand how visitors interact with our website by collecting anonymous usage data. This information helps us improve our platform and user experience.'}
                 </li>
               </ul>
             </Section>
 
-            <Section icon={BarChart3} title="Specific Cookies We Use" index={2}>
+            <Section icon={BarChart3} title={isAr ? 'الكوكيز اللي بنستخدمها' : 'Specific Cookies We Use'} index={2}>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-white/[0.06]">
-                      <th className="text-left py-3 pr-4 text-gray-300 font-medium">Cookie</th>
-                      <th className="text-left py-3 pr-4 text-gray-300 font-medium">Purpose</th>
-                      <th className="text-left py-3 text-gray-300 font-medium">Duration</th>
+                      <th className="text-left py-3 pr-4 text-gray-300 font-medium">{isAr ? 'الكوكيز' : 'Cookie'}</th>
+                      <th className="text-left py-3 pr-4 text-gray-300 font-medium">{isAr ? 'الغرض' : 'Purpose'}</th>
+                      <th className="text-left py-3 text-gray-300 font-medium">{isAr ? 'المدة' : 'Duration'}</th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-400">
                     <tr className="border-b border-white/[0.04]">
                       <td className="py-3 pr-4 font-mono text-xs">sb-auth-token</td>
-                      <td className="py-3 pr-4">Authentication session</td>
+                      <td className="py-3 pr-4">{isAr ? 'المصادقة وإدارة الجلسة' : 'Authentication session'}</td>
                       <td className="py-3">Session</td>
                     </tr>
                     <tr className="border-b border-white/[0.04]">
                       <td className="py-3 pr-4 font-mono text-xs">sb-refresh-token</td>
-                      <td className="py-3 pr-4">Token refresh</td>
-                      <td className="py-3">30 days</td>
+                      <td className="py-3 pr-4">{isAr ? 'تجديد الرمز' : 'Token refresh'}</td>
+                      <td className="py-3">30 {isAr ? 'أيام' : 'days'}</td>
                     </tr>
                     <tr className="border-b border-white/[0.04]">
                       <td className="py-3 pr-4 font-mono text-xs">na-language</td>
-                      <td className="py-3 pr-4">Language preference</td>
-                      <td className="py-3">1 year</td>
+                      <td className="py-3 pr-4">{isAr ? 'تفضيل اللغة' : 'Language preference'}</td>
+                      <td className="py-3">1 {isAr ? 'سنة' : 'year'}</td>
                     </tr>
                     <tr className="border-b border-white/[0.04]">
                       <td className="py-3 pr-4 font-mono text-xs">na-theme</td>
-                      <td className="py-3 pr-4">UI theme preference</td>
-                      <td className="py-3">1 year</td>
+                      <td className="py-3 pr-4">{isAr ? 'تفضيل المظهر (فاتح/غامق)' : 'UI theme preference'}</td>
+                      <td className="py-3">1 {isAr ? 'سنة' : 'year'}</td>
                     </tr>
                     <tr>
                       <td className="py-3 pr-4 font-mono text-xs">_ga / _gid</td>
-                      <td className="py-3 pr-4">Google Analytics</td>
-                      <td className="py-3">2 years / 24 hours</td>
+                      <td className="py-3 pr-4">{isAr ? 'تحليلات Google Analytics' : 'Google Analytics'}</td>
+                      <td className="py-3">{isAr ? 'سنتين / 24 ساعة' : '2 years / 24 hours'}</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </Section>
 
-            <Section icon={Settings} title="Managing Cookies" index={3}>
-              <p>You can control and manage cookies through your browser settings. Most browsers allow you to:</p>
+            <Section icon={Settings} title={isAr ? 'إدارة الكوكيز' : 'Managing Cookies'} index={3}>
+              <p>{isAr ? 'تقدر تتحكم وتدير الكوكيز من خلال إعدادات المتصفح. أغلب المتصفحات بتسمح لك بـ:' : 'You can control and manage cookies through your browser settings. Most browsers allow you to:'}</p>
               <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li>View what cookies are stored and delete them individually.</li>
-                <li>Block third-party cookies.</li>
-                <li>Block cookies from specific sites.</li>
-                <li>Block all cookies.</li>
-                <li>Delete all cookies when you close your browser.</li>
+                <li>{isAr ? 'حظر جميع الكوكيز' : 'Block all cookies'}</li>
+                <li>{isAr ? 'حذف الكوكيز لما تقفل المتصفح' : 'Delete cookies when you close your browser'}</li>
+                <li>{isAr ? 'استلام إشعار لما الكوكيز بتتضاف' : 'Receive a notification when a cookie is set'}</li>
               </ul>
-              <p>Note: Disabling essential cookies may prevent the Service from functioning properly. Features such as login, session persistence, and security protections may be affected.</p>
+              <p>{isAr ? 'ملاحظة: تعطيل الكوكيز ممكن يأثر على وظائف الخدمة.' : 'Please note that disabling cookies may affect the functionality of the Service.'}</p>
             </Section>
 
-            <Section icon={Shield} title="Third-Party Cookies" index={4}>
-              <p>In addition to our own cookies, we may use cookies from third-party services:</p>
-              <ul className="space-y-1.5 list-disc list-inside text-sm">
-                <li><strong className="text-gray-300">Google Analytics</strong> — For website usage analytics. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300">Google Privacy Policy</a></li>
-                <li><strong className="text-gray-300">Supabase</strong> — For authentication and session management.</li>
-              </ul>
-              <p>These third parties have their own privacy policies governing how they use information.</p>
+            <Section icon={Shield} title={isAr ? 'كوكيز الأطراف الثالثة' : 'Third-Party Cookies'} index={4}>
+              <p>{isAr ? 'بعض الكوكيز على منصتنا بتتوضع من خدمات أطراف ثالثة بنستخدمها، زي Google Analytics لتحليلات الموقع. الأطراف الثالثة دي عندها سياسات خصوصية خاصة بيها تتحكم في استخدامها للكوكيز.' : 'Some cookies on our platform are placed by third-party services we use, such as Google Analytics for website analytics. These third parties have their own privacy policies governing their use of cookies.'}</p>
             </Section>
 
-            <Section icon={Mail} title="Contact Us" index={5}>
-              <p>If you have any questions about our use of cookies, please contact us:</p>
+            <Section icon={Mail} title={isAr ? 'تواصل معنا' : 'Contact Us'} index={5}>
+              <p>{isAr ? 'إذا كانت لديك أي أسئلة حول استخدامنا للكوكيز، يرجى التواصل معنا:' : 'If you have any questions about our use of cookies, please contact us:'}</p>
               <a href="mailto:nineappsonline@gmail.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">nineappsonline@gmail.com</a>
+              <p className="text-gray-500">33, Al Andalus, 5th Settlement, Cairo, Egypt</p>
             </Section>
           </div>
         </section>
