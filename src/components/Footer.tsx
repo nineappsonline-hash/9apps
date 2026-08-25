@@ -133,7 +133,7 @@ export default function Footer() {
               <li>
                 <a href="tel:+201206777292" className="flex items-start gap-2 text-sm text-gray-500 hover:text-gray-200 transition-colors duration-200">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  +20 120 677 7292
+                  <span dir="ltr">+20 120 677 7292</span>
                 </a>
               </li>
               <li>

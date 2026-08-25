@@ -173,7 +173,7 @@ export default function ReturnPolicyPage() {
                   className="flex items-center gap-3 text-indigo-400 hover:text-indigo-300 transition-colors font-medium"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
-                  +20 120 677 7292
+                  <span dir="ltr">+20 120 677 7292</span>
                 </a>
                 <div className="flex items-start gap-3 text-gray-400">
                   <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-indigo-400" />
