@@ -119,6 +119,42 @@ type TranslationKeys = {
   termsOfService: string
   cookiePolicy: string
   gdpr: string
+  // Return Policy
+  returnPolicy: string
+  returnPolicyTitle: string
+  returnPolicyIntro: string
+  returnPolicyLastUpdated: string
+  rpFreeTrialTitle: string
+  rpFreeTrialP1: string
+  rpFreeTrialP2: string
+  rpFreeTrialP3: string
+  rpSubscriptionTitle: string
+  rpSubscriptionP1: string
+  rpSubscriptionP2: string
+  rpSubscriptionP3: string
+  rpCancellationTitle: string
+  rpCancellationP1: string
+  rpCancellationP2: string
+  rpCancellationStepsTitle: string
+  rpCancellationStep1: string
+  rpCancellationStep2: string
+  rpCancellationStep3: string
+  rpRefundTitle: string
+  rpRefundP1: string
+  rpRefundP2: string
+  rpRefundP3: string
+  rpRefundP4: string
+  rpExceptionsTitle: string
+  rpException1: string
+  rpException2: string
+  rpException3: string
+  rpException4: string
+  rpDataTitle: string
+  rpDataP1: string
+  rpDataP2: string
+  rpContactTitle: string
+  rpContactP1: string
+  rpContactEmail: string
   // Sign In
   welcomeBack: string
   signInSubtitle: string
@@ -255,6 +291,42 @@ const translations: Record<Locale, TranslationKeys> = {
     termsOfService: 'Terms of Service',
     cookiePolicy: 'Cookie Policy',
     gdpr: 'GDPR',
+    // Return Policy
+    returnPolicy: 'Return Policy',
+    returnPolicyTitle: 'Return & Refund Policy',
+    returnPolicyIntro: 'At NineApps, we want you to be completely satisfied with our products. Since our services are digital subscriptions, our return policy is designed to be fair and transparent for all customers.',
+    returnPolicyLastUpdated: 'Last updated: August 2026',
+    rpFreeTrialTitle: '14-Day Free Trial',
+    rpFreeTrialP1: 'Every NineApps product comes with a 14-day free trial — no credit card required. You can explore all features and evaluate whether the product meets your needs before committing to a subscription.',
+    rpFreeTrialP2: 'If you decide the product is not right for you, simply cancel before the trial ends and you will not be charged anything.',
+    rpFreeTrialP3: 'We encourage you to take full advantage of the trial period to test the product thoroughly with your team and workflows.',
+    rpSubscriptionTitle: 'Subscription Terms',
+    rpSubscriptionP1: 'All NineApps products are billed on a monthly subscription basis. Your subscription begins immediately after your free trial ends (or immediately upon purchase if you skip the trial).',
+    rpSubscriptionP2: 'Subscriptions automatically renew each billing cycle unless cancelled before the renewal date. You will receive a reminder email before each renewal.',
+    rpSubscriptionP3: 'We reserve the right to change pricing with 30 days\' advance notice. Existing subscribers will be grandfathered at their current rate for the remainder of their active billing period.',
+    rpCancellationTitle: 'How to Cancel Your Subscription',
+    rpCancellationP1: 'You may cancel your subscription at any time through your account dashboard. Cancellation takes effect at the end of your current billing period — you will retain access to the product until then.',
+    rpCancellationP2: 'We do not charge any cancellation fees. You are free to cancel whenever you choose.',
+    rpCancellationStepsTitle: 'Steps to cancel:',
+    rpCancellationStep1: 'Log in to your NineApps account.',
+    rpCancellationStep2: 'Navigate to Dashboard → Account Settings → Subscriptions.',
+    rpCancellationStep3: 'Select the product you wish to cancel and confirm your cancellation.',
+    rpRefundTitle: 'Refund Policy',
+    rpRefundP1: 'We offer a full refund within the first 7 days of any paid subscription. If you are unsatisfied with a product within 7 days of your first charge, contact our support team for a complete refund.',
+    rpRefundP2: 'After the first 7 days of a billing period, refunds are provided on a case-by-case basis. We evaluate each request considering the circumstances and usage.',
+    rpRefundP3: 'Refunds are processed back to the original payment method within 5–10 business days. You will receive an email confirmation once the refund has been initiated.',
+    rpRefundP4: 'If you were charged after a cancellation was made, please contact us immediately and we will process a refund for the incorrect charge.',
+    rpExceptionsTitle: 'Exceptions & Non-Refundable Items',
+    rpException1: 'Add-on services or premium support packages purchased separately are non-refundable once activated.',
+    rpException2: 'Annual subscription plans (if available) have a separate refund policy — please refer to the terms provided at the time of purchase.',
+    rpException3: 'Credits or promotional discounts applied to your account are non-refundable and cannot be exchanged for cash value.',
+    rpException4: 'Chargebacks filed without first contacting our support team may result in account suspension. We encourage you to reach out to us first so we can resolve any issues.',
+    rpDataTitle: 'Data & Account After Cancellation',
+    rpDataP1: 'After cancellation, your account data is retained for 30 days. During this period, you can export your data or reactivate your subscription to regain full access.',
+    rpDataP2: 'After 30 days, all account data is permanently deleted from our servers. This process is irreversible. We recommend exporting your data before this period ends.',
+    rpContactTitle: 'Contact Us',
+    rpContactP1: 'If you have any questions about this Return & Refund Policy or need assistance with a refund request, please contact our support team:',
+    rpContactEmail: 'support@nineapps.com',
     // Sign In
     welcomeBack: 'Welcome back',
     signInSubtitle: 'Sign in to access your dashboard and apps',
@@ -389,6 +461,42 @@ const translations: Record<Locale, TranslationKeys> = {
     termsOfService: 'شروط الخدمة',
     cookiePolicy: 'سياسة ملفات تعريف الارتباط',
     gdpr: 'GDPR',
+    // Return Policy
+    returnPolicy: 'سياسة الإرجاع',
+    returnPolicyTitle: 'سياسة الإرجاع والاسترداد',
+    returnPolicyIntro: 'في NineApps، نريدك أن تكون راضياً تماماً عن منتجاتنا. نظراً لأن خدماتنا عبارة عن اشتراكات رقمية، فإن سياسة الإرجاع لدينا مصممة لتكون عادلة وشفافة لجميع العملاء.',
+    returnPolicyLastUpdated: 'آخر تحديث: أغسطس 2026',
+    rpFreeTrialTitle: 'تجربة مجانية لمدة 14 يوماً',
+    rpFreeTrialP1: 'كل منتج من منتجات NineApps يأتي مع تجربة مجانية لمدة 14 يوماً — لا حاجة لبطاقة ائتمان. يمكنك استكشاف جميع المميزات وتقييم ما إذا كان المنتج يلبي احتياجاتك قبل الالتزام بالاشتراك.',
+    rpFreeTrialP2: 'إذا قررت أن المنتج لا يناسبك، ما عليك سوى الإلغاء قبل انتهاء التجربة ولن يتم تحصيل أي رسوم.',
+    rpFreeTrialP3: 'نشجعك على الاستفادة الكاملة من فترة التجربة لاختبار المنتج بشكل شامل مع فريقك وسير عملك.',
+    rpSubscriptionTitle: 'شروط الاشتراك',
+    rpSubscriptionP1: 'جميع منتجات NineApps تُحتسب على أساس اشتراك شهري. يبدأ اشتراكك فوراً بعد انتهاء التجربة المجانية (أو فوراً عند الشراء إذا تخطيت التجربة).',
+    rpSubscriptionP2: 'الاشتراكات تتجدد تلقائياً في كل دورة فوترة ما لم يتم الإلغاء قبل تاريخ التجديد. ستتلقى رسالة تذكير بالبريد الإلكتروني قبل كل تجديد.',
+    rpSubscriptionP3: 'نحتفظ بالحق في تغيير الأسعار مع إشعار مسبق لمدة 30 يوماً. سيتم الاحتفاظ بالأسعار الحالية للمشتركين الحاليين حتى نهاية فترتهم النشطة.',
+    rpCancellationTitle: 'كيفية إلغاء اشتراكك',
+    rpCancellationP1: 'يمكنك إلغاء اشتراكك في أي وقت من خلال لوحة تحكم حسابك. يسري الإلغاء في نهاية فترة الفوترة الحالية — ستحتفظ بالوصول إلى المنتج حتى ذلك الوقت.',
+    rpCancellationP2: 'لا نفرض أي رسوم إلغاء. يمكنك الإلغاء متى تشاء بحرية.',
+    rpCancellationStepsTitle: 'خطوات الإلغاء:',
+    rpCancellationStep1: 'سجّل الدخول إلى حساب NineApps الخاص بك.',
+    rpCancellationStep2: 'انتقل إلى لوحة التحكم ← إعدادات الحساب ← الاشتراكات.',
+    rpCancellationStep3: 'اختر المنتج الذي تريد إلغاؤه وأكد عملية الإلغاء.',
+    rpRefundTitle: 'سياسة الاسترداد',
+    rpRefundP1: 'نقدم استرداداً كاملاً خلال أول 7 أيام من أي اشتراك مدفوع. إذا لم تكن راضياً عن منتج خلال 7 أيام من أول فاتورة، اتصل بفريق الدعم للحصول على استرداد كامل.',
+    rpRefundP2: 'بعد أول 7 أيام من فترة الفوترة، يتم تقديم المبالغ المستردة حالة بحالة. نقيّم كل طلب مع مراعاة الظروف والاستخدام.',
+    rpRefundP3: 'تتم معالجة المبالغ المستردة إلى طريقة الدفع الأصلية خلال 5-10 أيام عمل. ستتلقى رسالة تأكيد بالبريد الإلكتروني بمجرد بدء عملية الاسترداد.',
+    rpRefundP4: 'إذا تم تحصيل رسوم منك بعد الإلغاء، يرجى الاتصال بنا فوراً وسنقوم بمعالجة استرداد المبلغ الخاطئ.',
+    rpExceptionsTitle: 'الاستثناءات والعناصر غير المستردة',
+    rpException1: 'الخدمات الإضافية أو حزم الدعم المميزة التي تُشراء بشكل منفصل غير مستردة بمجرد تفعيلها.',
+    rpException2: 'خطط الاشتراك السنوية (إن توفرت) لها سياسة استرداد منفصلة — يرجى الرجوع إلى الشروط المقدمة عند الشراء.',
+    rpException3: 'الائتمانات أو الخصومات الترويجية المطبقة على حسابك غير مستردة ولا يمكن استبدالها بقيمة نقدية.',
+    rpException4: 'قد يؤدي تقديم احتجاجات بدون الاتصال أولاً بفريق الدعم إلى تعليق الحساب. نشجعك على التواصل معنا أولاً حتى نتمكن من حل أي مشاكل.',
+    rpDataTitle: 'البيانات والحساب بعد الإلغاء',
+    rpDataP1: 'بعد الإلغاء، يتم الاحتفاظ ببيانات حسابك لمدة 30 يوماً. خلال هذه الفترة، يمكنك تصدير بياناتك أو إعادة تفعيل اشتراكك للحصول على وصول كامل.',
+    rpDataP2: 'بعد 30 يوماً، يتم حذف جميع بيانات الحساب نهائياً من خوادمنا. هذا العملية لا رجعة فيها. نوصي بتصدير بياناتك قبل انتهاء هذه الفترة.',
+    rpContactTitle: 'تواصل معنا',
+    rpContactP1: 'إذا كانت لديك أي أسئلة حول سياسة الإرجاع والاسترداد هذه أو تحتاج المساعدة في طلب استرداد، يرجى الاتصال بفريق الدعم:',
+    rpContactEmail: 'support@nineapps.com',
     // Sign In
     welcomeBack: 'مرحباً بعودتك',
     signInSubtitle: 'سجّل الدخول للوصول إلى لوحة التحكم والتطبيقات',

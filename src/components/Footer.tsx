@@ -62,6 +62,7 @@ export default function Footer() {
     [t.legal]: [
       { label: t.privacyPolicy, href: '#' },
       { label: t.termsOfService, href: '#' },
+      { label: t.returnPolicy, href: '/return-policy' },
       { label: t.cookiePolicy, href: '#' },
       { label: t.gdpr, href: '#' },
     ],
