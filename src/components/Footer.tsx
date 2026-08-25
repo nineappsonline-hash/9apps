@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Mail } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
 
 function GithubIcon() {
@@ -73,7 +73,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image
@@ -120,6 +120,30 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h3 className="text-xs font-semibold text-gray-300 mb-4 tracking-wide">{t.contactUs}</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="mailto:nineappsonline@gmail.com" className="flex items-start gap-2 text-sm text-gray-500 hover:text-gray-200 transition-colors duration-200">
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                  nineappsonline@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+201206777292" className="flex items-start gap-2 text-sm text-gray-500 hover:text-gray-200 transition-colors duration-200">
+                  <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                  +20 120 677 7292
+                </a>
+              </li>
+              <li>
+                <div className="flex items-start gap-2 text-sm text-gray-500">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>33, Al Andalus,<br />5th Settlement,<br />Cairo, Egypt</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">

@@ -119,6 +119,7 @@ type TranslationKeys = {
   termsOfService: string
   cookiePolicy: string
   gdpr: string
+  contactUs: string
   // Return Policy
   returnPolicy: string
   returnPolicyTitle: string
@@ -335,6 +336,7 @@ const translations: Record<Locale, TranslationKeys> = {
     termsOfService: 'Terms of Service',
     cookiePolicy: 'Cookie Policy',
     gdpr: 'GDPR',
+    contactUs: 'Contact Us',
     // Return Policy
     returnPolicy: 'Return Policy',
     returnPolicyTitle: 'Return & Refund Policy',
@@ -549,6 +551,7 @@ const translations: Record<Locale, TranslationKeys> = {
     termsOfService: 'شروط الخدمة',
     cookiePolicy: 'سياسة ملفات تعريف الارتباط',
     gdpr: 'GDPR',
+    contactUs: 'تواصل معنا',
     // Return Policy
     returnPolicy: 'سياسة الإرجاع',
     returnPolicyTitle: 'سياسة الإرجاع والاسترداد',
