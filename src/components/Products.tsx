@@ -225,10 +225,10 @@ export default function Products() {
             tagline={t.hesnTagline}
             desc={t.hesnDesc}
             pricing={[
-              { price: '$35', period: 'Per Month' },
-              { price: '$200', period: '6 Months', save: 'Save 5%' },
-              { price: '$350', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
-              { price: '$600', period: '2 Years', save: 'Save 29%' },
+              { price: '$60', period: 'Per Month' },
+              { price: '$330', period: '6 Months', save: 'Save 8%' },
+              { price: '$580', period: '1 Year', highlight: true, save: 'Best Value · Save 19%' },
+              { price: '$1,060', period: '2 Years', save: 'Save 27%' },
             ]}
             startTrialLabel={t.hesnStartTrial}
             moreInfoLabel={t.hesnMoreInfo}
