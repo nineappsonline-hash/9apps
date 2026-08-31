@@ -180,16 +180,7 @@ export default function EbnyPage() {
                 {t.ebnyHeroSub2}
               </motion.p>
 
-              <motion.div initial={{ opacity: 0, y: 10 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.35 }} className="flex flex-wrap gap-3 justify-center">
-                <a href="https://ebny.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-rose-500 to-red-500 text-white font-semibold hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-0.5">
-                  {t.ebnyBtnTrial}
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-                <Link href="/#products" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/10 text-gray-300 font-semibold hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5">
-                  <ArrowLeft className="w-4 h-4" />
-                  {t.ebnyBtnBack}
-                </Link>
-              </motion.div>
+
             </motion.div>
           </div>
         </motion.section>
