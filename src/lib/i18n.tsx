@@ -64,6 +64,70 @@ type TranslationKeys = {
   clientaDesc: string
   clientaStartTrial: string
   clientaMoreInfo: string
+  clientaHeroSub1: string
+  clientaHeroSub2: string
+  clientaBtnTrial: string
+  clientaBtnBack: string
+  clientaStatModules: string
+  clientaStatPerms: string
+  clientaStatChannels: string
+  clientaStatLanguages: string
+  clientaFeaturesHeading1: string
+  clientaFeaturesHeading2: string
+  clientaFeaturesSubtitle: string
+  clientaDashSub: string
+  clientaDashTitle: string
+  clientaDashDesc: string
+  clientaDashPoints: string[]
+  clientaAccSub: string
+  clientaAccTitle: string
+  clientaAccDesc: string
+  clientaAccPoints: string[]
+  clientaTicketSub: string
+  clientaTicketTitle: string
+  clientaTicketDesc: string
+  clientaTicketPoints: string[]
+  clientaInboxSub: string
+  clientaInboxTitle: string
+  clientaInboxDesc: string
+  clientaInboxPoints: string[]
+  clientaIncidentSub: string
+  clientaIncidentTitle: string
+  clientaIncidentDesc: string
+  clientaIncidentPoints: string[]
+  clientaReportSub: string
+  clientaReportTitle: string
+  clientaReportDesc: string
+  clientaReportPoints: string[]
+  clientaMultiSub: string
+  clientaMultiTitle: string
+  clientaMultiDesc: string
+  clientaMultiPoints: string[]
+  clientaKbSub: string
+  clientaKbTitle: string
+  clientaKbDesc: string
+  clientaKbPoints: string[]
+  clientaWhyTitle: string
+  clientaWhySubtitle: string
+  clientaWhy1Label: string
+  clientaWhy1Desc: string
+  clientaWhy2Label: string
+  clientaWhy2Desc: string
+  clientaWhy3Label: string
+  clientaWhy3Desc: string
+  clientaWhy4Label: string
+  clientaWhy4Desc: string
+  clientaPresentTitle: string
+  clientaPresentSubtitle: string
+  clientaPresent1Title: string
+  clientaPresent1Desc: string
+  clientaPresent2Title: string
+  clientaPresent2Desc: string
+  clientaSecurityTitle: string
+  clientaSecuritySubtitle: string
+  clientaSecurityPoints: string[]
+  clientaCtaHeading: string
+  clientaCtaText: string
   // Workflow
   workflowEnroll: string
   workflowSchedule: string
@@ -411,6 +475,70 @@ const translations: Record<Locale, TranslationKeys> = {
     clientaDesc: 'A multi-tenant CRM platform built for B2B SaaS companies. Unify customer service, support tickets, live chat, account health, incidents, and billing visibility — all from a single dashboard. Scale with feature flags and per-tenant branding.',
     clientaStartTrial: 'Start Free Trial',
     clientaMoreInfo: 'More Info',
+    clientaHeroSub1: 'A multi-tenant CRM platform built for B2B SaaS companies. Unify customer service, support tickets, live chat, account health, incidents, and billing visibility — all from a single dashboard.',
+    clientaHeroSub2: 'Whether you\'re a startup or an enterprise, Clienta scales with your business. Each tenant gets their own isolated workspace with configurable features, custom branding, and granular role-based access control.',
+    clientaBtnTrial: 'Start Free Trial',
+    clientaBtnBack: 'Back',
+    clientaStatModules: 'Modules',
+    clientaStatPerms: 'Permissions',
+    clientaStatChannels: 'Channels',
+    clientaStatLanguages: 'Languages (EN + AR)',
+    clientaFeaturesHeading1: 'Everything you need to ',
+    clientaFeaturesHeading2: 'run customer operations',
+    clientaFeaturesSubtitle: 'Clienta covers the full lifecycle — from onboarding customers and resolving tickets to tracking incidents and preventing churn.',
+    clientaDashSub: 'Your command center',
+    clientaDashTitle: 'Dashboard & Overview',
+    clientaDashDesc: 'A role-aware home screen that gives you instant visibility into open tickets, SLA compliance, MRR, account health, and agent performance. Smart alerts flag at-risk accounts, unresolved incidents, and pending approvals.',
+    clientaDashPoints: ['Real-time KPIs: open tickets, first response time, SLA compliance, MRR', 'Breakdown charts by status, priority, channel, department, and assignee', 'Monthly trend tracking across the last 6 months', 'Agent performance metrics and workload distribution'],
+    clientaAccSub: '360° customer view',
+    clientaAccTitle: 'Accounts & Contacts',
+    clientaAccDesc: 'Full B2B account profiles with health scores, usage metrics, subscriptions, invoices, and linked contacts. Proactively spot at-risk accounts before they churn with automated health scoring and trend tracking.',
+    clientaAccPoints: ['Health scoring with event history and trend visualization', 'Contact roles: Decision Maker, Billing, Technical, End User', 'Usage and billing visibility with MRR tracking', 'Renewal tracking and churn risk scores with at-risk revenue alerts'],
+    clientaTicketSub: 'Resolve faster',
+    clientaTicketTitle: 'Tickets & SLA Engine',
+    clientaTicketDesc: 'Full support ticketing with SLA tracking, priority, categories, departments, assignments, and conversation timelines. Configurable SLA policies with response time, resolution time, and automatic escalation tracking.',
+    clientaTicketPoints: ['Ticket workflow: statuses, priorities, assignments, categories, custom fields', 'SLA engine: automated tracking, escalation, and compliance monitoring', 'Conversation threads with internal notes for agent handoffs', 'Post-ticket CSAT and account-level NPS with trend analysis'],
+    clientaInboxSub: 'All channels, one place',
+    clientaInboxTitle: 'Unified Inbox & Chat Widget',
+    clientaInboxDesc: 'All conversations from email, chat, WhatsApp, SMS, social media, VoIP, Telegram, and API in one unified inbox. Plus an embeddable live-chat widget with 30+ configuration options that deploys with a single script tag.',
+    clientaInboxPoints: ['Omni-channel: Email, VoIP, WhatsApp, Facebook, Instagram, SMS, Telegram, Web Chat, API', 'Embeddable widget: pre-chat forms, proactive messages, bot auto-reply, typing indicators', 'Working hours and offline mode with lead capture', 'Emoji, ratings, satisfaction surveys, and file sharing built in'],
+    clientaIncidentSub: 'SaaS operations',
+    clientaIncidentTitle: 'Incidents, Bugs & Feature Requests',
+    clientaIncidentDesc: 'Track, triage, and resolve incidents with severity levels and affected account tracking. Log and manage bugs with status workflows. Let customers vote on feature requests with prioritization and status tracking.',
+    clientaIncidentPoints: ['Incident management with severity levels and affected account tracking', 'Bug tracking with severity, status workflow, and product linkage', 'Customer-driven feature voting with prioritization and status updates', 'Renewal tracking and churn prevention with risk scoring'],
+    clientaReportSub: 'Data-driven decisions',
+    clientaReportTitle: 'Reports & Analytics',
+    clientaReportDesc: '8+ key KPIs with breakdown charts by status, priority, source channel, department, and assignee. Monthly trend analysis, CSV export for deeper analysis, and automated account health scoring.',
+    clientaReportPoints: ['KPI dashboard: open tickets, first response, SLA compliance, MRR, health scores', 'Breakdown charts by status, priority, channel, department, assignee', 'Monthly trend tracking to spot patterns and measure improvement', 'CSV export for analysis in Excel, Google Sheets, or BI tools'],
+    clientaMultiSub: 'Enterprise-grade',
+    clientaMultiTitle: 'Multi-Tenant Architecture',
+    clientaMultiDesc: 'Each tenant gets their own isolated workspace with independent data, users, and settings. White-label ready with custom branding, logos, colors, and feature flags to sell different tiers without code changes.',
+    clientaMultiPoints: ['Data isolation: row-level security guarantees your data stays yours', 'Feature flags: enable or disable 15 modules per tenant', 'Custom branding: logos, colors, widget, and portal customization', 'Role-based access with 10 predefined roles and 50+ granular permissions'],
+    clientaKbSub: 'Empower your customers',
+    clientaKbTitle: 'Knowledge Base & Self-Service Portal',
+    clientaKbDesc: 'Self-service articles with categories, visibility control, and portal access for customers. Customers can submit tickets, browse the knowledge base, view billing, take surveys, and manage their profile — all from a branded portal.',
+    clientaKbPoints: ['Knowledge base with categories and visibility control', 'Customer portal: submit tickets, view billing, take surveys', 'CSAT and NPS surveys built into the portal experience', 'Reduces ticket volume by empowering customers to self-serve'],
+    clientaWhyTitle: 'Why Clienta?',
+    clientaWhySubtitle: 'Built for modern SaaS teams',
+    clientaWhy1Label: 'English & Arabic — bilingual',
+    clientaWhy1Desc: 'Full RTL layout support out of the box',
+    clientaWhy2Label: 'Ready to sell',
+    clientaWhy2Desc: 'Feature flags, tenant management, and pricing tiers built in',
+    clientaWhy3Label: 'Enterprise security',
+    clientaWhy3Desc: 'Row-level security, audit logs, role-based access',
+    clientaWhy4Label: 'Embeddable chat widget',
+    clientaWhy4Desc: 'One script tag — 30+ config options, 5 languages',
+    clientaPresentTitle: 'Presentations',
+    clientaPresentSubtitle: 'Learn more about Clienta',
+    clientaPresent1Title: 'Platform Overview',
+    clientaPresent1Desc: 'Full CRM platform features & architecture',
+    clientaPresent2Title: 'Tenant Guide',
+    clientaPresent2Desc: 'Your workspace & module walkthrough',
+    clientaSecurityTitle: 'Security & Administration',
+    clientaSecuritySubtitle: 'Enterprise-grade protection',
+    clientaSecurityPoints: ['Row-level security guarantees data isolation per tenant', 'Role-based access with 10 roles and 50+ permissions enforced at UI and database level', 'Full audit trail of who changed what, when, across all entities', 'Modern stack: Next.js, Supabase, TypeScript — fast, type-safe, scalable', 'Custom fields: 6 field types (text, number, date, boolean, select, multi-select)', 'Email templates and i18n support (English + Arabic with RTL)'],
+    clientaCtaHeading: 'Launch your customer platform today',
+    clientaCtaText: 'Scalable. Customizable. Ready to sell. Start your free trial — no credit card required.',
     // Workflow
     workflowEnroll: 'Enroll',
     workflowSchedule: 'Schedule',
@@ -755,6 +883,70 @@ const translations: Record<Locale, TranslationKeys> = {
     clientaDesc: 'منصة CRM متعددة المستأجرين مبنية لشركات SaaS B2B. وحّد خدمة العملاء، تذاكر الدعم، الدردشة المباشرة، صحة الحسابات، الحوادث، ورؤية الفواتير — كلها من لوحة تحكم واحدة.',
     clientaStartTrial: 'جرّب مجاناً',
     clientaMoreInfo: 'اعرف أكتر',
+    clientaHeroSub1: 'منصة CRM متعددة المستأجرين مبنية لشركات SaaS B2B. وحّد خدمة العملاء، تذاكر الدعم، الدردشة المباشرة، صحة الحسابات، الحوادث، ورؤية الفواتير — كلها من لوحة تحكم واحدة.',
+    clientaHeroSub2: 'سواء كنت شركة ناشئة أو مؤسسة كبيرة، كلاينتا بتتكيف مع حجم عملك. كل مستأجر بياخد مساحة عمل معزولة بإعدادات مستقلة وعلامة تجارية مخصصة وتحكم دقيق في الصلاحيات.',
+    clientaBtnTrial: 'جرّب مجاناً',
+    clientaBtnBack: 'رجوع',
+    clientaStatModules: 'وحدة',
+    clientaStatPerms: 'صلاحية',
+    clientaStatChannels: 'قناة',
+    clientaStatLanguages: 'لغتين (عربي + إنجليزي)',
+    clientaFeaturesHeading1: 'كل اللي تحتاجه عشان',
+    clientaFeaturesHeading2: 'تسير عمليات العملاء',
+    clientaFeaturesSubtitle: 'كلاينتا بيشتغل على كل دورة حياة العميل — من أول ما يسجل لحد ما تحل المشاكل وتمنعهم يمشوا.',
+    clientaDashSub: 'لوحة التحكم بتاعتك',
+    clientaDashTitle: 'لوحة التحكم والنظرة العامة',
+    clientaDashDesc: 'شاشة بتعرفك حالة التذاكر المفتوحة، الالتزام بمعايير الخدمة، الإيرادات الشهرية المتكررة، صحة الحسابات، وأداء فريق الدعم — كلها محدّثة لحظة بلحظة.',
+    clientaDashPoints: ['مؤشرات أداء فورية: التذاكر المفتوحة، وقت أول رد، الالتزام بمعايير الخدمة، الإيرادات الشهرية', 'رسوم بيانية حسب الحالة والأولوية والقناة والقسم والمُعيّن', 'تتبع الاتجاهات الشهرية خلال آخر 6 شهور', 'مؤشرات أداء فريق الدعم وتوزيع الحمل عليهم'],
+    clientaAccSub: 'نظرة شاملة على العميل',
+    clientaAccTitle: 'الحساباتجهات الاتصال',
+    clientaAccDesc: 'ملفات حسابات B2B كاملة مع درجات الصحة، مقاييس الاستخدام، الاشتراكات، الفواتير، وجهات الاتصال المرتبطة. تعرّف على الحسابات المعرضة للخطر قبل ما تفقد العميل.',
+    clientaAccPoints: ['درجات صحة الحساب مع سجل الأحداث وتتبع الاتجاهات', 'أدوار جهة الاتصال: صانع القرار، الفني، التقني، المستخدم النهائي', 'رؤية الاستخدام والفواتير مع تتبع الإيرادات الشهرية', 'تتبع التجديدات ودرجات خطر فقدان العميل مع تنبيهات الإيرادات المعرضة للخطر'],
+    clientaTicketSub: 'حل أسرع',
+    clientaTicketTitle: 'تذاكر الدعم ومحرك معايير الخدمة',
+    clientaTicketDesc: 'نظام تذاكر دعم كامل مع تتبع معايير الخدمة والأولوية والأقسام والتعيينات والمحادثات. سياسات قابلة للتعديل مع أوقات الاستجابة والحل والتصعيد التلقائي.',
+    clientaTicketPoints: ['سير عمل التذاكر: الحالات والأولويات والتعيينات والفئات والحقول المخصصة', 'محرك معايير الخدمة: تتبع تلقائي وتصعيد ومراقبة الالتزام', 'سلسلة محادثات مع ملاحظات داخلية لنقل الطلبات بين الموظفين', 'استبيانات رضا ما بعد التذاكر ومؤشرات رضا على مستوى الحساب مع تحليل الاتجاهات'],
+    clientaInboxSub: 'كل القنوات في مكان واحد',
+    clientaInboxTitle: 'صندوق الوارد الموحد وودجت الدردشة',
+    clientaInboxDesc: 'كل المحادثات من البريد والدردشة وواتساب والرسائل ووسائل التواصل والهاتف والتيليجرام والـ API في صندوق واحد. وكمان ودجت دردشة مباشرة قابلة للدمج مع 30+ خيار إعداد.',
+    clientaInboxPoints: ['قنوات متعددة: البريد، الهاتف، وواتساب، فيسبوك، إنستغرام، الرسائل، تيليجرام، الدردشة، API', 'ودجت قابلة للدمج: نماذج ما قبل الدردشة، رسائل تلقائية، ردود البوت، مؤشرات الكتابة', 'ساعات العمل والوضع غير المتاح مع التقاط بيانات العملاء المحتملين', 'إيموجي، تقييمات، استبيانات رضا، ومشاركة ملفات مدمجة'],
+    clientaIncidentSub: 'عمليات SaaS',
+    clientaIncidentTitle: 'الحوادث والأخطاء وطلبات الميزات',
+    clientaIncidentDesc: 'تتبع وحل الحوادث بمستويات الخطورة وتتبع الحسابات المتأثرة. سجّل وأدر الأخطاء بسير عمل الحالة. خلي العملاء يصوّتوا على طلبات الميزات مع الأولوية وحالة التتبع.',
+    clientaIncidentPoints: ['إدارة الحوادث مع مستويات الخطورة وتتبع الحسابات المتأثرة', 'تتبع الأخطاء مع الخطورة وسير عمل الحالة وربط المنتجات', 'تصويت العملاء على الميزات مع الأولوية وحالة التحديثات', 'تتبع التجديدات ومنع فقدان العميل مع درجات الخطورة'],
+    clientaReportSub: 'قرارات بالبيانات',
+    clientaReportTitle: 'التقارير والتحليلات',
+    clientaReportDesc: 'أكثر من 8 مؤشرات أداء رئيسية مع رسوم بيانية حسب الحالة والأولوية والقناة والقسم والمُعيّن. تحليل الاتجاهات الشهرية وتصدير CSV ودرجات صحة الحساب التلقائية.',
+    clientaReportPoints: ['لوحة مؤشرات الأداء: التذاكر المفتوحة، أول رد، الالتزام بالمعايير، الإيرادات، درجات الصحة', 'رسوم بيانية حسب الحالة والأولوية والقناة والقسم والمُعيّن', 'تتبع الاتجاهات الشهرية للكشف عن الأنماط وقياس التحسن', 'تصدير CSV للتحليل في Excel أو Google Sheets أو أدوات BI'],
+    clientaMultiSub: 'على مستوى الشركات الكبيرة',
+    clientaMultiTitle: 'بنية متعددة المستأجرين',
+    clientaMultiDesc: 'كل مستأجر بياخد مساحة عمل معزولة ببيانات مستقلة وإعدادات ومستخدمين. جاهز للعلامة التجارية المخصصة مع أعلام الميزات لبيع خطط مختلفة من غير تغيير الكود.',
+    clientaMultiPoints: ['عزل البيانات: الأمان على مستوى الصف يضمن بقاؤك وحدك', 'أعلام الميزات: فعّل أوعطّل 15 وحدة لكل مستأجر', 'علامة تجارية مخصصة: شعارات وألوان وودجت وبوابة مخصصة', 'تحكم في الوصول بأدوار محددة مسبقاً و50+ صلاحية تفصيلية'],
+    clientaKbSub: 'تمكين عملائك',
+    clientaKbTitle: 'قاعدة المعرفة والبوابة الذاتية',
+    clientaKbDesc: 'مقالات ذاتية الخدمة مع فئات وتحكم في الرؤية وصول للبوابة. العملاء يقدروا يبعتوا تذاكر ويتسطعوا في قاعدة المعرفة ويشوفوا الفواتير ويديروا ملفاتهم — كلها من بوابة مخصصة.',
+    clientaKbPoints: ['قاعدة معرفة مع فئات وتحكم في الرؤية', 'بوابة العملاء: إرسال تذاكر، عرض الفواتير، أخذ استبيانات', 'استبيانات CSAT و NPS مدمجة في تجربة البوابة', 'بتقلل حجم التذاكر بتمكين العميل من الخدمة الذاتية'],
+    clientaWhyTitle: 'ليه كلاينتا؟',
+    clientaWhySubtitle: 'مصمم لفرق SaaS الحديثة',
+    clientaWhy1Label: 'عربي وإنجليزي — ثنائي اللغة',
+    clientaWhy1Desc: 'دعم كامل لتخطيط من اليمين للشمال من الأول',
+    clientaWhy2Label: 'جاهز للبيع',
+    clientaWhy2Desc: 'أعلام الميزات وإدارة المستأجرين وخطط الأسعار مدمجة',
+    clientaWhy3Label: 'أمان على مستوى المؤسسات',
+    clientaWhy3Desc: 'أمان على مستوى الصف وسجلات التدقيق والتحكم بالأدوار',
+    clientaWhy4Label: 'ودجت دردشة قابل للدمج',
+    clientaWhy4Desc: 'سكريبت واحد — 30+ خيار إعداد، 5 لغات',
+    clientaPresentTitle: 'العروض التقديمية',
+    clientaPresentSubtitle: 'اعرف أكتر عن كلاينتا',
+    clientaPresent1Title: 'نظرة عامة على المنصة',
+    clientaPresent1Desc: 'مميزات وبنية منصة CRM كاملة',
+    clientaPresent2Title: 'دليل المستأجر',
+    clientaPresent2Desc: 'مساحة العمل بتاعتك والوحدات',
+    clientaSecurityTitle: 'الأمان والإدارة',
+    clientaSecuritySubtitle: 'حماية على مستوى الشركات الكبيرة',
+    clientaSecurityPoints: ['أمان على مستوى الصف يضمن عزل البيانات لكل مستأجر', 'تحكم في الوصول بأدوار و50+ صلاحية مفروضة على واجهة المستخدم وقاعدة البيانات', 'سجل تدقيق كامل لكل تغيير في كل الكيانات', 'تقنية حديثة: Next.js و Supabase و TypeScript — سريع وآمن وقابل للتوسع', 'حقول مخصصة: 6 أنواع حقول (نص، رقم، تاريخ، منطقية، اختيار، اختيار متعدد)', 'قوالب بريد إلكتروني ودعم التعددية اللغوية (عربي + إنجليزي مع RTL)'],
+    clientaCtaHeading: 'ابدأ منصة العملاء بتاعتك النهارده',
+    clientaCtaText: 'قابل للتوسع ومخصص وجاهز للبيع. ابدأ تجربتك المجانية — من غير بطاقة ائتمان.',
     // Workflow
     workflowEnroll: 'التسجيل',
     workflowSchedule: 'الجدولة',
