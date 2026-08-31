@@ -184,44 +184,6 @@ export default function Hero() {
             {t.heroSubtitle}
           </motion.p>
 
-          {/* CTA Buttons with magnetic effect */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
-          >
-            <MagneticButton strength={0.2}>
-              <Link
-                href="/signup"
-                className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden glow-btn whitespace-nowrap"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500" />
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative flex items-center gap-2">
-                  {t.startFreeTrial}
-                  <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.span>
-                </span>
-              </Link>
-            </MagneticButton>
-
-            <MagneticButton strength={0.15}>
-              <button className="group inline-flex items-center gap-3 px-8 py-4 text-gray-300 hover:text-white rounded-2xl border border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-300 whitespace-nowrap">
-                <motion.div
-                  whileHover={{ scale: 1.15, rotate: 10 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 rounded-full bg-white/[0.06] flex items-center justify-center group-hover:bg-white/[0.1] transition-colors flex-shrink-0"
-                >
-                  <Play className="w-3.5 h-3.5 ml-0.5" />
-                </motion.div>
-                <span className="font-medium text-sm">{t.watchDemo}</span>
-              </button>
-            </MagneticButton>
-          </motion.div>
-
           {/* Floating mockup */}
           <motion.div variants={itemVariants} className="w-full">
             <FloatingMockup />
