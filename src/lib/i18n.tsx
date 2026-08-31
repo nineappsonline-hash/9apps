@@ -1332,7 +1332,7 @@ const translations: Record<Locale, TranslationKeys> = {
     ebnyWhy3Desc: 'UBL XML وأكواد QR و ECDSA كلها منفذة وجاهزة',
     ebnyWhy4Label: 'تقنية حديثة',
     ebnyWhy4Desc: 'Next.js و Supabase و TypeScript — مختبر ومنشور على Vercel',
-    ebnyTechTitle: 'الم技术ية',
+    ebnyTechTitle: 'القنية المستخدمة',
     ebnyTechSubtitle: 'حديث ومختبر وقابل للتوسع',
     ebnyTechPoints: ['Next.js 16 و React 19 و TypeScript و Tailwind CSS v4', 'PostgreSQL عبر Supabase مع أمان على مستوى الصف', 'TanStack React Query v5 لإدارة الحالة', 'Vitest مع 23 مجموعة اختبار للوحدات الأساسية', 'jsPDF و xlsx-js-style لتصدير PDF و Excel بتصميم', 'منشور على Vercel مع معاينات تلقائية'],
     // Workflow
