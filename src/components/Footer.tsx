@@ -42,7 +42,8 @@ export default function Footer() {
 
   const footerLinks = {
     [t.product]: [
-      { label: t.footerVolleyra, href: '#products' },
+      { label: t.footerVolleyra, href: '/volleyra' },
+      { label: t.footerClienta, href: '/clienta' },
       { label: t.footerAnalytics, href: '#features' },
       { label: t.footerIntegrations, href: '#features' },
     ],

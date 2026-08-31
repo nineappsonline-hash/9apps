@@ -59,6 +59,11 @@ type TranslationKeys = {
   volleyraHeroSub: string
   volleyraFeaturesSubtitle: string
   volleyraFeaturesTitle: string
+  clientaName: string
+  clientaTagline: string
+  clientaDesc: string
+  clientaStartTrial: string
+  clientaMoreInfo: string
   // Workflow
   workflowEnroll: string
   workflowSchedule: string
@@ -228,6 +233,7 @@ type TranslationKeys = {
   builtWith: string
   // Footer links
   footerVolleyra: string
+  footerClienta: string
   footerAnalytics: string
   footerIntegrations: string
   aboutUs: string
@@ -400,6 +406,11 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraHeroSub: 'Replaces spreadsheets, WhatsApp groups and notebooks with a single platform that handles enrollment, scheduling, billing, attendance and profitability — so you can focus on coaching, not paperwork.',
     volleyraFeaturesSubtitle: 'Volleyra handles the full lifecycle of running an academy — from the moment a member joins to knowing exactly which sessions make money.',
     volleyraFeaturesTitle: 'Volleyra Features',
+    clientaName: 'Clienta',
+    clientaTagline: 'SaaS Customer Operations Platform',
+    clientaDesc: 'A multi-tenant CRM platform built for B2B SaaS companies. Unify customer service, support tickets, live chat, account health, incidents, and billing visibility — all from a single dashboard. Scale with feature flags and per-tenant branding.',
+    clientaStartTrial: 'Start Free Trial',
+    clientaMoreInfo: 'More Info',
     // Workflow
     workflowEnroll: 'Enroll',
     workflowSchedule: 'Schedule',
@@ -568,6 +579,7 @@ const translations: Record<Locale, TranslationKeys> = {
     copyright: 'All rights reserved.',
     builtWith: 'Built with precision & passion',
     footerVolleyra: 'Volleyra',
+    footerClienta: 'Clienta',
     footerAnalytics: 'Analytics',
     footerIntegrations: 'Integrations',
     aboutUs: 'About Us',
@@ -738,6 +750,11 @@ const translations: Record<Locale, TranslationKeys> = {
     volleyraHeroSub: 'بتبدل الإكسل وواتساب والدفاتر بمنصة واحدة بتغطي التسجيل والفواتير والحضور والربح — عشان تركز في التدريب مش في الأوراق.',
     volleyraFeaturesSubtitle: 'فوليرا بيشتغل على كل دورة حياة الأكاديمية — من لحظة ما العضو يسجل لحد ما تعرف بالظبط أنهي جلسات بتحقق أرباح.',
     volleyraFeaturesTitle: 'مميزات فوليرا',
+    clientaName: 'كلاينتا',
+    clientaTagline: 'منصة إدارة عمليات العملاء',
+    clientaDesc: 'منصة CRM متعددة المستأجرين مبنية لشركات SaaS B2B. وحّد خدمة العملاء، تذاكر الدعم، الدردشة المباشرة، صحة الحسابات، الحوادث، ورؤية الفواتير — كلها من لوحة تحكم واحدة.',
+    clientaStartTrial: 'جرّب مجاناً',
+    clientaMoreInfo: 'اعرف أكتر',
     // Workflow
     workflowEnroll: 'التسجيل',
     workflowSchedule: 'الجدولة',
@@ -906,6 +923,7 @@ const translations: Record<Locale, TranslationKeys> = {
     copyright: 'جميع الحقوق محفوظة.',
     builtWith: 'صُنع بشغف ودقة عالية',
     footerVolleyra: 'فوليرا',
+    footerClienta: 'كلاينتا',
     footerAnalytics: 'التحليلات',
     footerIntegrations: 'التكاملات',
     aboutUs: 'من نحن',
