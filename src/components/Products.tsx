@@ -86,10 +86,32 @@ export default function Products() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xl"
+                  className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xl"
                 >
                   {t.volleyraDesc}
                 </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.42 }}
+                  className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8"
+                >
+                  {[
+                    { price: '$35', period: '/mo' },
+                    { price: '$200', period: '/6 mo' },
+                    { price: '$350', period: '/yr' },
+                    { price: '$600', period: '/2 yr' },
+                  ].map((tier, i) => (
+                    <div
+                      key={i}
+                      className="px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:border-indigo-500/30 transition-colors"
+                    >
+                      <span className="text-white font-bold text-sm">{tier.price}</span>
+                      <span className="text-gray-500 text-xs">{tier.period}</span>
+                    </div>
+                  ))}
+                </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
