@@ -144,6 +144,57 @@ type TranslationKeys = {
   hesnFeaturesHeading1: string
   hesnFeaturesHeading2: string
   hesnFeaturesSubtitle: string
+  hesnF1Sub: string
+  hesnF1Title: string
+  hesnF1Desc: string
+  hesnF1Points: string[]
+  hesnF2Sub: string
+  hesnF2Title: string
+  hesnF2Desc: string
+  hesnF2Points: string[]
+  hesnF3Sub: string
+  hesnF3Title: string
+  hesnF3Desc: string
+  hesnF3Points: string[]
+  hesnF4Sub: string
+  hesnF4Title: string
+  hesnF4Desc: string
+  hesnF4Points: string[]
+  hesnF5Sub: string
+  hesnF5Title: string
+  hesnF5Desc: string
+  hesnF5Points: string[]
+  hesnF6Sub: string
+  hesnF6Title: string
+  hesnF6Desc: string
+  hesnF6Points: string[]
+  hesnF7Sub: string
+  hesnF7Title: string
+  hesnF7Desc: string
+  hesnF7Points: string[]
+  hesnF8Sub: string
+  hesnF8Title: string
+  hesnF8Desc: string
+  hesnF8Points: string[]
+  hesnWhyTitle: string
+  hesnWhySubtitle: string
+  hesnWhy1Label: string
+  hesnWhy1Desc: string
+  hesnWhy2Label: string
+  hesnWhy2Desc: string
+  hesnWhy3Label: string
+  hesnWhy3Desc: string
+  hesnWhy4Label: string
+  hesnWhy4Desc: string
+  hesnPresentTitle: string
+  hesnPresentSubtitle: string
+  hesnPresent1Title: string
+  hesnPresent1Desc: string
+  hesnPresent2Title: string
+  hesnPresent2Desc: string
+  hesnComplianceTitle: string
+  hesnComplianceSubtitle: string
+  hesnCompliancePoints: string[]
   // Workflow
   workflowEnroll: string
   workflowSchedule: string
@@ -572,6 +623,57 @@ const translations: Record<Locale, TranslationKeys> = {
     hesnFeaturesHeading1: 'Everything you need to ',
     hesnFeaturesHeading2: 'run security operations',
     hesnFeaturesSubtitle: 'Hesn covers the full security operations lifecycle — from signing a client contract to tracking patrols, managing personnel, and delivering transparent billing.',
+    hesnF1Sub: 'Client operations',
+    hesnF1Title: 'Site & Contract Management',
+    hesnF1Desc: 'Register client companies and prospects with full contact data. Track deals through qualification → proposal → negotiation → won/lost stages. Calculate weighted deal value, monthly projections, and 12-month revenue forecasts.',
+    hesnF1Points: ['Client company and prospect registration with full contact details', 'Deal pipeline tracking through sales stages', 'Weighted deal value and 12-month revenue projections', 'Meeting and call logging with email integration'],
+    hesnF2Sub: 'HR & workforce',
+    hesnF2Title: 'Personnel Management',
+    hesnF2Desc: 'Full HR module — hire, manage, and deploy security officers across sites. Track salaries, bonuses, penalties, performance evaluations, and certifications. Manage leave requests, advances, and employment contracts.',
+    hesnF2Points: ['Full employee profiles with qualifications and certifications', 'Salary, bonuses, and penalty management', 'Leave and advance request workflows', 'Performance evaluations and training tracking'],
+    hesnF3Sub: 'Operations core',
+    hesnF3Title: 'Shift & Patrol Management',
+    hesnF3Desc: 'Create and manage security sites with guard posts, shift schedules, and patrol routes. Track attendance, tardiness, and patrol completion. Generate shift reports and incident logs for every site.',
+    hesnF3Points: ['Site and guard post configuration with location mapping', 'Shift scheduling and rotation management', 'Attendance tracking with tardiness and absence logging', 'Patrol routes and completion verification'],
+    hesnF4Sub: 'Documentation',
+    hesnF4Title: 'Reports & Incidents',
+    hesnF4Desc: 'Submit and track incident reports for every site. Log events, accidents, and violations with timestamps and responsible parties. Generate periodic security reports for clients.',
+    hesnF4Points: ['Incident reporting with timestamps and categories', 'Event and accident logging with responsible party tracking', 'Periodic security reports for client delivery', 'Violation tracking and corrective action logging'],
+    hesnF5Sub: 'Billing & profitability',
+    hesnF5Title: 'Financial Management',
+    hesnF5Desc: 'Complete invoicing and collection system with dual-entry accounting. Track payments, generate financial reports, and analyze profitability per client and contract. The pricing engine calculates accurate quotes.',
+    hesnF5Points: ['Invoice generation and payment collection tracking', 'Dual-entry accounting with financial reports', 'Profitability analysis per client and contract', 'Pricing engine for accurate service quotes'],
+    hesnF6Sub: 'Assets & supplies',
+    hesnF6Title: 'Purchasing & Inventory',
+    hesnF6Desc: 'Manage procurement of security equipment, uniforms, and supplies. Track inventory levels, reorder points, and asset assignments to sites and personnel.',
+    hesnF6Points: ['Purchase order management and supplier tracking', 'Inventory level monitoring with reorder alerts', 'Asset assignment to sites and personnel', 'Uniform and equipment tracking per officer'],
+    hesnF7Sub: 'Transparency',
+    hesnF7Title: 'Client Portal',
+    hesnF7Desc: 'A dedicated portal where your clients can track services, view invoices, follow up on communications, and see real-time reports. Builds trust and reduces back-and-forth.',
+    hesnF7Points: ['Client-facing portal for service tracking', 'Invoice and payment visibility for clients', 'Communication history and follow-up tracking', 'Real-time report access for transparency'],
+    hesnF8Sub: 'Legal protection',
+    hesnF8Title: 'Compliance & Licensing',
+    hesnF8Desc: 'Track guard licenses, employment contracts, end-of-service benefits, and regulatory compliance. Ensure every officer meets government-mandated training and certification requirements.',
+    hesnF8Points: ['Guard license tracking and renewal alerts', 'Employment contract management', 'End-of-service benefits calculation', 'Regulatory compliance monitoring'],
+    hesnWhyTitle: 'Why MASDAR?',
+    hesnWhySubtitle: 'Your security, in safe hands',
+    hesnWhy1Label: '50+ companies across Egypt',
+    hesnWhy1Desc: 'Suzuki, PwC, Halliburton, and more',
+    hesnWhy2Label: 'Licensed & certified',
+    hesnWhy2Desc: 'All personnel meet government standards',
+    hesnWhy3Label: '24/7 support available',
+    hesnWhy3Desc: 'Round-the-clock emergency response',
+    hesnWhy4Label: '+500 trained officers',
+    hesnWhy4Desc: 'Rigorous selection and continuous training',
+    hesnPresentTitle: 'Presentation',
+    hesnPresentSubtitle: 'Learn more about Hesn',
+    hesnPresent1Title: 'Operations Platform Overview',
+    hesnPresent1Desc: 'Full security operations management system',
+    hesnPresent2Title: 'MASDAR Security Website',
+    hesnPresent2Desc: 'masdar-security.com',
+    hesnComplianceTitle: 'Compliance & Standards',
+    hesnComplianceSubtitle: 'Licensed and certified operations',
+    hesnCompliancePoints: ['All personnel fully licensed and government-certified', 'Rigorous selection and continuous training programs', 'Compliance with Egyptian security regulations and standards', 'Professional insurance and liability coverage', 'Transparent periodic reporting to clients', 'Modern surveillance and tracking technology'],
     // Workflow
     workflowEnroll: 'Enroll',
     workflowSchedule: 'Schedule',
@@ -997,6 +1099,57 @@ const translations: Record<Locale, TranslationKeys> = {
     hesnFeaturesHeading1: 'كل اللي تحتاجه عشان',
     hesnFeaturesHeading2: 'تسير العمليات الأمنية',
     hesnFeaturesSubtitle: 'حصن بيشتغل على كل دورة حياة العمليات الأمنية — من أول ما توقع عقد مع عميل لحد ما تتبع الدوريات وتدير الأفراد وتقدم فواتير شفافة.',
+    hesnF1Sub: 'عمليات العملاء',
+    hesnF1Title: 'إدارة المواقع والعقود',
+    hesnF1Desc: 'سجّل شركات العملاء والمرشحين مع كل بيانات الاتصال. تابع الصفقات من التأهيل للعرض والتفاوض لحد الفوز أو الخسارة. احسب القيمة المرجحة للصفقة والتقديرات الشهرية وتوقعات الإيرادات لمدة 12 شهر.',
+    hesnF1Points: ['تسجيل شركات العملاء والمرشحين مع بيانات الاتصال الكاملة', 'تتبع مسار الصفقات عبر مراحل البيع', 'القيمة المرجحة للصفقة وتوقعات الإيرادات لمدة 12 شهر', 'تسجيل الاجتماعات والمكالمات مع التكامل مع البريد'],
+    hesnF2Sub: 'الموارد البشرية',
+    hesnF2Title: 'إدارة الأفراد',
+    hesnF2Desc: 'وحدة HR كاملة — وظّف وأدر ونشر فرق الحراسة في المواقع. تابع الرواتب والمكافآت والجزاءات والتقييمات والشهادات. أدر طلبات الإجازات والسلف وعقود العمل.',
+    hesnF2Points: ['ملفات موظفين كاملة مع المؤهلات والشهادات', 'إدارة الرواتب والمكافآت والجزاءات', 'سير عمل طلبات الإجازات والسلف', 'تقييمات الأداء وتتبع التدريب'],
+    hesnF3Sub: 'قلب العمليات',
+    hesnF3Title: 'إدارة المناوبات والدوريات',
+    hesnF3Desc: 'أنشئ وأدر مواقع الحراسة مع مناطق الحراسة وجداول المناوبات ومسارات الدوريات. تابع الحضور والتأخر وإتمام الدوريات. أدر تقارير المناوبات وسجلات الحوادث لكل موقع.',
+    hesnF3Points: ['إعداد المواقع ومناطق الحراسة مع خرائط المواقع', 'جدولة المناوبات وإدارة الدوريات', 'تتبع الحضور مع تسجيل التأخر والغياب', 'مسارات الدوريات والتحقق من الإتمام'],
+    hesnF4Sub: 'التوثيق',
+    hesnF4Title: 'التقارير والحوادث',
+    hesnF4Desc: 'قدّم وتتبع تقارير الحوادث لكل موقع. سجّل الأحداث والحوادث والمخالفات مع الأوقات والمسؤولين. أدر تقارير أمنية دورية للعملاء.',
+    hesnF4Points: ['تقارير حوادث مع الأوقات والفئات', 'تسجيل الأحداث والحوادث مع تتبع المسؤولين', 'تقارير أمنية دورية لتسليم العملاء', 'تتبع المخالفات وتسجيل الإجراءات التصحيحية'],
+    hesnF5Sub: 'الفواتير والربحية',
+    hesnF5Title: 'الإدارة المالية',
+    hesnF5Desc: 'نظام فواتير وتحصيل كامل مع محاسبة مزدوجة الدخول. تابع المدفوعات وأدر التقارير المالية وحلل الربحية لكل عميل وcontract. محرك التسعير بيحسب عروض الأسعار بدقة.',
+    hesnF5Points: ['إصدار الفواتير وتتبع تحصيل المدفوعات', 'محاسبة مزدوجة الدخول مع تقارير مالية', 'تحليل الربحية لكل عميل وcontract', 'محرك تسعير لعروض أسعار دقيقة'],
+    hesnF6Sub: 'الأصول والمستلزمات',
+    hesnF6Title: 'المشتريات والمخزون',
+    hesnF6Desc: 'أدر مشتريات معدات الحراسة والزي الموحد والمستلزمات. تابع مستويات المخزون ونقاط إعادة الطلب وتعيين الأصول للمواقع والأفراد.',
+    hesnF6Points: ['إدارة أوامر الشراء وتتبع الموردين', 'مراقبة مستويات المخزون مع تنبيهات إعادة الطلب', 'تعيين الأصول للمواقع والأفراد', 'تتبع الزي الموحد والمعدات لكل فرد'],
+    hesnF7Sub: 'الشفافية',
+    hesnF7Title: 'بوابة العميل',
+    hesnF7Desc: 'بوابة مخصصة حيث العملاء يقدروا يتابعوا الخدمات ويشوفوا الفواتير وتتبع الاتصالات والتقارير الفورية. بتبني الثقة وبتقلل الرسايل والاتصالات المتكررة.',
+    hesnF7Points: ['بوابة للعميل لمتابعة الخدمات', 'رؤية الفواتير والمدفوعات للعملاء', 'تاريخ الاتصالات ومتابعة الطلبات', 'وصول للتقارير الفورية للشفافية'],
+    hesnF8Sub: 'الحماية القانونية',
+    hesnF8Title: 'الامتثال والتراخيص',
+    hesnF8Desc: 'تتبع تراخيص الحراسة وعقود العمل ومكافآت نهاية الخدمة والامتثال التنظيمي. تأكد إن كل فرد بيحقق متطلبات التدريب والشهادات الحكومية.',
+    hesnF8Points: ['تتبع تراخيص الحراسة وتنبيهات التجديد', 'إدارة عقود العمل', 'حساب مكافآت نهاية الخدمة', 'مراقبة الامتثال التنظيمي'],
+    hesnWhyTitle: 'ليه مصدر؟',
+    hesnWhySubtitle: 'أمنكم في أيدي أمينة',
+    hesnWhy1Label: 'أكتر من 50 شركة في مصر',
+    hesnWhy1Desc: 'سوزوكي و PwC وهاليبرتون وغيرهم',
+    hesnWhy2Label: 'مرخص ومعتمد',
+    hesnWhy2Desc: 'كل الأفراد بيحققوا المعايير الحكومية',
+    hesnWhy3Label: 'دعم 24/7 متاح',
+    hesnWhy3Desc: 'استجابة للطوارئ على مدار الساعة',
+    hesnWhy4Label: 'أكتر من 500 فرد مدرب',
+    hesnWhy4Desc: 'اختيار صارم وتدريب مستمر',
+    hesnPresentTitle: 'العرض التقديمي',
+    hesnPresentSubtitle: 'اعرف أكتر عن حصن',
+    hesnPresent1Title: 'نظرة عامة على منصة العمليات',
+    hesnPresent1Desc: 'نظام إدارة العمليات الأمنية الكاملة',
+    hesnPresent2Title: 'موقع مصدر للأمن',
+    hesnPresent2Desc: 'masdar-security.com',
+    hesnComplianceTitle: 'الامتثال والمعايير',
+    hesnComplianceSubtitle: 'عمليات مرخصة ومعتمدة',
+    hesnCompliancePoints: ['كل الأفراد مرخصين ومعتمدين من الحكومة', 'برامج اختيار صارمة وتدريب مستمر', 'امتثال للوائح والأمن المصرية المعايير', 'تأمين وcoverage مهني', 'تقارير دورية شفافة للعملاء', 'تكنولوجيا مراقبة وتتبع حديثة'],
     // Workflow
     workflowEnroll: 'التسجيل',
     workflowSchedule: 'الجدولة',

@@ -18,7 +18,6 @@ import {
   CheckCircle,
   Globe,
   FileText,
-  Activity,
   Building2,
   BadgeCheck,
   ClipboardList,
@@ -116,117 +115,21 @@ export default function HesnPage() {
   const { t } = useI18n()
 
   const features = [
-    {
-      icon: Building2,
-      gradient: 'from-amber-500 to-orange-500',
-      title: 'Site & Contract Management',
-      subtitle: 'Client operations',
-      description: 'Register client companies and prospects with full contact data. Track deals through qualification → proposal → negotiation → won/lost stages. Calculate weighted deal value, monthly projections, and 12-month revenue forecasts.',
-      points: [
-        'Client company and prospect registration with full contact details',
-        'Deal pipeline tracking through sales stages',
-        'Weighted deal value and 12-month revenue projections',
-        'Meeting and call logging with email integration',
-      ],
-    },
-    {
-      icon: Users,
-      gradient: 'from-violet-500 to-purple-500',
-      title: 'Personnel Management',
-      subtitle: 'HR & workforce',
-      description: 'Full HR module — hire, manage, and deploy security officers across sites. Track salaries, bonuses, penalties, performance evaluations, and certifications. Manage leave requests, advances, and employment contracts.',
-      points: [
-        'Full employee profiles with qualifications and certifications',
-        'Salary, bonuses, and penalty management',
-        'Leave and advance request workflows',
-        'Performance evaluations and training tracking',
-      ],
-    },
-    {
-      icon: ClipboardList,
-      gradient: 'from-emerald-500 to-teal-500',
-      title: 'Shift & Patrol Management',
-      subtitle: 'Operations core',
-      description: 'Create and manage security sites with guard posts, shift schedules, and patrol routes. Track attendance, tardiness, and patrol completion. Generate shift reports and incident logs for every site.',
-      points: [
-        'Site and guard post configuration with location mapping',
-        'Shift scheduling and rotation management',
-        'Attendance tracking with tardiness and absence logging',
-        'Patrol routes and completion verification',
-      ],
-    },
-    {
-      icon: ClipboardList,
-      gradient: 'from-orange-500 to-red-500',
-      title: 'Reports & Incidents',
-      subtitle: 'Documentation',
-      description: 'Submit and track incident reports for every site. Log events, accidents, and violations with timestamps and responsible parties. Generate periodic security reports for clients.',
-      points: [
-        'Incident reporting with timestamps and categories',
-        'Event and accident logging with responsible party tracking',
-        'Periodic security reports for client delivery',
-        'Violation tracking and corrective action logging',
-      ],
-    },
-    {
-      icon: BarChart3,
-      gradient: 'from-yellow-500 to-amber-500',
-      title: 'Financial Management',
-      subtitle: 'Billing & profitability',
-      description: 'Complete invoicing and collection system with dual-entry accounting. Track payments, generate financial reports, and analyze profitability per client and contract. The pricing engine calculates accurate quotes.',
-      points: [
-        'Invoice generation and payment collection tracking',
-        'Dual-entry accounting with financial reports',
-        'Profitability analysis per client and contract',
-        'Pricing engine for accurate service quotes',
-      ],
-    },
-    {
-      icon: Camera,
-      gradient: 'from-pink-500 to-rose-500',
-      title: 'Purchasing & Inventory',
-      subtitle: 'Assets & supplies',
-      description: 'Manage procurement of security equipment, uniforms, and supplies. Track inventory levels, reorder points, and asset assignments to sites and personnel.',
-      points: [
-        'Purchase order management and supplier tracking',
-        'Inventory level monitoring with reorder alerts',
-        'Asset assignment to sites and personnel',
-        'Uniform and equipment tracking per officer',
-      ],
-    },
-    {
-      icon: Globe,
-      gradient: 'from-cyan-500 to-blue-500',
-      title: 'Client Portal',
-      subtitle: 'Transparency',
-      description: 'A dedicated portal where your clients can track services, view invoices, follow up on communications, and see real-time reports. Builds trust and reduces back-and-forth.',
-      points: [
-        'Client-facing portal for service tracking',
-        'Invoice and payment visibility for clients',
-        'Communication history and follow-up tracking',
-        'Real-time report access for transparency',
-      ],
-    },
-    {
-      icon: Shield,
-      gradient: 'from-indigo-500 to-blue-500',
-      title: 'Compliance & Licensing',
-      subtitle: 'Legal protection',
-      description: 'Track guard licenses, employment contracts, end-of-service benefits, and regulatory compliance. Ensure every officer meets government-mandated training and certification requirements.',
-      points: [
-        'Guard license tracking and renewal alerts',
-        'Employment contract management',
-        'End-of-service benefits calculation',
-        'Regulatory compliance monitoring',
-      ],
-    },
+    { icon: Building2, gradient: 'from-amber-500 to-orange-500', title: t.hesnF1Title, subtitle: t.hesnF1Sub, description: t.hesnF1Desc, points: t.hesnF1Points },
+    { icon: Users, gradient: 'from-violet-500 to-purple-500', title: t.hesnF2Title, subtitle: t.hesnF2Sub, description: t.hesnF2Desc, points: t.hesnF2Points },
+    { icon: ClipboardList, gradient: 'from-emerald-500 to-teal-500', title: t.hesnF3Title, subtitle: t.hesnF3Sub, description: t.hesnF3Desc, points: t.hesnF3Points },
+    { icon: ClipboardList, gradient: 'from-orange-500 to-red-500', title: t.hesnF4Title, subtitle: t.hesnF4Sub, description: t.hesnF4Desc, points: t.hesnF4Points },
+    { icon: BarChart3, gradient: 'from-yellow-500 to-amber-500', title: t.hesnF5Title, subtitle: t.hesnF5Sub, description: t.hesnF5Desc, points: t.hesnF5Points },
+    { icon: Camera, gradient: 'from-pink-500 to-rose-500', title: t.hesnF6Title, subtitle: t.hesnF6Sub, description: t.hesnF6Desc, points: t.hesnF6Points },
+    { icon: Globe, gradient: 'from-cyan-500 to-blue-500', title: t.hesnF7Title, subtitle: t.hesnF7Sub, description: t.hesnF7Desc, points: t.hesnF7Points },
+    { icon: Shield, gradient: 'from-indigo-500 to-blue-500', title: t.hesnF8Title, subtitle: t.hesnF8Sub, description: t.hesnF8Desc, points: t.hesnF8Points },
   ]
 
   const clientIndustries = [
-    { icon: Globe, label: '50+ companies across Egypt', desc: 'Suzuki, PwC, Halliburton, and more' },
-    { icon: Shield, label: 'Licensed & certified', desc: 'All personnel meet government standards' },
-    { icon: Clock, label: '24/7 support available', desc: 'Round-the-clock emergency response' },
-    { icon: Users, label: '+500 trained officers', desc: 'Rigorous selection and continuous training' },
+    { icon: Globe, label: t.hesnWhy1Label, desc: t.hesnWhy1Desc },
+    { icon: Shield, label: t.hesnWhy2Label, desc: t.hesnWhy2Desc },
+    { icon: Clock, label: t.hesnWhy3Label, desc: t.hesnWhy3Desc },
+    { icon: Users, label: t.hesnWhy4Label, desc: t.hesnWhy4Desc },
   ]
 
   return (
@@ -362,8 +265,8 @@ export default function HesnPage() {
                       <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Why MASDAR?</h3>
-                      <p className="text-xs text-amber-400">Your security, in safe hands</p>
+                      <h3 className="text-xl font-bold text-white">{t.hesnWhyTitle}</h3>
+                      <p className="text-xs text-amber-400">{t.hesnWhySubtitle}</p>
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -395,23 +298,23 @@ export default function HesnPage() {
                       <FileText className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Presentation</h3>
-                      <p className="text-xs text-amber-400">Learn more about Hesn</p>
+                      <h3 className="text-xl font-bold text-white">{t.hesnPresentTitle}</h3>
+                      <p className="text-xs text-amber-400">{t.hesnPresentSubtitle}</p>
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <a href="/Hesn-Presentation.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:border-amber-500/30 transition-all hover:bg-white/[0.04] group">
                       <FileText className="w-8 h-8 text-amber-400 shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-white group-hover:text-amber-300 transition-colors">Operations Platform Overview</p>
-                        <p className="text-xs text-gray-500">Full security operations management system</p>
+                        <p className="text-sm font-medium text-white group-hover:text-amber-300 transition-colors">{t.hesnPresent1Title}</p>
+                        <p className="text-xs text-gray-500">{t.hesnPresent1Desc}</p>
                       </div>
                     </a>
                     <a href="https://masdar-security.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:border-amber-500/30 transition-all hover:bg-white/[0.04] group">
                       <Globe className="w-8 h-8 text-amber-400 shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-white group-hover:text-amber-300 transition-colors">MASDAR Security Website</p>
-                        <p className="text-xs text-gray-500">masdar-security.com</p>
+                        <p className="text-sm font-medium text-white group-hover:text-amber-300 transition-colors">{t.hesnPresent2Title}</p>
+                        <p className="text-xs text-gray-500">{t.hesnPresent2Desc}</p>
                       </div>
                     </a>
                   </div>
@@ -421,7 +324,7 @@ export default function HesnPage() {
           </div>
         </section>
 
-        {/* Security / Compliance */}
+        {/* Compliance */}
         <section className="relative py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6 }}>
@@ -433,19 +336,12 @@ export default function HesnPage() {
                       <BadgeCheck className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Compliance & Standards</h3>
-                      <p className="text-xs text-amber-400">Licensed and certified operations</p>
+                      <h3 className="text-xl font-bold text-white">{t.hesnComplianceTitle}</h3>
+                      <p className="text-xs text-amber-400">{t.hesnComplianceSubtitle}</p>
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    {[
-                      'All personnel fully licensed and government-certified',
-                      'Rigorous selection and continuous training programs',
-                      'Compliance with Egyptian security regulations and standards',
-                      'Professional insurance and liability coverage',
-                      'Transparent periodic reporting to clients',
-                      'Modern surveillance and tracking technology',
-                    ].map((point, i) => (
+                    {t.hesnCompliancePoints.map((point, i) => (
                       <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: i * 0.05 }} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
                         <span className="text-sm text-gray-300">{point}</span>
