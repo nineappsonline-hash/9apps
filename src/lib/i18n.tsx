@@ -195,6 +195,67 @@ type TranslationKeys = {
   hesnComplianceTitle: string
   hesnComplianceSubtitle: string
   hesnCompliancePoints: string[]
+  ebnyName: string
+  ebnyTagline: string
+  ebnyDesc: string
+  ebnyStartTrial: string
+  ebnyMoreInfo: string
+  ebnyHeroSub1: string
+  ebnyHeroSub2: string
+  ebnyBtnTrial: string
+  ebnyBtnBack: string
+  ebnyStatProjects: string
+  ebnyStatCompliance: string
+  ebnyStatIFRS: string
+  ebnyStatBilingual: string
+  ebnyFeaturesHeading1: string
+  ebnyFeaturesHeading2: string
+  ebnyFeaturesSubtitle: string
+  ebnyF1Sub: string
+  ebnyF1Title: string
+  ebnyF1Desc: string
+  ebnyF1Points: string[]
+  ebnyF2Sub: string
+  ebnyF2Title: string
+  ebnyF2Desc: string
+  ebnyF2Points: string[]
+  ebnyF3Sub: string
+  ebnyF3Title: string
+  ebnyF3Desc: string
+  ebnyF3Points: string[]
+  ebnyF4Sub: string
+  ebnyF4Title: string
+  ebnyF4Desc: string
+  ebnyF4Points: string[]
+  ebnyF5Sub: string
+  ebnyF5Title: string
+  ebnyF5Desc: string
+  ebnyF5Points: string[]
+  ebnyF6Sub: string
+  ebnyF6Title: string
+  ebnyF6Desc: string
+  ebnyF6Points: string[]
+  ebnyF7Sub: string
+  ebnyF7Title: string
+  ebnyF7Desc: string
+  ebnyF7Points: string[]
+  ebnyF8Sub: string
+  ebnyF8Title: string
+  ebnyF8Desc: string
+  ebnyF8Points: string[]
+  ebnyWhyTitle: string
+  ebnyWhySubtitle: string
+  ebnyWhy1Label: string
+  ebnyWhy1Desc: string
+  ebnyWhy2Label: string
+  ebnyWhy2Desc: string
+  ebnyWhy3Label: string
+  ebnyWhy3Desc: string
+  ebnyWhy4Label: string
+  ebnyWhy4Desc: string
+  ebnyTechTitle: string
+  ebnyTechSubtitle: string
+  ebnyTechPoints: string[]
   // Workflow
   workflowEnroll: string
   workflowSchedule: string
@@ -366,6 +427,7 @@ type TranslationKeys = {
   footerVolleyra: string
   footerClienta: string
   footerHesn: string
+  footerEbny: string
   footerAnalytics: string
   footerIntegrations: string
   aboutUs: string
@@ -674,6 +736,67 @@ const translations: Record<Locale, TranslationKeys> = {
     hesnComplianceTitle: 'Compliance & Standards',
     hesnComplianceSubtitle: 'Licensed and certified operations',
     hesnCompliancePoints: ['All personnel fully licensed and government-certified', 'Rigorous selection and continuous training programs', 'Compliance with Egyptian security regulations and standards', 'Professional insurance and liability coverage', 'Transparent periodic reporting to clients', 'Modern surveillance and tracking technology'],
+    ebnyName: 'Ebny',
+    ebnyTagline: 'Construction Accounting ERP',
+    ebnyDesc: 'A full-featured Construction Accounting ERP built for Saudi Arabia. Project accounting, financial compliance, HR/payroll, and field operations — all in one unified platform.',
+    ebnyStartTrial: 'Start Free Trial',
+    ebnyMoreInfo: 'More Info',
+    ebnyHeroSub1: 'Purpose-built for the Saudi construction industry. Ebny covers project accounting, IFRS compliance, VAT/Zakat, ZATCA e-invoicing, HR/payroll, and field operations in one system.',
+    ebnyHeroSub2: 'From project costing and earned value management to ZATCA Phase 2 e-invoicing and automated bank reconciliation — Ebny replaces multiple disconnected tools with a single, compliant, bilingual platform.',
+    ebnyBtnTrial: 'Start Free Trial',
+    ebnyBtnBack: 'Back',
+    ebnyStatProjects: 'Project Accounting',
+    ebnyStatCompliance: 'Saudi Compliance',
+    ebnyStatIFRS: 'IFRS Built-In',
+    ebnyStatBilingual: 'Bilingual (EN + AR)',
+    ebnyFeaturesHeading1: 'Everything you need to ',
+    ebnyFeaturesHeading2: 'run construction finance',
+    ebnyFeaturesSubtitle: 'Ebny covers the full construction ERP lifecycle — from project setup and cost control to billing, procurement, payroll, and regulatory compliance.',
+    ebnyF1Sub: 'Financial foundation',
+    ebnyF1Title: 'Core Accounting & GL',
+    ebnyF1Desc: 'Double-entry GL engine with balanced journal posting, centralized chart of accounts with 6-digit codes, accounting period management, and posting queue with approval notifications.',
+    ebnyF1Points: ['Double-entry GL with idempotency guarantees — no duplicate entries', 'Centralized Chart of Accounts with 6-digit Oracle-style codes', 'Accounting period lock/close to prevent backdated postings', 'Journal reversal with proper audit trail'],
+    ebnyF2Sub: 'Project-centric',
+    ebnyF2Title: 'Project Management & Cost Control',
+    ebnyF2Desc: 'Manage multiple construction projects with sub-phases and cost codes. Real-time budget vs. actual tracking, Earned Value Management (CPI, SPI, EAC), forecasting, and change order management.',
+    ebnyF2Points: ['Project & phase tracking with cost codes', 'Budget vs. Actual real-time cost tracking with variance alerts', 'Earned Value Management: CPI, SPI, EAC, TCPI, S-curve', 'Change order management with approval workflow'],
+    ebnyF3Sub: 'Revenue collection',
+    ebnyF3Title: 'Billing & Accounts Receivable',
+    ebnyF3Desc: 'Generate invoices from GRNs or manually. Progress billing based on POC percentage or milestones. Retention management, aging reports, unbilled revenue tracking, and IFRS 15 contract calculations.',
+    ebnyF3Points: ['Client invoicing from GRNs or manually with line-item detail', 'Progress billing based on POC percentage or milestones', 'Retention management and release per contract terms', 'AR aging by client, project, and period with visual charts'],
+    ebnyF4Sub: 'Procurement',
+    ebnyF4Title: 'Procurement & Accounts Payable',
+    ebnyF4Desc: 'Full procurement workflow from requisitions to POs. RFQ to vendors, three-way matching (PO ↔ GRN ↔ Invoice), subcontract management, and vendor aging reports.',
+    ebnyF4Points: ['Purchase requisitions → POs with approval gates', 'Three-way matching: PO ↔ GRN ↔ Vendor Invoice', 'Subcontract agreements with certified progress', 'Vendor aging analysis by vendor and project'],
+    ebnyF5Sub: 'Cash management',
+    ebnyF5Title: 'Cash & Bank Management',
+    ebnyF5Desc: 'Multi-bank account management with real-time balances. Automatic bank reconciliation with confidence scoring. Petty cash, live exchange rates, and cash position dashboard.',
+    ebnyF5Points: ['Multi-bank account tracking with real-time balances', 'Auto bank reconciliation with fuzzy matching and confidence scoring', 'Petty cash management with disbursement and replenishment', 'Live exchange rates for multi-currency transactions'],
+    ebnyF6Sub: 'Workforce',
+    ebnyF6Title: 'HR & Payroll',
+    ebnyF6Desc: 'Full employee lifecycle with document tracking. Automated payroll with GL posting. Timesheet import, leave management, overtime tracking, EOSB calculations per Saudi law, and certified payroll reports.',
+    ebnyF6Points: ['Employee management with document tracking and expiry alerts', 'Automated payroll calculation with GL posting', 'EOSB (End of Service Benefit) per IAS 19 and Saudi law', 'Leave, overtime, loans, penalties, and insurance management'],
+    ebnyF7Sub: 'Saudi regulations',
+    ebnyF7Title: 'Saudi Regulatory Compliance',
+    ebnyF7Desc: 'VAT (15%), Zakat, ZATCA e-invoicing (Phase 1 & 2), GOSI, WPS, Saudization/Nitaqat, and Qiwa — all built in and compliant out of the box.',
+    ebnyF7Points: ['VAT 15% automated calculation and return preparation', 'ZATCA Phase 2: UBL 2.1 XML, QR codes, ECDSA signing', 'GOSI submission tracking and WPS compliance', 'Saudization ratio tracking and Nitaqat monitoring'],
+    ebnyF8Sub: 'Dashboards',
+    ebnyF8Title: 'Reporting & Dashboards',
+    ebnyF8Desc: 'Executive dashboards with KPI cards, trend charts, aging charts, S-curves, trial balance, financial statements, project profitability, and scheduled report delivery via email.',
+    ebnyF8Points: ['Executive dashboard with KPI cards and trend charts', 'AR/AP aging, cashflow, and S-curve visualizations', 'Financial statements: income statement, balance sheet from GL', 'Scheduled daily report delivery via email'],
+    ebnyWhyTitle: 'Why Ebny?',
+    ebnyWhySubtitle: 'Built for Saudi construction',
+    ebnyWhy1Label: 'One system replaces many',
+    ebnyWhy1Desc: 'Accounting, HR, procurement, billing, compliance — all in one',
+    ebnyWhy2Label: 'IFRS-compliant',
+    ebnyWhy2Desc: 'Revenue recognition, ECL, EOSB built in, not bolted on',
+    ebnyWhy3Label: 'ZATCA Phase 2 ready',
+    ebnyWhy3Desc: 'UBL XML, QR codes, ECDSA signing all implemented',
+    ebnyWhy4Label: 'Modern tech stack',
+    ebnyWhy4Desc: 'Next.js, Supabase, TypeScript — tested and deployed on Vercel',
+    ebnyTechTitle: 'Tech Stack',
+    ebnyTechSubtitle: 'Modern, tested, and extensible',
+    ebnyTechPoints: ['Next.js 16, React 19, TypeScript, Tailwind CSS v4', 'PostgreSQL via Supabase with Row-Level Security', 'TanStack React Query v5 for state management', 'Vitest with 23 test suites covering core modules', 'jsPDF + xlsx-js-style for styled PDF and Excel export', 'Deployed on Vercel with automatic previews'],
     // Workflow
     workflowEnroll: 'Enroll',
     workflowSchedule: 'Schedule',
@@ -844,6 +967,7 @@ const translations: Record<Locale, TranslationKeys> = {
     footerVolleyra: 'Volleyra',
     footerClienta: 'Clienta',
     footerHesn: 'Hesn',
+    footerEbny: 'Ebny',
     footerAnalytics: 'Analytics',
     footerIntegrations: 'Integrations',
     aboutUs: 'About Us',
@@ -1150,6 +1274,67 @@ const translations: Record<Locale, TranslationKeys> = {
     hesnComplianceTitle: 'الامتثال والمعايير',
     hesnComplianceSubtitle: 'عمليات مرخصة ومعتمدة',
     hesnCompliancePoints: ['كل الأفراد مرخصين ومعتمدين من الحكومة', 'برامج اختيار صارمة وتدريب مستمر', 'امتثال للوائح والأمن المصرية المعايير', 'تأمين وcoverage مهني', 'تقارير دورية شفافة للعملاء', 'تكنولوجيا مراقبة وتتبع حديثة'],
+    ebnyName: 'ابني',
+    ebnyTagline: 'نظام محاسبة مقاولات',
+    ebnyDesc: 'نظام محاسبة مقاولات شامل مبني خصيصاً للمقاولين في السعودية. محاسبة المشاريع والامتثال المالي والموارد البشرية والرواتب والعمليات الميدانية — كلها في منصة واحدة.',
+    ebnyStartTrial: 'جرّب مجاناً',
+    ebnyMoreInfo: 'اعرف أكتر',
+    ebnyHeroSub1: 'مصمم خصيصاً لقطاع المقاولات في السعودية. ابني بيشمل محاسبة المشاريع والامتثال لمعايير IFRS والزكاة وضريبة القيمة المضافة و ZATCA والموارد البشرية والرواتب.',
+    ebnyHeroSub2: 'من تكلفة المشاريع وإدارة القيمة المحققة لحد الفوترة الإلكترونية ZATCA والتقايم البنكية التلقائية — ابني بيدّي بديل شامل لكل الأدوات المنفصلة بمنصة واحدة متوافقة وثنائية اللغة.',
+    ebnyBtnTrial: 'جرّب مجاناً',
+    ebnyBtnBack: 'رجوع',
+    ebnyStatProjects: 'محاسبة المشاريع',
+    ebnyStatCompliance: 'امتثال سعودي',
+    ebnyStatIFRS: 'معايير IFRS مدمجة',
+    ebnyStatBilingual: 'ثنائية اللغة (عربي + إنجليزي)',
+    ebnyFeaturesHeading1: 'كل اللي تحتاجه عشان',
+    ebnyFeaturesHeading2: 'تسير محاسبة المقاولات',
+    ebnyFeaturesSubtitle: 'ابني بيشتغل على كل دورة حياة نظام ERP للمقاولات — من إعداد المشاريع وتكلفةProjects لحد الفوترة والمشتريات والرواتب والامتثال.',
+    ebnyF1Sub: 'الأساس المالي',
+    ebnyF1Title: 'المحاسبة الأساسية ودفتر الأستاذ',
+    ebnyF1Desc: 'محرك دفتر أستاذ مزدوج الدخول مع قيود يومية متوازنة، ودليل حسابات مركزي بأكواد 6 أرقام، وإدارة فترات محاسبية وقائمة انتظار موافقات.',
+    ebnyF1Points: ['دفتر أستاذ مزدوج الدخول مع ضمان عدم التكرار', 'دليل حسابات مركزي بأكواد 6 أرقام بأسلوب Oracle', 'قفل فترات المحاسبة لمنع القيود المتأخرة', 'عكس القيود اليومية مع سجل تدقيق كامل'],
+    ebnyF2Sub: 'التركيز على المشاريع',
+    ebnyF2Title: 'إدارة المشاريع والتحكم في التكاليف',
+    ebnyF2Desc: 'أدر مشاريع مقاولات كتير مع مراحل فرعية وأكواد تكلفة. تتبع الفعلي مقابل الميزانية بالوقت الحقيقي، وإدارة القيمة المحققة (CPI, SPI, EAC) والتنبؤ.',
+    ebnyF2Points: ['تتبع المشاريع والمراحل مع أكواد التكلفة', 'تتبع التكاليف الفعلية مقابل الميزانية مع تنبيهات الانحراف', 'إدارة القيمة المحققة: CPI, SPI, EAC, TCPI, منحنى S', 'إدارة أوامر التغيير مع سير عمل الموافقات'],
+    ebnyF3Sub: 'تحصيل الإيرادات',
+    ebnyF3Title: 'الفواتير والحسابات المدينة',
+    ebnyF3Desc: 'إصدار فواتير من إيصالات البضاعة أو يدوياً. الفواتير التقدمية بناءً على نسبة الإنجاز أو الإنجازات. إدارة الاحتفاظ وتقارير التقادم وحسابات IFRS 15.',
+    ebnyF3Points: ['فواتير العملاء من إيصالات البضاعة أو يدوياً مع تفاصيل البنود', 'فواتير تقدمية بناءً على نسبة الإنجاز أو الإنجازات', 'إدارة الاحتفاظ والإفراج شروط العقود', 'تقارير التقادم المدينة حسب العميل والمشروع والفترة'],
+    ebnyF4Sub: 'المشتريات',
+    ebnyF4Title: 'المشتريات والحسابات الدائنة',
+    ebnyF4Desc: 'سير عمل مشتريات كامل من طلبات الشراء لأوامر الشراء. طلبات عروض الأسعار للموردين، ومطابقة ثلاثية (أمر الشراء ↔ إيصال البضاعة ↔ فاتورة المورد).',
+    ebnyF4Points: ['طلبات شراء → أوامر شراء مع بوابات موافقة', 'مطابقة ثلاثية: أمر الشراء ↔ إيصال البضاعة ↔ فاتورة المورد', 'عقود مقاولي الباطن مع الإنجاز المعتمد', 'تقارير تقادم الحسابات الدائنة حسب المورد والمشروع'],
+    ebnyF5Sub: 'إدارة النقد',
+    ebnyF5Title: 'إدارة النقد والبنوك',
+    ebnyF5Desc: 'إدارة حسابات بنكية كتير مع أرصدة بالوقت الحقيقي. تقايم بنكية تلقائية مع درجة ثقة. صندوق المصروفات النثرية وأسعار الصرف الحية.',
+    ebnyF5Points: ['تتبع حسابات بنكية كتير مع أرصدة بالوقت الحقيقي', 'تقايم بنكية تلقائية مع مطابقة ضبابية ودرجة ثقة', 'إدارة صندوق المصروفات النثرية مع صرف و re-supply', 'أسعار صرف حية للمعاملات متعددة العملات'],
+    ebnyF6Sub: 'القوى العاملة',
+    ebnyF6Title: 'الموارد البشرية والرواتب',
+    ebnyF6Desc: 'دورة حياة موظفين كاملة مع تتبع المستندات. رواتب تلقائية مع قيود يومية. استيراد جداول العمل وإدارة الإجازات ومكافآت نهاية الخدمة حسب القانون السعودي.',
+    ebnyF6Points: ['إدارة الموظفين مع تتبع المستندات وتنبيهات الانتهاء', 'حساب رواتب تلقائي مع قيود يومية', 'مكافآت نهاية الخدمة (EOSB) حسب IAS 19 والقانون السعودي', 'إدارة الإجازات والأوفرتايم والقروض والجزاءات والتأمين'],
+    ebnyF7Sub: 'الوائح السعودية',
+    ebnyF7Title: 'الامتثال التنظيمي السعودي',
+    ebnyF7Desc: 'ضريبة القيمة المضافة 15% والزكاة و ZATCA الفوترة الإلكترونية والمراقبة الاجتماعية ونظام حماية الأجور ونظام التوطين — كلها مدمجة ومتوافقة من الأول.',
+    ebnyF7Points: ['ضريبة القيمة المضافة 15% حساب تلقائي وإعداد الإقرار', 'ZATCA المرحلة الثانية: UBL XML وأكواد QR و ECDSA', 'تتبع تقديم المراقبة الاجتماعية ونظام حماية الأجور', 'تتبع نسبة التوطين ومراقبة نظام نطاق'],
+    ebnyF8Sub: 'لوحات التحكم',
+    ebnyF8Title: 'التقارير ولوحات التحكم',
+    ebnyF8Desc: 'لوحات تنفيذية مع بطاقات مؤشرات الأداء ورسوم بيانية وتقارير مالية ومنحنيات S وتقايم يومية تلقائية عبر البريد.',
+    ebnyF8Points: ['لوحة تنفيذية مع بطاقات مؤشرات الأداء ورسوم بيانية', 'تقارير التقادم المدينة والدائنة والتدفق النقدي ومنحنى S', 'قوائم مالية: قائمة الدخل والميزانية العمومية من دفتر الأستاذ', 'تقايم يومية مجدولة عبر البريد الإلكتروني'],
+    ebnyWhyTitle: 'ليه ابني؟',
+    ebnyWhySubtitle: 'مصمم لمقاولات السعودية',
+    ebnyWhy1Label: 'نظام واحد بيدّي بديل لكل حاجة',
+    ebnyWhy1Desc: 'محاسبة وموارد بشرية ومشتريات وفواتير وامتثال — كلها في مكان واحد',
+    ebnyWhy2Label: 'متوافق مع IFRS',
+    ebnyWhy2Desc: 'إيرادات و خسائر ائتمانية ومكافآت نهاية خدمة مدمجة مش مضافة',
+    ebnyWhy3Label: 'جاهز لـ ZATCA المرحلة الثانية',
+    ebnyWhy3Desc: 'UBL XML وأكواد QR و ECDSA كلها منفذة وجاهزة',
+    ebnyWhy4Label: 'تقنية حديثة',
+    ebnyWhy4Desc: 'Next.js و Supabase و TypeScript — مختبر ومنشور على Vercel',
+    ebnyTechTitle: 'الم技术ية',
+    ebnyTechSubtitle: 'حديث ومختبر وقابل للتوسع',
+    ebnyTechPoints: ['Next.js 16 و React 19 و TypeScript و Tailwind CSS v4', 'PostgreSQL عبر Supabase مع أمان على مستوى الصف', 'TanStack React Query v5 لإدارة الحالة', 'Vitest مع 23 مجموعة اختبار للوحدات الأساسية', 'jsPDF و xlsx-js-style لتصدير PDF و Excel بتصميم', 'منشور على Vercel مع معاينات تلقائية'],
     // Workflow
     workflowEnroll: 'التسجيل',
     workflowSchedule: 'الجدولة',
@@ -1320,6 +1505,7 @@ const translations: Record<Locale, TranslationKeys> = {
     footerVolleyra: 'فوليرا',
     footerClienta: 'كلاينتا',
     footerHesn: 'حصن',
+    footerEbny: 'ابني',
     footerAnalytics: 'التحليلات',
     footerIntegrations: 'التكاملات',
     aboutUs: 'من نحن',

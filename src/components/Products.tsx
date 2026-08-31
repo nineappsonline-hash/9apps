@@ -237,6 +237,26 @@ export default function Products() {
             gradient="from-amber-500 to-orange-500"
             index={2}
           />
+
+          <ProductCard
+            logo="/Ebny-Logo.webp"
+            logoAlt="Ebny Logo"
+            name={t.ebnyName}
+            tagline={t.ebnyTagline}
+            desc={t.ebnyDesc}
+            pricing={[
+              { price: '$60', period: 'Per Month' },
+              { price: '$330', period: '6 Months', save: 'Save 8%' },
+              { price: '$580', period: '1 Year', highlight: true, save: 'Best Value · Save 19%' },
+              { price: '$1,060', period: '2 Years', save: 'Save 27%' },
+            ]}
+            startTrialLabel={t.ebnyStartTrial}
+            moreInfoLabel={t.ebnyMoreInfo}
+            trialHref="https://ebny.app"
+            infoHref="/ebny"
+            gradient="from-rose-500 to-red-500"
+            index={3}
+          />
         </div>
       </div>
     </section>
