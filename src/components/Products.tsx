@@ -95,22 +95,30 @@ export default function Products() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.42 }}
-                  className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8"
+                  className="mb-8"
                 >
-                  {[
-                    { price: '$35', period: '/mo' },
-                    { price: '$200', period: '/6 mo' },
-                    { price: '$350', period: '/yr' },
-                    { price: '$600', period: '/2 yr' },
-                  ].map((tier, i) => (
-                    <div
-                      key={i}
-                      className="px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:border-indigo-500/30 transition-colors"
-                    >
-                      <span className="text-white font-bold text-sm">{tier.price}</span>
-                      <span className="text-gray-500 text-xs">{tier.period}</span>
-                    </div>
-                  ))}
+                  <p className="text-xs font-semibold text-indigo-400 tracking-wider uppercase mb-3">Pricing</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {[
+                      { price: '$35', period: 'Per Month', highlight: false },
+                      { price: '$200', period: '6 Months', highlight: false, save: 'Save 5%' },
+                      { price: '$350', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
+                      { price: '$600', period: '2 Years', highlight: false, save: 'Save 29%' },
+                    ].map(({ price, period, highlight, save }, i) => (
+                      <div
+                        key={i}
+                        className={`relative rounded-xl p-4 text-center transition-all duration-300 hover:scale-[1.03] ${highlight ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/40 shadow-lg shadow-indigo-500/10' : 'bg-white/[0.04] border border-white/[0.06] hover:border-indigo-500/20'}`}
+                      >
+                        {save && (
+                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-[9px] font-bold text-white whitespace-nowrap">
+                            {save}
+                          </span>
+                        )}
+                        <div className="text-2xl font-extrabold text-white mb-1 mt-1">{price}</div>
+                        <div className="text-xs text-gray-400 font-medium">{period}</div>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
 
                 <motion.div
