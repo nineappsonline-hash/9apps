@@ -4,15 +4,19 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronRight, ShoppingCart } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useI18n } from '@/lib/i18n'
+import { useCart } from '@/lib/cart'
 import LanguageSwitcher from './LanguageSwitcher'
+import CartPanel from './CartPanel'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [cartOpen, setCartOpen] = useState(false)
   const { t, locale } = useI18n()
+  const { items } = useCart()
 
   const navLinks = [
     { href: '#features', label: t.features },
@@ -28,6 +32,7 @@ export default function Navbar() {
   }, [])
 
   return (
+    <>
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -76,6 +81,17 @@ export default function Navbar() {
 
           {/* Desktop auth buttons */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <button
+              onClick={() => setCartOpen(true)}
+              className="relative p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/[0.04] transition-colors"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {items.length > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 flex items-center justify-center rounded-full bg-indigo-500 text-[10px] font-bold text-white min-w-[18px] h-[18px]">
+                  {items.length}
+                </span>
+              )}
+            </button>
             <LanguageSwitcher />
             <Link
               href="/signin"
@@ -134,7 +150,18 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <div className="pt-3 border-t border-white/[0.04] space-y-2 mt-2">
-                <div className="flex justify-center pb-1">
+                <div className="flex justify-center gap-3 pb-1">
+                  <button
+                    onClick={() => { setIsOpen(false); setCartOpen(true) }}
+                    className="relative p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/[0.04] transition-colors"
+                  >
+                    <ShoppingCart className="w-5 h-5" />
+                    {items.length > 0 && (
+                      <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center rounded-full bg-indigo-500 text-[10px] font-bold text-white min-w-[18px] h-[18px]">
+                        {items.length}
+                      </span>
+                    )}
+                  </button>
                   <LanguageSwitcher />
                 </div>
                 <Link
@@ -157,5 +184,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
+    <CartPanel open={cartOpen} onClose={() => setCartOpen(false)} />
+    </>
   )
 }

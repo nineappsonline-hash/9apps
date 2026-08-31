@@ -2,12 +2,14 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ShoppingCart, Check } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
+import { useCart } from '@/lib/cart'
 import Link from 'next/link'
 import Image from 'next/image'
 
 function ProductCard({
+  id,
   logo,
   logoAlt,
   name,
@@ -22,6 +24,7 @@ function ProductCard({
   gradient,
   index,
 }: {
+  id: string
   logo: string
   logoAlt: string
   name: string
@@ -38,6 +41,7 @@ function ProductCard({
 }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { addItem, isInCart } = useCart()
 
   return (
     <motion.div
@@ -102,20 +106,52 @@ function ProductCard({
             >
               <p className="text-xs font-semibold text-indigo-400 tracking-wider uppercase mb-3">Pricing</p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {pricing.map(({ price, period, highlight, save }, i) => (
-                  <div
-                    key={i}
-                    className={`relative rounded-xl p-4 text-center transition-all duration-300 hover:scale-[1.03] ${highlight ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/40 shadow-lg shadow-indigo-500/10' : 'bg-white/[0.04] border border-white/[0.06] hover:border-indigo-500/20'}`}
-                  >
-                    {save && (
-                      <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-[9px] font-bold text-white whitespace-nowrap">
-                        {save}
-                      </span>
-                    )}
-                    <div className="text-2xl font-extrabold text-white mb-1 mt-1">{price}</div>
-                    <div className="text-xs text-gray-400 font-medium">{period}</div>
-                  </div>
-                ))}
+                {pricing.map(({ price, period, highlight, save }, i) => {
+                  const tierId = `${id}-${period.replace(/\s/g, '-').toLowerCase()}`
+                  const inCart = isInCart(tierId)
+                  return (
+                    <div
+                      key={i}
+                      className={`relative rounded-xl p-4 text-center transition-all duration-300 hover:scale-[1.03] ${highlight ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/40 shadow-lg shadow-indigo-500/10' : 'bg-white/[0.04] border border-white/[0.06] hover:border-indigo-500/20'}`}
+                    >
+                      {save && (
+                        <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-[9px] font-bold text-white whitespace-nowrap">
+                          {save}
+                        </span>
+                      )}
+                      <div className="text-2xl font-extrabold text-white mb-1 mt-1">{price}</div>
+                      <div className="text-xs text-gray-400 font-medium mb-3">{period}</div>
+                      <button
+                        onClick={() => !inCart && addItem({
+                          productId: tierId,
+                          productName: name,
+                          productLogo: logo,
+                          price,
+                          period,
+                          gradient,
+                        })}
+                        disabled={inCart}
+                        className={`w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                          inCart
+                            ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 cursor-default'
+                            : 'bg-white/[0.06] text-gray-300 border border-white/[0.1] hover:bg-indigo-500/20 hover:text-indigo-300 hover:border-indigo-500/30'
+                        }`}
+                      >
+                        {inCart ? (
+                          <>
+                            <Check className="w-3.5 h-3.5" />
+                            Added
+                          </>
+                        ) : (
+                          <>
+                            <ShoppingCart className="w-3.5 h-3.5" />
+                            Add to Cart
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  )
+                })}
               </div>
             </motion.div>
 
@@ -184,6 +220,7 @@ export default function Products() {
 
         <div className="space-y-12">
           <ProductCard
+            id="volleyra"
             logo="/Volleyra.jpeg"
             logoAlt="Volleyra Logo"
             name={t.volleyraName}
@@ -205,6 +242,7 @@ export default function Products() {
           />
 
           <ProductCard
+            id="clienta"
             logo="/Clienta-Logo.png"
             logoAlt="Clienta Logo"
             name={t.clientaName}
@@ -226,6 +264,7 @@ export default function Products() {
           />
 
           <ProductCard
+            id="hesn"
             logo="/Hesn-Logo.webp"
             logoAlt="Hesn Logo"
             name={t.hesnName}
@@ -247,6 +286,7 @@ export default function Products() {
           />
 
           <ProductCard
+            id="ebny"
             logo="/Ebny-Logo.webp"
             logoAlt="Ebny Logo"
             name={t.ebnyName}

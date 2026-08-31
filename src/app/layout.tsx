@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Tajawal } from 'next/font/google'
 import './globals.css'
 import { I18nProvider } from '@/lib/i18n'
+import { CartProvider } from '@/lib/cart'
 import ClientEffects from '@/components/ClientEffects'
 
 const inter = Inter({
@@ -43,7 +44,9 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" className={`${inter.variable} ${tajawal.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans">
         <ClientEffects />
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <CartProvider>{children}</CartProvider>
+        </I18nProvider>
       </body>
     </html>
   )
