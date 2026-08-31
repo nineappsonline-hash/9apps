@@ -51,6 +51,10 @@ type TranslationKeys = {
   productsTitle1: string
   productsTitle2: string
   productsSubtitle: string
+  volleyraCardTitle: string
+  clientaCardTitle: string
+  hesnCardTitle: string
+  ebnyCardTitle: string
   volleyraName: string
   volleyraTagline: string
   volleyraDesc: string
@@ -589,9 +593,13 @@ const translations: Record<Locale, TranslationKeys> = {
     feature9Desc: 'Pick and choose the modules you need. Scale from startup to enterprise without changing platforms.',
     // Products
     productsLabel: 'Products',
-    productsTitle1: 'Built for Sports ',
-    productsTitle2: 'Academies',
-    productsSubtitle: 'Powerful management tools designed to help sports academies run smoothly, track performance, and grow their programs.',
+    productsTitle1: 'Our ',
+    productsTitle2: 'Products',
+    productsSubtitle: 'Powerful tools built to transform how you manage your business.',
+    volleyraCardTitle: 'Built for Sports Academies',
+    clientaCardTitle: 'Built for Customer Success Teams',
+    hesnCardTitle: 'Built for Security Operations',
+    ebnyCardTitle: 'Built for Construction Companies',
     volleyraName: 'Volleyra',
     volleyraTagline: 'Sports Academy Management',
     volleyraDesc: 'A complete management platform for sports academies. From player registration and training schedules to match tracking and performance analytics — Volleyra gives coaches and administrators everything they need to run a world-class academy.',
@@ -1127,9 +1135,13 @@ const translations: Record<Locale, TranslationKeys> = {
     feature9Desc: 'اختر فقط ما تحتاجه من الوحدات وتوسّع تدريجياً من شركة ناشئة إلى مؤسسة كبيرة دون تغيير المنصة.',
     // Products
     productsLabel: 'المنتجات',
-    productsTitle1: 'صُمّمت لأكاديميات ',
-    productsTitle2: 'الرياضة',
-    productsSubtitle: 'أدوات إدارة قوية مصممة لمساعدة أكاديميات الرياضة على العمل بسلاسة وتتبّع الأداء وتنمية برامجها.',
+    productsTitle1: 'منتجاتنا',
+    productsTitle2: '',
+    productsSubtitle: 'أدوات قوية اتصممت عشان تغيّر طريقة إدارتك لشغلك.',
+    volleyraCardTitle: 'صمّمناها لأكاديميات الرياضة',
+    clientaCardTitle: 'صمّمناها لفرق نجاح العملاء',
+    hesnCardTitle: 'صمّمناها لعمليات الحراسة والأمن',
+    ebnyCardTitle: 'صمّمناها لشركات المقاولات',
     volleyraName: 'فوليرا',
     volleyraTagline: 'إدارة أكاديميات الرياضة',
     volleyraDesc: 'منصة شاملة لإدارة أكاديميات الرياضة — من تسجيل اللاعبين وجداول التدريب لحد تتبع المباريات والتحليلات. فوليرا بتوفر كل اللي المدربين والمديرين محتاجينه عشان يسيروا أكاديمية باحترافية.',

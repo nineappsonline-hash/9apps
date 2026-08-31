@@ -11,6 +11,7 @@ function ProductCard({
   logo,
   logoAlt,
   name,
+  cardTitle,
   tagline,
   desc,
   pricing,
@@ -24,6 +25,7 @@ function ProductCard({
   logo: string
   logoAlt: string
   name: string
+  cardTitle?: string
   tagline: string
   desc: string
   pricing: { price: string; period: string; highlight?: boolean; save?: string }[]
@@ -73,6 +75,9 @@ function ProductCard({
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
+              {cardTitle && (
+                <p className="text-xs font-semibold text-indigo-400 tracking-wider uppercase mb-2">{cardTitle}</p>
+              )}
               <div className="flex items-center gap-2.5 mb-1 justify-center lg:justify-start">
                 <h3 className="text-2xl lg:text-3xl font-bold text-white">{name}</h3>
                 <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -182,6 +187,7 @@ export default function Products() {
             logo="/Volleyra.jpeg"
             logoAlt="Volleyra Logo"
             name={t.volleyraName}
+            cardTitle={t.volleyraCardTitle}
             tagline={t.volleyraTagline}
             desc={t.volleyraDesc}
             pricing={[
@@ -202,6 +208,7 @@ export default function Products() {
             logo="/Clienta-Logo.png"
             logoAlt="Clienta Logo"
             name={t.clientaName}
+            cardTitle={t.clientaCardTitle}
             tagline={t.clientaTagline}
             desc={t.clientaDesc}
             pricing={[
@@ -222,6 +229,7 @@ export default function Products() {
             logo="/Hesn-Logo.webp"
             logoAlt="Hesn Logo"
             name={t.hesnName}
+            cardTitle={t.hesnCardTitle}
             tagline={t.hesnTagline}
             desc={t.hesnDesc}
             pricing={[
@@ -242,6 +250,7 @@ export default function Products() {
             logo="/Ebny-Logo.webp"
             logoAlt="Ebny Logo"
             name={t.ebnyName}
+            cardTitle={t.ebnyCardTitle}
             tagline={t.ebnyTagline}
             desc={t.ebnyDesc}
             pricing={[
