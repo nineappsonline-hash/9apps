@@ -128,6 +128,22 @@ type TranslationKeys = {
   clientaSecurityPoints: string[]
   clientaCtaHeading: string
   clientaCtaText: string
+  hesnName: string
+  hesnTagline: string
+  hesnDesc: string
+  hesnStartTrial: string
+  hesnMoreInfo: string
+  hesnHeroSub1: string
+  hesnHeroSub2: string
+  hesnBtnTrial: string
+  hesnBtnBack: string
+  hesnStatOfficers: string
+  hesnStatSupport: string
+  hesnStatCoverage: string
+  hesnStatClients: string
+  hesnFeaturesHeading1: string
+  hesnFeaturesHeading2: string
+  hesnFeaturesSubtitle: string
   // Workflow
   workflowEnroll: string
   workflowSchedule: string
@@ -298,6 +314,7 @@ type TranslationKeys = {
   // Footer links
   footerVolleyra: string
   footerClienta: string
+  footerHesn: string
   footerAnalytics: string
   footerIntegrations: string
   aboutUs: string
@@ -539,6 +556,22 @@ const translations: Record<Locale, TranslationKeys> = {
     clientaSecurityPoints: ['Row-level security guarantees data isolation per tenant', 'Role-based access with 10 roles and 50+ permissions enforced at UI and database level', 'Full audit trail of who changed what, when, across all entities', 'Modern stack: Next.js, Supabase, TypeScript — fast, type-safe, scalable', 'Custom fields: 6 field types (text, number, date, boolean, select, multi-select)', 'Email templates and i18n support (English + Arabic with RTL)'],
     clientaCtaHeading: 'Launch your customer platform today',
     clientaCtaText: 'Scalable. Customizable. Ready to sell. Start your free trial — no credit card required.',
+    hesnName: 'Hesn',
+    hesnTagline: 'Security Operations Platform',
+    hesnDesc: 'A comprehensive security and guarding management platform for MASDAR Security Services. Manage sites, shifts, patrols, personnel, billing, and client operations — all from a single dashboard.',
+    hesnStartTrial: 'Start Free Trial',
+    hesnMoreInfo: 'More Info',
+    hesnHeroSub1: 'Your security, in safe hands. A complete platform to manage security operations — from site assignments and shift scheduling to attendance, invoicing, and profitability analysis.',
+    hesnHeroSub2: 'Whether you run a small guarding team or a nationwide security operation, Hesn gives you the tools to manage personnel, track patrols, handle billing, and deliver transparent reports to your clients.',
+    hesnBtnTrial: 'Start Free Trial',
+    hesnBtnBack: 'Back',
+    hesnStatOfficers: 'Security Officers',
+    hesnStatSupport: 'Support Available',
+    hesnStatCoverage: 'Coverage',
+    hesnStatClients: 'Trusted Clients',
+    hesnFeaturesHeading1: 'Everything you need to ',
+    hesnFeaturesHeading2: 'run security operations',
+    hesnFeaturesSubtitle: 'Hesn covers the full security operations lifecycle — from signing a client contract to tracking patrols, managing personnel, and delivering transparent billing.',
     // Workflow
     workflowEnroll: 'Enroll',
     workflowSchedule: 'Schedule',
@@ -708,6 +741,7 @@ const translations: Record<Locale, TranslationKeys> = {
     builtWith: 'Built with precision & passion',
     footerVolleyra: 'Volleyra',
     footerClienta: 'Clienta',
+    footerHesn: 'Hesn',
     footerAnalytics: 'Analytics',
     footerIntegrations: 'Integrations',
     aboutUs: 'About Us',
@@ -947,6 +981,22 @@ const translations: Record<Locale, TranslationKeys> = {
     clientaSecurityPoints: ['أمان على مستوى الصف يضمن عزل البيانات لكل مستأجر', 'تحكم في الوصول بأدوار و50+ صلاحية مفروضة على واجهة المستخدم وقاعدة البيانات', 'سجل تدقيق كامل لكل تغيير في كل الكيانات', 'تقنية حديثة: Next.js و Supabase و TypeScript — سريع وآمن وقابل للتوسع', 'حقول مخصصة: 6 أنواع (نص، رقم، تاريخ، منطقية، اختيار، اختيار متعدد)', 'قوالب بريد إلكتروني ودعم عربي وإنجليزي مع RTL'],
     clientaCtaHeading: 'ابدأ منصة العملاء بتاعتك النهارده',
     clientaCtaText: 'قابل للتوسع ومخصص وجاهز للبيع. جرّب مجاناً — من غير بطاقة ائتمان.',
+    hesnName: 'حصن',
+    hesnTagline: 'منصة إدارة العمليات الأمنية',
+    hesnDesc: 'منصة شاملة لإدارة الحراسات الأمنية لشركة مصدر. أدِر المواقع والمناوبات والدوريات والأفراد والفواتير وعمليات العملاء — كلها من لوحة تحكم واحدة.',
+    hesnStartTrial: 'جرّب مجاناً',
+    hesnMoreInfo: 'اعرف أكتر',
+    hesnHeroSub1: 'أمنكم في أيدي أمينة. منصة كاملة لإدارة العمليات الأمنية — من تعيين المواقع وجدولة المناوبات لحد الحضور والفواتير وتحليل الربحية.',
+    hesnHeroSub2: 'سواء كنت بتشغّل فريق حراسة صغير أو عملية أمنية على مستوى الجمهورية، حصن بيدك الأدوات اللي ت manage الأفراد وتتابع الدوريات وتتعامل مع الفواتير وتقدم تقارير شفافة لعملائك.',
+    hesnBtnTrial: 'جرّب مجاناً',
+    hesnBtnBack: 'رجوع',
+    hesnStatOfficers: 'فرد أمن',
+    hesnStatSupport: 'دعم متاح',
+    hesnStatCoverage: 'تغطية',
+    hesnStatClients: 'عميل ثقة',
+    hesnFeaturesHeading1: 'كل اللي تحتاجه عشان',
+    hesnFeaturesHeading2: 'تسير العمليات الأمنية',
+    hesnFeaturesSubtitle: 'حصن بيشتغل على كل دورة حياة العمليات الأمنية — من أول ما توقع عقد مع عميل لحد ما تتبع الدوريات وتدير الأفراد وتقدم فواتير شفافة.',
     // Workflow
     workflowEnroll: 'التسجيل',
     workflowSchedule: 'الجدولة',
@@ -1116,6 +1166,7 @@ const translations: Record<Locale, TranslationKeys> = {
     builtWith: 'صُنع بشغف ودقة عالية',
     footerVolleyra: 'فوليرا',
     footerClienta: 'كلاينتا',
+    footerHesn: 'حصن',
     footerAnalytics: 'التحليلات',
     footerIntegrations: 'التكاملات',
     aboutUs: 'من نحن',

@@ -44,6 +44,7 @@ export default function Footer() {
     [t.product]: [
       { label: t.footerVolleyra, href: '/volleyra' },
       { label: t.footerClienta, href: '/clienta' },
+      { label: t.footerHesn, href: '/hesn' },
       { label: t.footerAnalytics, href: '#features' },
       { label: t.footerIntegrations, href: '#features' },
     ],

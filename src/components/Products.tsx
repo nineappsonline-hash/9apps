@@ -217,6 +217,26 @@ export default function Products() {
             gradient="from-cyan-500 to-blue-500"
             index={1}
           />
+
+          <ProductCard
+            logo="/Hesn-Logo.webp"
+            logoAlt="Hesn Logo"
+            name={t.hesnName}
+            tagline={t.hesnTagline}
+            desc={t.hesnDesc}
+            pricing={[
+              { price: '$35', period: 'Per Month' },
+              { price: '$200', period: '6 Months', save: 'Save 5%' },
+              { price: '$350', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
+              { price: '$600', period: '2 Years', save: 'Save 29%' },
+            ]}
+            startTrialLabel={t.hesnStartTrial}
+            moreInfoLabel={t.hesnMoreInfo}
+            trialHref="https://masdar-security.com"
+            infoHref="/hesn"
+            gradient="from-amber-500 to-orange-500"
+            index={2}
+          />
         </div>
       </div>
     </section>
