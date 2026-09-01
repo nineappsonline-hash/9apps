@@ -228,10 +228,10 @@ export default function Products() {
             tagline={t.volleyraTagline}
             desc={t.volleyraDesc}
             pricing={[
-              { price: '$35', period: 'Per Month' },
-              { price: '$200', period: '6 Months', save: 'Save 5%' },
-              { price: '$350', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
-              { price: '$600', period: '2 Years', save: 'Save 29%' },
+              { price: '1,750 EGP', period: 'Per Month' },
+              { price: '10,000 EGP', period: '6 Months', save: 'Save 5%' },
+              { price: '17,500 EGP', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
+              { price: '30,000 EGP', period: '2 Years', save: 'Save 29%' },
             ]}
             startTrialLabel={t.volleyraStartTrial}
             moreInfoLabel={t.volleyraMoreInfo}
@@ -250,10 +250,10 @@ export default function Products() {
             tagline={t.clientaTagline}
             desc={t.clientaDesc}
             pricing={[
-              { price: '$35', period: 'Per Month' },
-              { price: '$200', period: '6 Months', save: 'Save 5%' },
-              { price: '$350', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
-              { price: '$600', period: '2 Years', save: 'Save 29%' },
+              { price: '1,750 EGP', period: 'Per Month' },
+              { price: '10,000 EGP', period: '6 Months', save: 'Save 5%' },
+              { price: '17,500 EGP', period: '1 Year', highlight: true, save: 'Best Value · Save 17%' },
+              { price: '30,000 EGP', period: '2 Years', save: 'Save 29%' },
             ]}
             startTrialLabel={t.clientaStartTrial}
             moreInfoLabel={t.clientaMoreInfo}
@@ -272,10 +272,10 @@ export default function Products() {
             tagline={t.hesnTagline}
             desc={t.hesnDesc}
             pricing={[
-              { price: '$60', period: 'Per Month' },
-              { price: '$330', period: '6 Months', save: 'Save 8%' },
-              { price: '$580', period: '1 Year', highlight: true, save: 'Best Value · Save 19%' },
-              { price: '$1,060', period: '2 Years', save: 'Save 27%' },
+              { price: '3,000 EGP', period: 'Per Month' },
+              { price: '16,500 EGP', period: '6 Months', save: 'Save 8%' },
+              { price: '29,000 EGP', period: '1 Year', highlight: true, save: 'Best Value · Save 19%' },
+              { price: '53,000 EGP', period: '2 Years', save: 'Save 27%' },
             ]}
             startTrialLabel={t.hesnStartTrial}
             moreInfoLabel={t.hesnMoreInfo}
@@ -294,10 +294,10 @@ export default function Products() {
             tagline={t.ebnyTagline}
             desc={t.ebnyDesc}
             pricing={[
-              { price: '$100', period: 'Per Month' },
-              { price: '$500', period: '6 Months', save: 'Save 17%' },
-              { price: '$900', period: '1 Year', highlight: true, save: 'Best Value · Save 25%' },
-              { price: '$1,600', period: '2 Years', save: 'Save 33%' },
+              { price: '5,000 EGP', period: 'Per Month' },
+              { price: '25,000 EGP', period: '6 Months', save: 'Save 17%' },
+              { price: '45,000 EGP', period: '1 Year', highlight: true, save: 'Best Value · Save 25%' },
+              { price: '80,000 EGP', period: '2 Years', save: 'Save 33%' },
             ]}
             startTrialLabel={t.ebnyStartTrial}
             moreInfoLabel={t.ebnyMoreInfo}

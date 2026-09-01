@@ -25,7 +25,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 const CART_KEY = 'nineapps-cart'
 
 function parsePrice(price: string): number {
-  return parseFloat(price.replace(/[^0-9.]/g, ''))
+  return parseFloat(price.replace(/[^0-9]/g, ''))
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
