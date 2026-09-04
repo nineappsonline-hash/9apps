@@ -21,11 +21,11 @@ const tajawal = Tajawal({
 
 export const metadata: Metadata = {
   title: {
-    default: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات | مصر والسعودية',
+    default: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال | مصر والسعودية',
     template: '%s | NineApps',
   },
   description:
-    'NineApps بتبني منصات SaaS مخصصة لكل قطاع: ابني (محاسبة مقاولات و ZATCA للسعودية)، كلاينتا (CRM وتذاكر لشركات SaaS B2B)، حصن (إدارة الحراسات والأمن)، و فوليرا (إدارة أكاديميات رياضية وحجز). ابدأ تجربتك المجانية النهارده.',
+    'NineApps منصة برمجيات متكاملة لإدارة الأعمال: علاقات العملاء (CRM)، تخطيط موارد المؤسسات (ERP)، إدارة المبيعات والتذاكر، الفواتير الإلكترونية، وخدمات مخصصة للمقاولات والأمن والأكاديميات الرياضية. ابدأ تجربتك المجانية النهارده.',
   keywords: [
     // Core brand
     'NineApps', ' NineApps software', ' NineApps CRM', ' NineApps ERP',
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات',
-    description: 'منصات SaaS مخصصة لكل قطاع: محاسبة مقاولات (ZATCA/IFRS)، CRM وتذاكر، إدارة الحراسات، وحجز أكاديميات رياضية. مصممة لمصر والسعودية.',
+    title: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال',
+    description: 'منصة متكاملة لإدارة الأعمال: علاقات العملاء، تخطيط الموارد، المبيعات، الفواتير الإلكترونية، وحلول مخصصة للقطاعات المختلفة. مصممة لمصر والسعودية.',
     type: 'website',
     images: ['/Logo.jpeg'],
     siteName: 'NineApps',
@@ -86,8 +86,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات',
-    description: 'منصات SaaS مخصصة لكل قطاع: محاسبة مقاولات، CRM وتذاكر، إدارة الحراسات، وأكاديميات رياضية.',
+    title: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال',
+    description: 'منصة متكاملة لإدارة الأعمال: علاقات العملاء، تخطيط الموارد، المبيعات، وحلول مخصصة للقطاعات المختلفة.',
     images: ['/Logo.jpeg'],
   },
   alternates: {
