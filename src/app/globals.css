@@ -54,10 +54,10 @@ html[lang="ar"] {
 [dir="rtl"] #testimonials p { font-size: 1.08em; }
 
 /* Section labels (المميزات, المنتجات, الحلول, etc.) */
-[dir="rtl"] .text-xs.tracking-\[0\.2em\] { font-size: 0.95em; letter-spacing: 0.15em; }
-[dir="rtl"] .text-xs.tracking-wider.uppercase { font-size: 0.9em; letter-spacing: 0.1em; }
-[dir="rtl"] span.text-xs.font-semibold.tracking-\[0\.2em\] { font-size: 1em; }
-[dir="rtl"] span.text-xs.font-semibold.tracking-wider { font-size: 0.95em; }
+[dir="rtl"] .text-xs.tracking-\[0\.2em\] { font-size: 1.1em; letter-spacing: 0.1em; }
+[dir="rtl"] .text-xs.tracking-wider.uppercase { font-size: 1.05em; letter-spacing: 0.08em; }
+[dir="rtl"] span.text-xs.font-semibold.tracking-\[0\.2em\] { font-size: 1.15em; }
+[dir="rtl"] span.text-xs.font-semibold.tracking-wider { font-size: 1.1em; }
 
 html {
   scroll-behavior: smooth;
