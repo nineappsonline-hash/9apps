@@ -201,15 +201,7 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xs font-semibold text-cyan-400 tracking-[0.2em] uppercase mb-4 block"
-          >
-            {t.productsLabel}
-          </motion.span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">{t.productsTitle1}</span>
             <span className="text-shimmer">{t.productsTitle2}</span>
           </h2>
