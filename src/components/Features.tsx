@@ -45,15 +45,7 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xs font-semibold text-indigo-400 tracking-[0.2em] uppercase mb-4 block"
-          >
-            {t.featuresLabel}
-          </motion.span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
             <span className="text-white">{t.featuresTitle1}</span>
             <span className="text-shimmer">{t.featuresTitle2}</span>
           </h2>
