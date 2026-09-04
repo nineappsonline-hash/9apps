@@ -55,6 +55,11 @@ html[lang="ar"] {
 [dir="rtl"] #products h2.text-4xl { font-size: 2.5rem; }
 @media (min-width: 640px) { [dir="rtl"] #products h2.text-5xl { font-size: 3.5rem; } }
 @media (min-width: 1024px) { [dir="rtl"] #products h2.text-6xl { font-size: 4.5rem; } }
+
+/* Product card names - greatly increase for Arabic */
+[dir="rtl"] .glass-card h3.text-3xl { font-size: 2.8rem; }
+@media (min-width: 640px) { [dir="rtl"] .glass-card h3.text-4xl { font-size: 3.5rem; } }
+@media (min-width: 1024px) { [dir="rtl"] .glass-card h3.text-5xl { font-size: 4.5rem; } }
 [dir="rtl"] h2 { font-size: 1.2em; }
 [dir="rtl"] h3 { font-size: 1.15em; }
 [dir="rtl"] p { font-size: 1.08em; }
