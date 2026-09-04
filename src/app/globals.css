@@ -35,6 +35,16 @@ html[lang="ar"] {
 
 /* Increase Arabic text sizes for better readability */
 [dir="rtl"] h1 { font-size: 1.25em; }
+
+/* Hero headline - greatly increase for Arabic */
+[dir="rtl"] h1.text-4xl { font-size: 2.2rem; }
+@media (min-width: 640px) { [dir="rtl"] h1.text-5xl { font-size: 3rem; } }
+@media (min-width: 768px) { [dir="rtl"] h1.text-6xl { font-size: 3.8rem; } }
+@media (min-width: 1024px) { [dir="rtl"] h1.lg\:text-\[72px\] { font-size: 5rem; } }
+
+/* Hero subtitle */
+[dir="rtl"] .text-\[17px\] { font-size: 1.15rem; }
+@media (min-width: 640px) { [dir="rtl"] .sm\:text-lg { font-size: 1.25rem; } }
 [dir="rtl"] h2 { font-size: 1.2em; }
 [dir="rtl"] h3 { font-size: 1.15em; }
 [dir="rtl"] p { font-size: 1.08em; }
