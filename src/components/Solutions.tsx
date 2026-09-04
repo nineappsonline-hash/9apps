@@ -62,8 +62,8 @@ export default function Solutions() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">{isAr ? 'حلول مخصصة' : 'Industry Solutions'}</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="gradient-text">{isAr ? 'حلول مخصصة' : 'Industry Solutions'}</span>
           </h2>
           <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             {isAr
