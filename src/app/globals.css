@@ -53,6 +53,12 @@ html[lang="ar"] {
 [dir="rtl"] #testimonials h2 { font-size: 1.15em; }
 [dir="rtl"] #testimonials p { font-size: 1.08em; }
 
+/* Section labels (المميزات, المنتجات, الحلول, etc.) */
+[dir="rtl"] .text-xs.tracking-\[0\.2em\] { font-size: 0.95em; letter-spacing: 0.15em; }
+[dir="rtl"] .text-xs.tracking-wider.uppercase { font-size: 0.9em; letter-spacing: 0.1em; }
+[dir="rtl"] span.text-xs.font-semibold.tracking-\[0\.2em\] { font-size: 1em; }
+[dir="rtl"] span.text-xs.font-semibold.tracking-wider { font-size: 0.95em; }
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
