@@ -62,17 +62,8 @@ export default function Solutions() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xs font-semibold text-cyan-400 tracking-[0.2em] uppercase mb-4 block"
-          >
-            {isAr ? 'حلول مخصصة' : 'Industry Solutions'}
-          </motion.span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-white">{isAr ? 'مصممة لقطاعك' : 'Built for your '}</span>
-            <span className="text-shimmer">{isAr ? '' : 'industry'}</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="text-white">{isAr ? 'حلول مخصصة' : 'Industry Solutions'}</span>
           </h2>
           <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             {isAr
