@@ -201,9 +201,8 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">{t.productsTitle1}</span>
-            <span className="text-shimmer">{t.productsTitle2}</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="gradient-text">{t.productsTitle1}{t.productsTitle2}</span>
           </h2>
           <p className="max-w-[560px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             {t.productsSubtitle}
