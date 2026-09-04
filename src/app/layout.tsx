@@ -21,7 +21,7 @@ const tajawal = Tajawal({
 
 export const metadata: Metadata = {
   title: {
-    default: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال | مصر والسعودية',
+    default: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال',
     template: '%s | NineApps',
   },
   description:
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'NineApps — برمجيات CRM و ERP لإدارة الأعمال',
-    description: 'منصة متكاملة لإدارة الأعمال: علاقات العملاء، تخطيط الموارد، المبيعات، الفواتير الإلكترونية، وحلول مخصصة للقطاعات المختلفة. مصممة لمصر والسعودية.',
+    description: 'منصة متكاملة لإدارة الأعمال: علاقات العملاء، تخطيط الموارد، المبيعات، الفواتير الإلكترونية، وحلول مخصصة للقطاعات المختلفة.',
     type: 'website',
     images: ['/Logo.jpeg'],
     siteName: 'NineApps',
