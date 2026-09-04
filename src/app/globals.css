@@ -34,11 +34,11 @@ html[lang="ar"] {
 }
 
 /* Increase Arabic text sizes for better readability */
-[dir="rtl"] h1 { font-size: 1.1em; }
-[dir="rtl"] h2 { font-size: 1.08em; }
-[dir="rtl"] h3 { font-size: 1.05em; }
-[dir="rtl"] p { font-size: 1.05em; }
-[dir="rtl"] li { font-size: 1.03em; }
+[dir="rtl"] h1 { font-size: 1.25em; }
+[dir="rtl"] h2 { font-size: 1.2em; }
+[dir="rtl"] h3 { font-size: 1.15em; }
+[dir="rtl"] p { font-size: 1.08em; }
+[dir="rtl"] li { font-size: 1.05em; }
 [dir="rtl"] span { font-size: inherit; }
 
 /* Arabic text in cards */
