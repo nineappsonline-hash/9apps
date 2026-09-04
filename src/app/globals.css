@@ -12,6 +12,8 @@
   text-align: right;
 }
 
+[dir="rtl"] .lg\:text-left { text-align: right; }
+
 [dir="rtl"] .ml-0\.5 {
   margin-left: 0;
   margin-right: 0.125rem;
