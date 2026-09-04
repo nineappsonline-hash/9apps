@@ -46,7 +46,12 @@ html[lang="ar"] {
 [dir="rtl"] .glass-card p { font-size: 1.1em; }
 [dir="rtl"] .glass-card .text-xs { font-size: 0.85em; }
 [dir="rtl"] .glass-card .text-sm { font-size: 0.95em; }
+[dir="rtl"] .glass-card .text-[11px] { font-size: 0.8em; }
 [dir="rtl"] .glass-card .text-base { font-size: 1.05em; }
+
+/* Testimonials section */
+[dir="rtl"] #testimonials h2 { font-size: 1.15em; }
+[dir="rtl"] #testimonials p { font-size: 1.08em; }
 
 html {
   scroll-behavior: smooth;
