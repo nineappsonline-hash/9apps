@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import Products from '@/components/Products'
 import Solutions from '@/components/Solutions'
-import Pricing from '@/components/Pricing'
 import Testimonials from '@/components/Testimonials'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
@@ -17,7 +16,6 @@ export default function Home() {
         <Features />
         <Products />
         <Solutions />
-        <Pricing />
         <Testimonials />
         <CTA />
       </main>
