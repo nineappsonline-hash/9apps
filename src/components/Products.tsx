@@ -83,7 +83,7 @@ function ProductCard({
                 <p className="text-xs font-semibold text-indigo-400 tracking-wider uppercase mb-2">{cardTitle}</p>
               )}
               <div className="flex items-center gap-2.5 mb-1 justify-center lg:justify-start">
-                <h3 className="text-2xl lg:text-3xl font-bold text-white">{name}</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{name}</h3>
                 <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
               <p className="text-xl lg:text-2xl font-bold text-indigo-400 mb-4">{tagline}</p>
