@@ -45,6 +45,11 @@ html[lang="ar"] {
 /* Hero subtitle */
 [dir="rtl"] .text-\[17px\] { font-size: 1.15rem; }
 @media (min-width: 640px) { [dir="rtl"] .sm\:text-lg { font-size: 1.25rem; } }
+
+/* Features section title - greatly increase for Arabic */
+[dir="rtl"] #features h2.text-4xl { font-size: 2.5rem; }
+@media (min-width: 640px) { [dir="rtl"] #features h2.text-5xl { font-size: 3.5rem; } }
+@media (min-width: 1024px) { [dir="rtl"] #features h2.text-6xl { font-size: 4.5rem; } }
 [dir="rtl"] h2 { font-size: 1.2em; }
 [dir="rtl"] h3 { font-size: 1.15em; }
 [dir="rtl"] p { font-size: 1.08em; }
