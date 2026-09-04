@@ -105,17 +105,8 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xs font-semibold text-emerald-400 tracking-[0.2em] uppercase mb-4 block"
-          >
-            {t.testimonialsLabel}
-          </motion.span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-white">{t.testimonialsTitle1}</span>
-            <span className="text-shimmer">{t.testimonialsTitle2}</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="gradient-text">{t.testimonialsTitle1}{t.testimonialsTitle2}</span>
           </h2>
           <p className="max-w-[500px] mx-auto text-gray-400 text-[17px] leading-relaxed">
             {t.testimonialsSubtitle}
