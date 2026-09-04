@@ -82,9 +82,9 @@ html[lang="ar"] {
 [dir="rtl"] .glass-card .text-base { font-size: 1.05em; }
 
 /* Testimonials section */
-[dir="rtl"] #testimonials h2 { font-size: 3rem; }
-@media (min-width: 640px) { [dir="rtl"] #testimonials h2 { font-size: 4.5rem; } }
-@media (min-width: 1024px) { [dir="rtl"] #testimonials h2 { font-size: 6rem; } }
+[dir="rtl"] #testimonials h2 { font-size: 2.5rem; }
+@media (min-width: 640px) { [dir="rtl"] #testimonials h2 { font-size: 3.5rem; } }
+@media (min-width: 1024px) { [dir="rtl"] #testimonials h2 { font-size: 4.5rem; } }
 [dir="rtl"] #testimonials p { font-size: 1.08em; }
 
 /* Section labels (المميزات, المنتجات, الحلول, etc.) */
