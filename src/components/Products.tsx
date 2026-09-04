@@ -86,7 +86,7 @@ function ProductCard({
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{name}</h3>
                 <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-indigo-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
               </div>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-400 mb-4">{tagline}</p>
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400 mb-4">{tagline}</p>
             </motion.div>
 
             <motion.p
