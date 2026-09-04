@@ -41,6 +41,13 @@ html[lang="ar"] {
 [dir="rtl"] li { font-size: 1.03em; }
 [dir="rtl"] span { font-size: inherit; }
 
+/* Arabic text in cards */
+[dir="rtl"] .glass-card h3 { font-size: 1.1em; }
+[dir="rtl"] .glass-card p { font-size: 1.1em; }
+[dir="rtl"] .glass-card .text-xs { font-size: 0.85em; }
+[dir="rtl"] .glass-card .text-sm { font-size: 0.95em; }
+[dir="rtl"] .glass-card .text-base { font-size: 1.05em; }
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
