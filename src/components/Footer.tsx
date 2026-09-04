@@ -39,6 +39,7 @@ const socialLinks = [
 
 export default function Footer() {
   const { t, locale } = useI18n()
+  const isAr = locale === 'ar'
 
   const footerLinks = {
     [t.product]: [
@@ -46,8 +47,12 @@ export default function Footer() {
       { label: t.footerClienta, href: '/clienta' },
       { label: t.footerHesn, href: '/hesn' },
       { label: t.footerEbny, href: '/ebny' },
-      { label: t.footerAnalytics, href: '#features' },
-      { label: t.footerIntegrations, href: '#features' },
+    ],
+    [isAr ? 'الحلول' : 'Solutions']: [
+      { label: isAr ? 'إدارة الأكاديميات الرياضية' : 'Sports Academy Management', href: '/solutions/volleyra' },
+      { label: isAr ? 'منصة CRM والتذاكر' : 'CRM & Ticketing Platform', href: '/solutions/clienta' },
+      { label: isAr ? 'محاسبة المقاولات' : 'Construction Accounting', href: '/solutions/ebny' },
+      { label: isAr ? 'إدارة العمليات الأمنية' : 'Security Operations', href: '/solutions/hesn' },
     ],
     [t.company]: [
       { label: t.aboutUs, href: '/about' },
@@ -75,7 +80,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image

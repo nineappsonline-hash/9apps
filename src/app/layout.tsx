@@ -4,6 +4,7 @@ import './globals.css'
 import { I18nProvider } from '@/lib/i18n'
 import { CartProvider } from '@/lib/cart'
 import ClientEffects from '@/components/ClientEffects'
+import StructuredData from '@/components/StructuredData'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,19 +20,99 @@ const tajawal = Tajawal({
 })
 
 export const metadata: Metadata = {
-  title: 'NineApps — برنامج إدارة علاقات العملاء ومورد المؤسسات للفرق الحديثة',
+  title: {
+    default: 'NineApps — CRM, ERP & Construction Accounting Software | Egypt & Saudi Arabia',
+    template: '%s | NineApps',
+  },
   description:
-    'حلول CRM و ERP قوية مصممة لتبسيط سير العمل، وزيادة الإنتاجية، ودفع نمو الأعمال. ابدأ تجربتك المجانية اليوم.',
-  keywords: ['CRM', 'ERP', 'برمجيات أعمال', 'إدارة علاقات العملاء', 'تخطيط موارد المؤسسات'],
+    'NineApps builds industry-specific SaaS platforms: Ebny (construction accounting & ZATCA compliance for Saudi Arabia), Clienta (CRM & ticketing for B2B SaaS), Hesn (security services & guard management), and Volleyra (sports academy booking & scheduling). Start your free trial today.',
+  keywords: [
+    // Core brand
+    'NineApps', ' NineApps software', ' NineApps CRM', ' NineApps ERP',
+    // Ebny - Construction
+    'construction accounting software', 'construction ERP Saudi Arabia', 'construction company accounting Egypt',
+    'percentage of completion accounting', 'POC accounting construction', 'earned value management construction',
+    'ZATCA compliance software', 'ZATCA e-invoicing Saudi Arabia', 'ZATCA Phase 2 UBL XML',
+    'IFRS construction accounting', 'IFRS 15 construction revenue',
+    'construction project management software', 'construction cost tracking', 'construction billing software',
+    'Saudi Arabia construction software', 'Egypt construction accounting', 'مقاولات محاسبة',
+    'نظام محاسبة مقاولات السعودية', 'نظام ابني', 'نسبة الإنجاز المحاسبية',
+    'ZATCA الفوترة الإلكترونية', 'ضريبة القيمة المضافة مقاولات', 'زكاة شركات المقاولات',
+    'construction HR payroll Saudi', 'construction procurement software',
+    // Volleyra - Sports
+    'sports academy management software', 'sports academy booking system',
+    'volleyball academy software', 'football academy management', 'basketball academy scheduling',
+    'swimming academy booking system', 'padel court booking software',
+    'sports session scheduling', 'trainer management software', 'coach scheduling platform',
+    'competition management sports', 'sports club management Egypt', 'athlete registration software',
+    'نظام إدارة الأكاديميات الرياضية', 'حجز ملاعب كرة القدم', 'إدارة المدربين الرياضيين',
+    'أكاديمية طائرة إدارة', 'حجز جلسات تدريب', 'إدارة منافسات رياضية',
+    'sports attendance tracking', 'sports membership management', 'academy billing software',
+    // Clienta - CRM
+    'CRM software', 'CRM platform B2B', 'customer relationship management',
+    'ticketing system software', 'support ticket management', 'help desk software',
+    'omnichannel CRM', 'live chat widget', 'customer support platform',
+    'multi-tenant CRM', 'SaaS CRM platform', 'B2B customer success software',
+    'incident management software', 'customer health scoring', 'SLA management software',
+    'نظام إدارة علاقات العملاء', 'نظام التذاكر', 'خدمة عملاء CRM',
+    'فيجت دردشة مباشرة', 'إدارة الحوادث', 'دعم فني مؤسسات',
+    // Hesn - Security
+    'security services management software', 'security guard management system',
+    'security company CRM', 'guard patrol management', 'site security management',
+    'security operations management', 'security shift scheduling', 'guard attendance tracking',
+    'security invoicing software', 'security company billing', 'guard licensing tracking',
+    'نظام إدارة خدمات الحراسة', 'إدارة الحراسات الأمنية', 'إدارة المواقع الأمنية',
+    'جدولة مناوبات الحراسة', 'تتبع حضور الحراس', 'فوترة شركات الأمن',
+    'security personnel management', 'security contract management', 'security client portal',
+    // Industry & Regional
+    'SaaS Egypt', 'SaaS Saudi Arabia', 'business software Egypt', 'business software Saudi Arabia',
+    'ERP software Middle East', 'CRM software Middle East',
+    'accounting software Egypt', 'accounting software Saudi Arabia',
+    'project management software Egypt', 'project management software Saudi Arabia',
+    'business intelligence Egypt', 'enterprise software Egypt',
+    'برمجيات أعمال مصر', 'برمجيات أعمال السعودية', 'أنظمة تخطيط موارد المؤسسات',
+  ],
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'NineApps — برنامج إدارة علاقات العملاء ومورد المؤسسات للفرق الحديثة',
-    description: 'حلول CRM و ERP قوية مصممة لتبسيط سير العمل، وزيادة الإنتاجية، ودفع نمو الأعمال.',
+    title: 'NineApps — CRM, ERP & Construction Accounting Software',
+    description: 'Industry-specific SaaS: Construction accounting (ZATCA/IFRS), CRM & ticketing, security guard management, and sports academy booking. Built for Egypt & Saudi Arabia.',
     type: 'website',
     images: ['/Logo.jpeg'],
+    siteName: 'NineApps',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NineApps — CRM, ERP & Construction Accounting Software',
+    description: 'Industry-specific SaaS: Construction accounting (ZATCA/IFRS), CRM & ticketing, security guard management, and sports academy booking.',
+    images: ['/Logo.jpeg'],
+  },
+  alternates: {
+    canonical: 'https://nineapps.dev',
+    languages: {
+      'ar': 'https://nineapps.dev',
+      'en': 'https://nineapps.dev',
+      'x-default': 'https://nineapps.dev',
+    },
+  },
+  metadataBase: new URL('https://nineapps.dev'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'application-name': 'NineApps',
+    'theme-color': '#0a0a1a',
   },
 }
 
@@ -43,6 +124,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${inter.variable} ${tajawal.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans">
+        <StructuredData />
         <ClientEffects />
         <I18nProvider>
           <CartProvider>{children}</CartProvider>

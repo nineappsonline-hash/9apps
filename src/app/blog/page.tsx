@@ -6,12 +6,14 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
+import Link from 'next/link'
 
-function BlogPost({ title, excerpt, date, readTime, tag, index, isAr }: { title: string; excerpt: string; date: string; readTime: string; tag: string; index: number; isAr: boolean }) {
+function BlogPost({ title, excerpt, date, readTime, tag, href, index, isAr }: { title: string; excerpt: string; date: string; readTime: string; tag: string; href?: string; index: number; isAr: boolean }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-40px' })
   return (
-    <motion.article ref={ref} initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: index * 0.05 }} className="glass-card rounded-2xl p-6 group cursor-pointer">
+    <motion.article ref={ref} initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: index * 0.05 }} className="glass-card rounded-2xl p-6 group relative">
+      {href && <Link href={href} className="absolute inset-0 z-10" aria-label={title} />}
       <div className="flex items-center gap-3 mb-4">
         <span className="px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-medium">{tag}</span>
         <span className="flex items-center gap-1 text-xs text-gray-500"><Calendar className="w-3 h-3" />{date}</span>
@@ -32,20 +34,18 @@ export default function BlogPage() {
 
   const posts = isAr
     ? [
+        { title: 'دليل ZATCA المرحلة الثانية لشركات المقاولات', excerpt: 'كل ما تحتاج معرفته عن متطلبات ZATCA للفوترة الإلكترونية لشركات المقاولات في السعودية.', date: 'Aug 20, 2026', readTime: '8 min', tag: 'مقاولات', href: '/blog/zatca-phase-2-construction-companies' },
+        { title: 'إزاي تدير أكاديمية رياضية: الدليل الكامل 2026', excerpt: 'من تسجيل اللاعبين لتحليل الربحية — كل حاجة عن إدارة أكاديمية رياضية حديثة.', date: 'Aug 12, 2026', readTime: '6 min', tag: 'رياضة', href: '/blog/sports-academy-management-guide' },
+        { title: 'CRM مقابل نظام التذاكر: إيه الفرق؟', excerpt: 'افهم الفرق بين CRM ونظام التذاكر — وإ ليه الشركات تحتاجẍن الاثنين في منصة واحدة.', date: 'Aug 5, 2026', readTime: '7 min', tag: 'CRM', href: '/blog/crm-vs-helpdesk-guide' },
         { title: 'تعريف NineApps CRM Suite 2.0', excerpt: 'متحمسين لإطلاق CRM Suite المعيد تصميمه مع رؤى مدعومة بالذكاء الاصطناعي وخط مبيعات جديد وتكاملات أعمق.', date: 'Aug 15, 2026', readTime: '5 min', tag: 'منتج' },
-        { title: 'إزاي الذكاء الاصطناعي بيحول إدارة علاقات العملاء', excerpt: 'استكشف إزاي الذكاء الاصطناعي بيغيّر طريقة الشركات في إدارة تفاعلات العملاء، من التحليلات التنبؤية للأتمتة التلقائية.', date: 'Aug 8, 2026', readTime: '8 min', tag: 'ذكاء اصطناعي وتقنية' },
-        { title: '5 أفضل ممارسات ERP للشركات المتنامية', excerpt: 'بتكبر عملياتك؟ دي 5 استراتيجيات ERP أساسية هتساعدك تدير النمو من غير مشاكل النمو.', date: 'Jul 30, 2026', readTime: '6 min', tag: 'أفضل الممارسات' },
-        { title: 'NineApps يحقق الامتثال SOC 2 Type II', excerpt: 'الأمان في صميم كل حاجة بنعملها. اعرف عن رحلتنا لشهادة SOC 2 Type II وإيه معناها لعملائنا.', date: 'Jul 22, 2026', readTime: '4 min', tag: 'أمان' },
-        { title: 'بناء منصة SaaS معيارية: قراراتنا المعمارية', excerpt: 'تحليل معمق للقرارات التقنية وراء البنية المعيارية لـ NineApps — ليه اختارنا الخدمات المصغرة والتصميم المدفوع بالأحداث والمزيد.', date: 'Jul 14, 2026', readTime: '10 min', tag: 'هندسة' },
-        { title: 'مستقبل ERP: أتجاهات تتبعها في 2026', excerpt: 'من الأتمتة المدعومة بالذكاء الاصطناعي للتحليلات الفورية، اكتشف الأتجاهات الرئيسية اللي بت şekّل مستقبل تخطيط موارد المؤسسات.', date: 'Jul 5, 2026', readTime: '7 min', tag: 'صناعة' },
+        { title: 'إزاي الذكاء الاصطناعي بيحول إدارة علاقات العملاء', excerpt: 'استكشف إزاي الذكاء الاصطناعي بيغيّر طريقة الشركات في إدارة تفاعلات العملاء.', date: 'Aug 8, 2026', readTime: '8 min', tag: 'ذكاء اصطناعي وتقنية' },
       ]
     : [
-        { title: 'Introducing NineApps CRM Suite 2.0', excerpt: 'We\'re excited to announce the launch of our redesigned CRM Suite with AI-powered insights, a全新的 sales pipeline, and deeper integrations.', date: 'Aug 15, 2026', readTime: '5 min', tag: 'Product' },
-        { title: 'How AI is Transforming Customer Relationship Management', excerpt: 'Explore how artificial intelligence is reshaping the way businesses manage customer interactions, from predictive analytics to automated follow-ups.', date: 'Aug 8, 2026', readTime: '8 min', tag: 'AI & Tech' },
-        { title: '5 ERP Best Practices for Growing Businesses', excerpt: 'Scaling your operations? Here are five essential ERP strategies that will help you manage growth without the growing pains.', date: 'Jul 30, 2026', readTime: '6 min', tag: 'Best Practices' },
-        { title: 'NineApps Achieves SOC 2 Type II Compliance', excerpt: 'Security is at the core of everything we do. Learn about our journey to SOC 2 Type II certification and what it means for our customers.', date: 'Jul 22, 2026', readTime: '4 min', tag: 'Security' },
-        { title: 'Building a Modular SaaS Platform: Our Architecture Decisions', excerpt: 'A deep dive into the technical decisions behind NineApps\' modular architecture — why we chose microservices, event-driven design, and more.', date: 'Jul 14, 2026', readTime: '10 min', tag: 'Engineering' },
-        { title: 'The Future of ERP: Trends to Watch in 2026', excerpt: 'From AI-driven automation to real-time analytics, discover the key trends shaping the future of enterprise resource planning.', date: 'Jul 5, 2026', readTime: '7 min', tag: 'Industry' },
+        { title: 'ZATCA Phase 2 Compliance Guide for Construction Companies', excerpt: 'Everything construction companies need to know about ZATCA Phase 2 e-invoicing — UBL XML, QR codes, ECDSA, and VAT compliance.', date: 'Aug 20, 2026', readTime: '8 min', tag: 'Construction', href: '/blog/zatca-phase-2-construction-companies' },
+        { title: 'How to Manage a Sports Academy: The Complete Guide', excerpt: 'From player registration to profitability analysis — everything about running a modern sports academy.', date: 'Aug 12, 2026', readTime: '6 min', tag: 'Sports', href: '/blog/sports-academy-management-guide' },
+        { title: 'CRM vs Help Desk: What\'s the Difference?', excerpt: 'Understanding the difference between CRM and help desk tools — and why modern B2B SaaS companies need both.', date: 'Aug 5, 2026', readTime: '7 min', tag: 'CRM', href: '/blog/crm-vs-helpdesk-guide' },
+        { title: 'Introducing NineApps CRM Suite 2.0', excerpt: 'We\'re excited to announce the launch of our redesigned CRM Suite with AI-powered insights, a new sales pipeline, and deeper integrations.', date: 'Aug 15, 2026', readTime: '5 min', tag: 'Product' },
+        { title: 'How AI is Transforming Customer Relationship Management', excerpt: 'Explore how artificial intelligence is reshaping the way businesses manage customer interactions.', date: 'Aug 8, 2026', readTime: '8 min', tag: 'AI & Tech' },
       ]
 
   return (

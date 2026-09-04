@@ -431,6 +431,9 @@ export default function ClientaPage() {
                   {t.clientaBtnTrial}
                   <ArrowUpRight className="w-5 h-5" />
                 </a>
+                <Link href="/solutions/clienta" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-gray-300 font-semibold hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300">
+                  See Overview
+                </Link>
               </div>
             </motion.div>
           </div>
