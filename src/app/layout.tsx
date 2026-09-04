@@ -21,11 +21,11 @@ const tajawal = Tajawal({
 
 export const metadata: Metadata = {
   title: {
-    default: 'NineApps — CRM, ERP & Construction Accounting Software | Egypt & Saudi Arabia',
+    default: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات | مصر والسعودية',
     template: '%s | NineApps',
   },
   description:
-    'NineApps builds industry-specific SaaS platforms: Ebny (construction accounting & ZATCA compliance for Saudi Arabia), Clienta (CRM & ticketing for B2B SaaS), Hesn (security services & guard management), and Volleyra (sports academy booking & scheduling). Start your free trial today.',
+    'NineApps بتبني منصات SaaS مخصصة لكل قطاع: ابني (محاسبة مقاولات و ZATCA للسعودية)، كلاينتا (CRM وتذاكر لشركات SaaS B2B)، حصن (إدارة الحراسات والأمن)، و فوليرا (إدارة أكاديميات رياضية وحجز). ابدأ تجربتك المجانية النهارده.',
   keywords: [
     // Core brand
     'NineApps', ' NineApps software', ' NineApps CRM', ' NineApps ERP',
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'NineApps — CRM, ERP & Construction Accounting Software',
-    description: 'Industry-specific SaaS: Construction accounting (ZATCA/IFRS), CRM & ticketing, security guard management, and sports academy booking. Built for Egypt & Saudi Arabia.',
+    title: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات',
+    description: 'منصات SaaS مخصصة لكل قطاع: محاسبة مقاولات (ZATCA/IFRS)، CRM وتذاكر، إدارة الحراسات، وحجز أكاديميات رياضية. مصممة لمصر والسعودية.',
     type: 'website',
     images: ['/Logo.jpeg'],
     siteName: 'NineApps',
@@ -86,8 +86,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NineApps — CRM, ERP & Construction Accounting Software',
-    description: 'Industry-specific SaaS: Construction accounting (ZATCA/IFRS), CRM & ticketing, security guard management, and sports academy booking.',
+    title: 'NineApps — برمجيات CRM و ERP و محاسبة المقاولات',
+    description: 'منصات SaaS مخصصة لكل قطاع: محاسبة مقاولات، CRM وتذاكر، إدارة الحراسات، وأكاديميات رياضية.',
     images: ['/Logo.jpeg'],
   },
   alternates: {
