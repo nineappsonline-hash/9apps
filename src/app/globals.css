@@ -30,7 +30,16 @@
 /* Arabic font override */
 html[lang="ar"] {
   font-family: "Tajawal", var(--font-sans);
+  font-size: 17px;
 }
+
+/* Increase Arabic text sizes for better readability */
+[dir="rtl"] h1 { font-size: 1.1em; }
+[dir="rtl"] h2 { font-size: 1.08em; }
+[dir="rtl"] h3 { font-size: 1.05em; }
+[dir="rtl"] p { font-size: 1.05em; }
+[dir="rtl"] li { font-size: 1.03em; }
+[dir="rtl"] span { font-size: inherit; }
 
 html {
   scroll-behavior: smooth;
